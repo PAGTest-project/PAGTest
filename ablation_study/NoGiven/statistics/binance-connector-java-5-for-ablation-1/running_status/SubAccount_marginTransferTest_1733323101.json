@@ -1,0 +1,1 @@
+{"name": "SubAccount_marginTransferTest", "status": "coverage get success", "coverage_result": {"marginTransfer": [{"Instruction Coverage": 1.0}, {"Branch Coverage": -1.0}, {"Line Coverage": 1.0}]}}

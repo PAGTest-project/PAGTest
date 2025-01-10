@@ -1,0 +1,17 @@
+{
+    "name": "Parser_parseFragmentTest",
+    "status": "coverage get success",
+    "coverage_result": {
+        "parseFragment": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    }
+}

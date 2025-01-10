@@ -1,0 +1,1 @@
+{"name": "MapUtils_getByteTest", "status": "coverage get success", "coverage_result": {"getByte": [{"Instruction Coverage": 1.0}, {"Branch Coverage": 1.0}, {"Line Coverage": 1.0}]}}

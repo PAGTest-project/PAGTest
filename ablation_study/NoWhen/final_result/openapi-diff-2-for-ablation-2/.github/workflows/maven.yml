@@ -1,0 +1,59 @@
+name: Main Build
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - 'docs/**'
+      - '.circleci/**'
+      - '.github/**'
+      - 'README.md'
+
+env:
+  OSS_USERNAME: ${{ secrets.OSS_USERNAME }}
+  OSS_PASSWORD: ${{ secrets.OSS_PASSWORD }}
+
+jobs:
+  build:
+    name: Build on JDK ${{ matrix.java_version }}
+    runs-on: 'ubuntu-latest'
+    strategy:
+      fail-fast: false
+      matrix:
+        java_version: ['8', '11', '17', '21']
+    env:
+      JAVA_OPTS: "-XX:+TieredCompilation -XX:TieredStopAtLevel=1"
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+    - name: Set up JDK
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'zulu'
+        java-version: ${{ matrix.java_version }}
+        cache: 'maven'
+        # Value of the distributionManagement/repository/id field of the pom.xml
+        server-id: sonatype-nexus-snapshots
+        server-username: OSS_USERNAME
+        server-password: OSS_PASSWORD
+    - name: Cache SonarCloud packages
+      uses: actions/cache@v4
+      if: ${{ env.SONAR_TOKEN != null && env.SONAR_TOKEN != '' && matrix.java_version == '17' }}
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      with:
+        path: ~/.sonar/cache
+        key: ${{ runner.os }}-sonar
+        restore-keys: ${{ runner.os }}-sonar
+    - name: Run tests
+      run: ./mvnw -V -B -ntp -ff verify jacoco:report
+    - name: Static Analysis (Sonar)
+      if: ${{ env.SONAR_TOKEN != null && env.SONAR_TOKEN != '' && matrix.java_version == '17' }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      run: ./mvnw -B -ntp -ff org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+    - name: Release Snapshot
+      if: matrix.java_version == '11'
+      run: ./mvnw -V -B -ntp -ff deploy

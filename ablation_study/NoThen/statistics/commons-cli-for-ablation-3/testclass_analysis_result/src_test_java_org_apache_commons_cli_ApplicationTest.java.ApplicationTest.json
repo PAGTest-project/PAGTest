@@ -1,0 +1,136 @@
+{
+    "file_path": "src/test/java/org/apache/commons/cli/ApplicationTest.java",
+    "testclass_name": "ApplicationTest",
+    "dependencies": [
+        "package org.apache.commons.cli;",
+        "import static org.junit.jupiter.api.Assertions.assertEquals;",
+        "import static org.junit.jupiter.api.Assertions.assertTrue;",
+        "import java.io.PrintWriter;",
+        "import java.io.StringWriter;",
+        "import org.junit.jupiter.api.Test;"
+    ],
+    "name": "ApplicationTest",
+    "description": "Unit tests for various command line parsing scenarios using Apache Commons CLI.",
+    "class_members": {
+        "variables": [],
+        "methods": [],
+        "nested_classes": []
+    },
+    "fixtures": [],
+    "test_cases": [
+        {
+            "name": "testAnt",
+            "primary_tested": [
+                "CommandLineParser.parse(Options,String[])"
+            ],
+            "associated_methods": [
+                "Options.addOption(String,boolean,String)",
+                "CommandLine.getOptionValues(String)",
+                "CommandLine.getOptionValue(String)",
+                "CommandLine.hasOption(String)"
+            ],
+            "external_dependencies": {
+                "modules": [
+                    "CommandLineParser",
+                    "GnuParser",
+                    "Options",
+                    "CommandLine",
+                    "OptionBuilder"
+                ],
+                "class_members": []
+            },
+            "category": "unit",
+            "description": "Tests the parsing of command line options using the GNU parser."
+        },
+        {
+            "name": "testGroovy",
+            "primary_tested": [
+                "CommandLineParser.parse(Options,String[])"
+            ],
+            "associated_methods": [
+                "Options.addOption(Option)",
+                "CommandLine.hasOption(char)",
+                "CommandLine.getOptionValue(char)"
+            ],
+            "external_dependencies": {
+                "modules": [
+                    "Options",
+                    "OptionBuilder",
+                    "PosixParser",
+                    "CommandLine"
+                ],
+                "class_members": []
+            },
+            "category": "unit",
+            "description": "Tests the parsing of command line options using the Posix parser."
+        },
+        {
+            "name": "testLs",
+            "primary_tested": [
+                "CommandLineParser.parse(Options,String[])"
+            ],
+            "associated_methods": [
+                "Options.addOption(String,String,boolean,String)",
+                "CommandLine.hasOption(String)",
+                "CommandLine.getOptionValue(String)"
+            ],
+            "external_dependencies": {
+                "modules": [
+                    "CommandLineParser",
+                    "PosixParser",
+                    "Options",
+                    "CommandLine",
+                    "OptionBuilder"
+                ],
+                "class_members": []
+            },
+            "category": "unit",
+            "description": "Tests the parsing of command line options for a 'ls' command-like scenario."
+        },
+        {
+            "name": "testMan",
+            "primary_tested": [
+                "HelpFormatter.printHelp(PrintWriter,int,String,String,Options,int,int,String,boolean)"
+            ],
+            "associated_methods": [
+                "Options.addOption(String,String,boolean,String)",
+                "HelpFormatter.DEFAULT_LEFT_PAD",
+                "HelpFormatter.DEFAULT_DESC_PAD"
+            ],
+            "external_dependencies": {
+                "modules": [
+                    "HelpFormatter",
+                    "Options",
+                    "PrintWriter",
+                    "StringWriter"
+                ],
+                "class_members": []
+            },
+            "category": "unit",
+            "description": "Tests the generation of a help message for a 'man' command-like scenario."
+        },
+        {
+            "name": "testNLT",
+            "primary_tested": [
+                "CommandLineParser.parse(Options,String[])"
+            ],
+            "associated_methods": [
+                "Options.addOption(Option)",
+                "CommandLine.hasOption(String)",
+                "CommandLine.getOptionValue(String)"
+            ],
+            "external_dependencies": {
+                "modules": [
+                    "Option",
+                    "OptionBuilder",
+                    "PosixParser",
+                    "CommandLine",
+                    "Options"
+                ],
+                "class_members": []
+            },
+            "category": "unit",
+            "description": "Tests the parsing of command line options for a 'NLT' command-like scenario."
+        }
+    ]
+}

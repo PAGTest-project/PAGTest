@@ -1,0 +1,1 @@
+{"name": "BoundedIterator_removeTest", "status": "coverage get success", "coverage_result": {"remove": [{"Instruction Coverage": 0.7333333333333333}, {"Branch Coverage": 0.5}, {"Line Coverage": 0.5}]}}

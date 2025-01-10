@@ -1,0 +1,1 @@
+{"name": "Entities_getByNameTest", "status": "coverage get success", "coverage_result": {"getByName": [{"Instruction Coverage": 0.9333333333333333}, {"Branch Coverage": 0.75}, {"Line Coverage": 0.8571428571428571}]}}

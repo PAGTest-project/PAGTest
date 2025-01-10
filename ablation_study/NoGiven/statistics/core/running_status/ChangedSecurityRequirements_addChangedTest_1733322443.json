@@ -1,0 +1,1 @@
+{"name": "ChangedSecurityRequirements_addChangedTest", "status": "coverage get success", "coverage_result": {"addChanged": [{"Instruction Coverage": 0.6428571428571429}, {"Branch Coverage": 0.5}, {"Line Coverage": 0.75}]}}

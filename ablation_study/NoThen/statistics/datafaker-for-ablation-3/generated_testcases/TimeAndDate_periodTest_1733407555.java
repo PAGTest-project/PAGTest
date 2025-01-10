@@ -1,0 +1,48 @@
+
+package net.datafaker.providers.base;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import java.time.Period;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class TimeAndDate_periodTest {
+    private TimeAndDate timeAndDate;
+
+    @BeforeEach
+    public void setUp() {
+        timeAndDate = new TimeAndDate(new BaseProviders());
+    }
+
+    @Test
+    public void testPeriodValidRange() {
+        Period min = Period.of(1, 2, 3);
+        Period max = Period.of(4, 5, 6);
+
+        Period result = timeAndDate.period(min, max);
+
+        assertTrue(result.getYears() >= min.getYears() && result.getYears() <= max.getYears());
+        assertTrue(result.getMonths() >= min.getMonths() && result.getMonths() <= max.getMonths());
+        assertTrue(result.getDays() >= min.getDays() && result.getDays() <= max.getDays());
+    }
+
+    @Test
+    public void testPeriodInvalidRange() {
+        Period min = Period.of(4, 5, 6);
+        Period max = Period.of(1, 2, 3);
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            timeAndDate.period(min, max);
+        });
+    }
+
+    @Test
+    public void testPeriodEqualMinMax() {
+        Period min = Period.of(1, 2, 3);
+        Period max = Period.of(1, 2, 3);
+
+        Period result = timeAndDate.period(min, max);
+
+        assertEquals(min, result);
+    }
+}

@@ -1,0 +1,1925 @@
+[
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/ast/Pos_plusTest.java",
+        "testclass_name": "Pos_plusTest",
+        "dependencies": [
+            "package net.hydromatic.morel.ast;",
+            "import org.junit.jupiter.api.Test;",
+            "import static org.junit.jupiter.api.Assertions.*;"
+        ],
+        "name": "Pos_plusTest",
+        "description": "Unit tests for the plus method of the Pos class.",
+        "class_members": {
+            "variables": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testPlus",
+                "primary_tested": [
+                    "Pos.plus(Pos)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pos"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the plus method of the Pos class, ensuring it correctly combines two Pos objects."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Pair_rightTest.java",
+        "testclass_name": "Pair_rightTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.Arrays;",
+            "import java.util.List;",
+            "import java.util.Map;",
+            "import static org.junit.jupiter.api.Assertions.assertEquals;"
+        ],
+        "name": "Pair_rightTest",
+        "description": "Unit test for the Pair.right method which extracts the right elements from a list of pairs.",
+        "class_members": {},
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testRight",
+                "primary_tested": [
+                    "Pair.right(List<Map.Entry<String,Integer>>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair",
+                        "Arrays",
+                        "List",
+                        "Map"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the extraction of right elements from a list of pairs."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Static_strTest.java",
+        "testclass_name": "Static_strTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import org.junit.jupiter.api.Test;",
+            "import static org.junit.jupiter.api.Assertions.assertEquals;"
+        ],
+        "name": "Static_strTest",
+        "description": "Unit tests for the Static.str method.",
+        "class_members": {
+            "variables": [],
+            "methods": [],
+            "nested_classes": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testStr",
+                "primary_tested": [
+                    "Static.str(StringBuilder)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Static"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the Static.str method to ensure it correctly converts a StringBuilder to a String and clears the StringBuilder."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Pair_zipMutableTest.java",
+        "testclass_name": "Pair_zipMutableTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.Arrays;",
+            "import java.util.List;",
+            "import static org.junit.jupiter.api.Assertions.assertEquals;"
+        ],
+        "name": "Pair_zipMutableTest",
+        "description": "Unit tests for the Pair.zipMutable method.",
+        "class_members": {
+            "variables": [],
+            "methods": [],
+            "nested_classes": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testZipMutable",
+                "primary_tested": [
+                    "Pair.zipMutable(List<Integer>,List<String>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair",
+                        "Arrays",
+                        "List",
+                        "Pair"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the zipMutable functionality of the Pair class, ensuring that it correctly pairs elements from two lists."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Pair_toMapTest.java",
+        "testclass_name": "Pair_toMapTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.Arrays;",
+            "import java.util.HashMap;",
+            "import java.util.List;",
+            "import java.util.Map;",
+            "import static org.junit.jupiter.api.Assertions.assertEquals;"
+        ],
+        "name": "Pair_toMapTest",
+        "description": "Unit test for converting a list of pairs to a map.",
+        "class_members": {
+            "variables": [],
+            "methods": [],
+            "nested_classes": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testToMap",
+                "primary_tested": [
+                    "Pair.toMap(List<Pair<String,Integer>>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair",
+                        "Arrays",
+                        "HashMap",
+                        "List",
+                        "Map"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "description": "Tests the conversion of a list of pairs to a map."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Pair_leftTest.java",
+        "testclass_name": "Pair_leftTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.Arrays;",
+            "import java.util.List;",
+            "import java.util.Map;",
+            "import java.util.AbstractMap;",
+            "import static org.junit.jupiter.api.Assertions.assertEquals;"
+        ],
+        "name": "Pair_leftTest",
+        "description": "Unit tests for the Pair.left method which extracts the left elements from a list of pairs.",
+        "class_members": {
+            "variables": [],
+            "methods": [],
+            "nested_classes": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testLeft",
+                "primary_tested": [
+                    "Pair.left(List<Map.Entry<String,Integer>>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "java.util.Arrays",
+                        "java.util.List",
+                        "java.util.Map",
+                        "java.util.AbstractMap",
+                        "net.hydromatic.morel.util.Pair"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "description": "Tests the extraction of left elements from a list of pairs."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Pair_forEachTest.java",
+        "testclass_name": "Pair_forEachTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.Arrays;",
+            "import java.util.List;",
+            "import java.util.function.BiConsumer;",
+            "import static org.junit.jupiter.api.Assertions.assertEquals;"
+        ],
+        "name": "Pair_forEachTest",
+        "description": "Unit test for the forEach method in the Pair class.",
+        "class_members": {
+            "variables": [],
+            "methods": [],
+            "nested_classes": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testForEach",
+                "primary_tested": [
+                    "Pair.forEach(List<Integer>,List<String>,BiConsumer<Integer,String>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair",
+                        "Arrays",
+                        "List",
+                        "BiConsumer",
+                        "StringBuilder"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the forEach functionality of the Pair class, ensuring that it correctly appends key-value pairs to a StringBuilder."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Static_plusTest.java",
+        "testclass_name": "Static_plusTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import com.google.common.collect.ImmutableMap;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.HashMap;",
+            "import java.util.Map;",
+            "import static org.junit.jupiter.api.Assertions.assertEquals;"
+        ],
+        "name": "Static_plusTest",
+        "description": "Unit tests for the Static.plus method which adds a key-value pair to a map.",
+        "class_members": {
+            "variables": [],
+            "methods": [],
+            "nested_classes": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testPlus",
+                "primary_tested": [
+                    "Static.plus(Map<String,Integer>,String,Integer)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "com.google.common.collect.ImmutableMap",
+                        "java.util.HashMap",
+                        "java.util.Map",
+                        "net.hydromatic.morel.util.Static"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "description": "Tests the Static.plus method to ensure it correctly adds a key-value pair to a map and returns the updated map."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Static_toImmutableListTest.java",
+        "testclass_name": "Static_toImmutableListTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import com.google.common.collect.ImmutableList;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.Arrays;",
+            "import java.util.List;",
+            "import java.util.stream.Stream;",
+            "import static org.junit.jupiter.api.Assertions.assertEquals;"
+        ],
+        "name": "Static_toImmutableListTest",
+        "description": "Unit test for converting a Stream to an ImmutableList using Static.toImmutableList().",
+        "class_members": {
+            "variables": [],
+            "methods": [],
+            "nested_classes": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testToImmutableList",
+                "primary_tested": [
+                    "Static.toImmutableList()"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "com.google.common.collect.ImmutableList",
+                        "java.util.Arrays",
+                        "java.util.List",
+                        "java.util.stream.Stream"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the conversion of a Stream to an ImmutableList using Static.toImmutableList()."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Static_minusTest.java",
+        "testclass_name": "Static_minusTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import com.google.common.collect.ImmutableList;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.Arrays;",
+            "import java.util.List;",
+            "import static org.junit.jupiter.api.Assertions.assertEquals;"
+        ],
+        "name": "Static_minusTest",
+        "description": "Unit tests for the Static.minus method, which removes an element from a list.",
+        "class_members": {},
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testMinus_ElementPresent",
+                "primary_tested": [
+                    "Static.minus(List<String>,String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Static",
+                        "Arrays"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the Static.minus method when the element to be removed is present in the list."
+            },
+            {
+                "name": "testMinus_ElementNotPresent",
+                "primary_tested": [
+                    "Static.minus(List<String>,String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Static",
+                        "Arrays"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the Static.minus method when the element to be removed is not present in the list."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/ast/Pos_splitTest.java",
+        "testclass_name": "Pos_splitTest",
+        "dependencies": [
+            "package net.hydromatic.morel.ast;",
+            "import net.hydromatic.morel.util.Pair;",
+            "import org.junit.jupiter.api.Test;",
+            "import static org.junit.jupiter.api.Assertions.*;"
+        ],
+        "name": "Pos_splitTest",
+        "description": "Unit tests for the Pos.split method, which splits a string based on a delimiter and returns a Pair containing the split parts and their positions.",
+        "class_members": {
+            "variables": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testSplit_ValidInput",
+                "primary_tested": [
+                    "Pos.split(String,char,String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pos",
+                        "Pair"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "description": "Tests the Pos.split method with valid input, ensuring it correctly splits the string and returns the expected Pair."
+            },
+            {
+                "name": "testSplit_InvalidInput",
+                "primary_tested": [
+                    "Pos.split(String,char,String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pos",
+                        "Pair"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "description": "Tests the Pos.split method with invalid input, ensuring it throws an IllegalArgumentException with the expected message."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/TailList_clearTest.java",
+        "testclass_name": "TailList_clearTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.ArrayList;",
+            "import java.util.List;",
+            "import static org.junit.jupiter.api.Assertions.assertEquals;"
+        ],
+        "name": "TailList_clearTest",
+        "description": "Unit test for the clear method of the TailList class.",
+        "class_members": {
+            "variables": [
+                {
+                    "name": "backingList",
+                    "type": "List<Integer>"
+                },
+                {
+                    "name": "tailList",
+                    "type": "TailList<Integer>"
+                }
+            ]
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testClear",
+                "primary_tested": [
+                    "TailList.clear()"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "java.util.ArrayList",
+                        "java.util.List",
+                        "TailList"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "backingList",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "tailList",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the clear functionality of the TailList class, ensuring that only the specified number of elements are retained in the backing list."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/type/RangeExtent_toStringTest.java",
+        "testclass_name": "RangeExtent_toStringTest",
+        "dependencies": [
+            "package net.hydromatic.morel.type;",
+            "import com.google.common.collect.ImmutableMap;",
+            "import com.google.common.collect.ImmutableRangeSet;",
+            "import org.junit.jupiter.api.Test;",
+            "import static org.junit.jupiter.api.Assertions.assertEquals;"
+        ],
+        "name": "RangeExtent_toStringTest",
+        "description": "Unit tests for the toString method of the RangeExtent class.",
+        "class_members": {
+            "variables": [],
+            "methods": [],
+            "nested_classes": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testToStringUnbounded",
+                "primary_tested": [
+                    "RangeExtent.toString()"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Type",
+                        "ImmutableMap"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the toString method of RangeExtent for an unbounded case."
+            },
+            {
+                "name": "testToStringBounded",
+                "primary_tested": [
+                    "RangeExtent.toString()"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Type",
+                        "ImmutableMap",
+                        "ImmutableRangeSet"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the toString method of RangeExtent for a bounded case."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/ast/Pos_equalsTest.java",
+        "testclass_name": "Pos_equalsTest",
+        "dependencies": [
+            "package net.hydromatic.morel.ast;",
+            "import org.junit.jupiter.api.Test;",
+            "import static org.junit.jupiter.api.Assertions.*;"
+        ],
+        "name": "Pos_equalsTest",
+        "description": "Unit tests for the equals method in the Pos class.",
+        "class_members": {
+            "variables": [
+                {
+                    "name": "pos1",
+                    "type": "Pos"
+                },
+                {
+                    "name": "pos2",
+                    "type": "Pos"
+                },
+                {
+                    "name": "pos3",
+                    "type": "Pos"
+                }
+            ]
+        },
+        "test_cases": [
+            {
+                "name": "testEquals",
+                "primary_tested": [
+                    "Pos.equals(Object)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pos"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "pos1",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "pos2",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "pos3",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the equals method of the Pos class, including equality checks for the same object, equal objects, different objects, null, and different class types."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/ast/Pos_sumTest.java",
+        "testclass_name": "Pos_sumTest",
+        "dependencies": [
+            "package net.hydromatic.morel.ast;",
+            "import com.google.common.collect.Lists;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.List;",
+            "import static org.junit.jupiter.api.Assertions.assertEquals;"
+        ],
+        "name": "Pos_sumTest",
+        "description": "Unit tests for the Pos.sum method, which sums positions from a list or iterable.",
+        "class_members": {
+            "variables": [],
+            "methods": [],
+            "nested_classes": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testSumWithList",
+                "primary_tested": [
+                    "Pos.sum(List<Pos>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "com.google.common.collect.Lists",
+                        "Pos"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the Pos.sum method with a List of Pos objects."
+            },
+            {
+                "name": "testSumWithIterable",
+                "primary_tested": [
+                    "Pos.sum(Iterable<Pos>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "com.google.common.collect.Lists",
+                        "Pos"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the Pos.sum method with an Iterable of Pos objects."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Ord_forEachTest.java",
+        "testclass_name": "Ord_forEachTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.Arrays;",
+            "import java.util.List;",
+            "import java.util.function.ObjIntConsumer;",
+            "import static org.junit.jupiter.api.Assertions.assertEquals;"
+        ],
+        "name": "Ord_forEachTest",
+        "description": "Unit test for the Ord.forEach method.",
+        "class_members": {
+            "variables": [
+                {
+                    "name": "list",
+                    "type": "List<String>"
+                },
+                {
+                    "name": "result",
+                    "type": "StringBuilder"
+                },
+                {
+                    "name": "consumer",
+                    "type": "ObjIntConsumer<String>"
+                }
+            ]
+        },
+        "test_cases": [
+            {
+                "name": "testForEach",
+                "primary_tested": [
+                    "Ord.forEach(List<String>,ObjIntConsumer<String>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Arrays",
+                        "List",
+                        "ObjIntConsumer",
+                        "Ord"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "list",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "result",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "consumer",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the Ord.forEach method by iterating over a list of strings and appending each element and its index to a StringBuilder."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Pair_firstAndTest.java",
+        "testclass_name": "Pair_firstAndTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.Arrays;",
+            "import java.util.Collections;",
+            "import java.util.Iterator;",
+            "import java.util.List;",
+            "import static org.junit.jupiter.api.Assertions.*;"
+        ],
+        "name": "Pair_firstAndTest",
+        "description": "Unit tests for the Pair.firstAnd method, which generates pairs from an iterable.",
+        "class_members": {
+            "variables": [],
+            "methods": [],
+            "nested_classes": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testFirstAndWithNonEmptyIterable",
+                "primary_tested": [
+                    "Pair.firstAnd(Iterable<Integer>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair",
+                        "Arrays",
+                        "Collections",
+                        "Iterator"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the Pair.firstAnd method with a non-empty iterable, ensuring it generates the correct pairs."
+            },
+            {
+                "name": "testFirstAndWithEmptyIterable",
+                "primary_tested": [
+                    "Pair.firstAnd(Iterable<Integer>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair",
+                        "Collections",
+                        "Iterator"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the Pair.firstAnd method with an empty iterable, ensuring it does not generate any pairs."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Static_transformEagerTest.java",
+        "testclass_name": "Static_transformEagerTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import com.google.common.collect.ImmutableList;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.Arrays;",
+            "import java.util.Collections;",
+            "import java.util.function.Function;",
+            "import static org.junit.jupiter.api.Assertions.assertEquals;"
+        ],
+        "name": "Static_transformEagerTest",
+        "description": "Unit tests for the Static.transformEager method, which transforms an iterable using a given function.",
+        "class_members": {
+            "variables": [],
+            "methods": [],
+            "nested_classes": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testTransformEagerWithEmptyIterable",
+                "primary_tested": [
+                    "Static.transformEager(Iterable<String>,Function<String,Integer>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Collections",
+                        "ImmutableList",
+                        "Static"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the transformEager method with an empty iterable, expecting an empty result."
+            },
+            {
+                "name": "testTransformEagerWithNonEmptyIterable",
+                "primary_tested": [
+                    "Static.transformEager(Iterable<String>,Function<String,Integer>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Arrays",
+                        "ImmutableList",
+                        "Static"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the transformEager method with a non-empty iterable, expecting the transformed result based on the length of each string."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Ord_forEachIndexedTest.java",
+        "testclass_name": "Ord_forEachIndexedTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.Arrays;",
+            "import java.util.List;",
+            "import java.util.function.ObjIntConsumer;",
+            "import static org.junit.jupiter.api.Assertions.assertEquals;"
+        ],
+        "name": "Ord_forEachIndexedTest",
+        "description": "Unit test for the forEachIndexed method in the Ord class.",
+        "class_members": {
+            "variables": [
+                {
+                    "name": "list",
+                    "type": "List<String>"
+                },
+                {
+                    "name": "result",
+                    "type": "StringBuilder"
+                },
+                {
+                    "name": "consumer",
+                    "type": "ObjIntConsumer<String>"
+                }
+            ]
+        },
+        "test_cases": [
+            {
+                "name": "testForEachIndexed",
+                "primary_tested": [
+                    "Ord.forEachIndexed(List<String>,ObjIntConsumer<String>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "java.util.Arrays",
+                        "java.util.List",
+                        "java.util.function.ObjIntConsumer",
+                        "net.hydromatic.morel.util.Ord"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "list",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "result",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "consumer",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the forEachIndexed method of the Ord class by verifying that it correctly processes a list of strings and appends their indices and values to a StringBuilder."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Pair_adjacentsTest.java",
+        "testclass_name": "Pair_adjacentsTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.Arrays;",
+            "import java.util.Collections;",
+            "import java.util.Iterator;",
+            "import java.util.List;",
+            "import static org.junit.jupiter.api.Assertions.*;"
+        ],
+        "name": "Pair_adjacentsTest",
+        "description": "Unit tests for the Pair.adjacents method, which generates pairs of adjacent elements from an iterable.",
+        "class_members": {
+            "variables": [],
+            "methods": [],
+            "nested_classes": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testAdjacentsWithNonEmptyIterable",
+                "primary_tested": [
+                    "Pair.adjacents(Iterable<Integer>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair",
+                        "Arrays",
+                        "Collections",
+                        "Iterator",
+                        "List"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the Pair.adjacents method with a non-empty iterable, ensuring it correctly generates pairs of adjacent elements."
+            },
+            {
+                "name": "testAdjacentsWithEmptyIterable",
+                "primary_tested": [
+                    "Pair.adjacents(Iterable<Integer>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair",
+                        "Arrays",
+                        "Collections",
+                        "Iterator",
+                        "List"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the Pair.adjacents method with an empty iterable, ensuring it correctly handles the case where no pairs are generated."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Static_intersectTest.java",
+        "testclass_name": "Static_intersectTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import com.google.common.collect.ImmutableList;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.Arrays;",
+            "import java.util.Collections;",
+            "import java.util.List;",
+            "import static org.junit.jupiter.api.Assertions.assertEquals;"
+        ],
+        "name": "Static_intersectTest",
+        "description": "Unit tests for the Static.intersect method, which computes the intersection of two lists.",
+        "class_members": {},
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testIntersect_NoCommonElements",
+                "primary_tested": [
+                    "Static.intersect(List<Integer>,Iterable<Integer>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Arrays",
+                        "Collections",
+                        "Static"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the intersection functionality of the Static class when there are no common elements between the two lists."
+            },
+            {
+                "name": "testIntersect_WithCommonElements",
+                "primary_tested": [
+                    "Static.intersect(List<Integer>,Iterable<Integer>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Arrays",
+                        "ImmutableList",
+                        "Static"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the intersection functionality of the Static class when there are common elements between the two lists."
+            },
+            {
+                "name": "testIntersect_AllCommonElements",
+                "primary_tested": [
+                    "Static.intersect(List<Integer>,Iterable<Integer>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Arrays",
+                        "ImmutableList",
+                        "Static"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the intersection functionality of the Static class when all elements are common between the two lists."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Pair_compareToTest.java",
+        "testclass_name": "Pair_compareToTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import org.junit.jupiter.api.Test;",
+            "import static org.junit.jupiter.api.Assertions.*;"
+        ],
+        "name": "Pair_compareToTest",
+        "description": "Unit tests for the compareTo method of the Pair class.",
+        "class_members": {
+            "variables": [],
+            "methods": [],
+            "nested_classes": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testCompareTo_DifferentLeft",
+                "primary_tested": [
+                    "Pair.compareTo(Pair)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the compareTo method when the left elements of the pairs are different."
+            },
+            {
+                "name": "testCompareTo_SameLeftDifferentRight",
+                "primary_tested": [
+                    "Pair.compareTo(Pair)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the compareTo method when the left elements are the same but the right elements are different."
+            },
+            {
+                "name": "testCompareTo_SameLeftSameRight",
+                "primary_tested": [
+                    "Pair.compareTo(Pair)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the compareTo method when both the left and right elements of the pairs are the same."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Static_shorterThanTest.java",
+        "testclass_name": "Static_shorterThanTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import com.google.common.collect.ImmutableList;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.Arrays;",
+            "import java.util.Collection;",
+            "import static org.junit.jupiter.api.Assertions.assertFalse;",
+            "import static org.junit.jupiter.api.Assertions.assertTrue;"
+        ],
+        "name": "Static_shorterThanTest",
+        "description": "Unit tests for the Static.shorterThan method, which checks if a collection or iterable is shorter than a given number.",
+        "class_members": {
+            "variables": [],
+            "methods": [],
+            "nested_classes": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testShorterThanWithCollection",
+                "primary_tested": [
+                    "Static.shorterThan(Collection<Integer>,int)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Static",
+                        "Arrays"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the shorterThan method with a Collection, checking if the collection is shorter than a given number."
+            },
+            {
+                "name": "testShorterThanWithIterable",
+                "primary_tested": [
+                    "Static.shorterThan(Iterable<Integer>,int)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Static",
+                        "ImmutableList"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the shorterThan method with an Iterable, checking if the iterable is shorter than a given number."
+            },
+            {
+                "name": "testShorterThanWithNonPositiveN",
+                "primary_tested": [
+                    "Static.shorterThan(Iterable<Integer>,int)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Static",
+                        "ImmutableList"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the shorterThan method with non-positive values for n, checking if the method correctly handles such cases."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Pair_anyMatchTest.java",
+        "testclass_name": "Pair_anyMatchTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.Arrays;",
+            "import java.util.Collections;",
+            "import java.util.List;",
+            "import java.util.function.BiPredicate;",
+            "import static org.junit.jupiter.api.Assertions.assertFalse;",
+            "import static org.junit.jupiter.api.Assertions.assertTrue;"
+        ],
+        "name": "Pair_anyMatchTest",
+        "description": "Unit tests for the Pair.anyMatch method, which checks if any pair of elements from two lists matches a given predicate.",
+        "class_members": {
+            "variables": [],
+            "methods": [],
+            "nested_classes": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testAnyMatch_True",
+                "primary_tested": [
+                    "Pair.anyMatch(List<Integer>,List<Integer>,BiPredicate<Integer,Integer>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair",
+                        "Arrays",
+                        "BiPredicate"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "description": "Tests the Pair.anyMatch method with lists where at least one pair matches the predicate."
+            },
+            {
+                "name": "testAnyMatch_False",
+                "primary_tested": [
+                    "Pair.anyMatch(List<Integer>,List<Integer>,BiPredicate<Integer,Integer>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair",
+                        "Arrays",
+                        "BiPredicate"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "description": "Tests the Pair.anyMatch method with lists where no pairs match the predicate."
+            },
+            {
+                "name": "testAnyMatch_EmptyIterables",
+                "primary_tested": [
+                    "Pair.anyMatch(List<Integer>,List<Integer>,BiPredicate<Integer,Integer>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair",
+                        "Collections",
+                        "BiPredicate"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "description": "Tests the Pair.anyMatch method with empty lists, expecting no match."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Pair_zipTest.java",
+        "testclass_name": "Pair_zipTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.Arrays;",
+            "import java.util.List;",
+            "import static org.junit.jupiter.api.Assertions.*;"
+        ],
+        "name": "Pair_zipTest",
+        "description": "Unit tests for the Pair.zip method, which zips two lists into a list of pairs.",
+        "class_members": {
+            "variables": [],
+            "methods": [],
+            "nested_classes": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testZipStrictEqualSizes",
+                "primary_tested": [
+                    "Pair.zip(List<Integer>,List<String>,boolean)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair",
+                        "Arrays",
+                        "List",
+                        "Pair<Integer, String>"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "description": "Tests the zip functionality when both lists have equal sizes and strict mode is enabled."
+            },
+            {
+                "name": "testZipStrictDifferentSizes",
+                "primary_tested": [
+                    "Pair.zip(List<Integer>,List<String>,boolean)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair",
+                        "Arrays",
+                        "List",
+                        "Pair<Integer, String>"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "description": "Tests the zip functionality when lists have different sizes and strict mode is enabled, expecting an AssertionError."
+            },
+            {
+                "name": "testZipNonStrict",
+                "primary_tested": [
+                    "Pair.zip(List<Integer>,List<String>,boolean)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair",
+                        "Arrays",
+                        "List",
+                        "Pair<Integer, String>"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "description": "Tests the zip functionality when lists have different sizes and strict mode is disabled."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/compile/Extents_unionTest.java",
+        "testclass_name": "Extents_unionTest",
+        "dependencies": [
+            "package net.hydromatic.morel.compile;",
+            "import com.google.common.collect.ImmutableMap;",
+            "import com.google.common.collect.ImmutableRangeSet;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.Arrays;",
+            "import java.util.List;",
+            "import java.util.Map;",
+            "import static org.junit.jupiter.api.Assertions.assertEquals;"
+        ],
+        "name": "Extents_unionTest",
+        "description": "Unit tests for the union functionality of Extents class.",
+        "class_members": {
+            "variables": [],
+            "methods": [],
+            "nested_classes": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testUnionWithEmptyList",
+                "primary_tested": [
+                    "Extents.union(List<Map<String, ImmutableRangeSet<Integer>>>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Extents",
+                        "ImmutableMap",
+                        "ImmutableRangeSet"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the union functionality of Extents with an empty list of maps."
+            },
+            {
+                "name": "testUnionWithSingleMap",
+                "primary_tested": [
+                    "Extents.union(List<Map<String, ImmutableRangeSet<Integer>>>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Extents",
+                        "ImmutableMap",
+                        "ImmutableRangeSet",
+                        "com.google.common.collect.Range"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the union functionality of Extents with a single map."
+            },
+            {
+                "name": "testUnionWithMultipleMaps",
+                "primary_tested": [
+                    "Extents.union(List<Map<String, ImmutableRangeSet<Integer>>>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Extents",
+                        "ImmutableMap",
+                        "ImmutableRangeSet",
+                        "com.google.common.collect.Range"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the union functionality of Extents with multiple maps."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/Shell_createTest.java",
+        "testclass_name": "Shell_createTest",
+        "dependencies": [
+            "package net.hydromatic.morel;",
+            "import org.junit.jupiter.api.BeforeEach;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.io.ByteArrayInputStream;",
+            "import java.io.ByteArrayOutputStream;",
+            "import java.io.IOException;",
+            "import java.util.Arrays;",
+            "import java.util.List;",
+            "import static org.junit.jupiter.api.Assertions.assertNotNull;"
+        ],
+        "name": "Shell_createTest",
+        "description": "Unit tests for creating Shell instances with different configurations.",
+        "class_members": {
+            "variables": [
+                {
+                    "name": "shell",
+                    "type": "Shell"
+                },
+                {
+                    "name": "inputStream",
+                    "type": "ByteArrayInputStream"
+                },
+                {
+                    "name": "outputStream",
+                    "type": "ByteArrayOutputStream"
+                }
+            ]
+        },
+        "fixtures": [
+            "setUp"
+        ],
+        "test_cases": [
+            {
+                "name": "testCreateShellWithDefaultConfig",
+                "primary_tested": [
+                    "Shell.create(List<String>,ByteArrayInputStream,ByteArrayOutputStream)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Shell",
+                        "ByteArrayInputStream",
+                        "ByteArrayOutputStream",
+                        "Arrays",
+                        "List"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "shell",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "inputStream",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "outputStream",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "fixtures_used": [
+                    "setUp"
+                ],
+                "description": "Tests the creation of a Shell instance with default configuration."
+            },
+            {
+                "name": "testCreateShellWithCustomConfig",
+                "primary_tested": [
+                    "Shell.create(List<String>,ByteArrayInputStream,ByteArrayOutputStream)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Shell",
+                        "ByteArrayInputStream",
+                        "ByteArrayOutputStream",
+                        "Arrays",
+                        "List"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "shell",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "inputStream",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "outputStream",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "fixtures_used": [
+                    "setUp"
+                ],
+                "description": "Tests the creation of a Shell instance with custom configuration."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Sat_variableTest.java",
+        "testclass_name": "Sat_variableTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import org.junit.jupiter.api.BeforeEach;",
+            "import org.junit.jupiter.api.Test;",
+            "import static org.junit.jupiter.api.Assertions.*;"
+        ],
+        "name": "Sat_variableTest",
+        "description": "Unit tests for the Sat.Variable class, focusing on variable creation, retrieval, and ID increment.",
+        "class_members": {
+            "variables": [
+                {
+                    "name": "sat",
+                    "type": "Sat"
+                }
+            ]
+        },
+        "fixtures": [
+            "setUp"
+        ],
+        "test_cases": [
+            {
+                "name": "testVariableCreation",
+                "primary_tested": [
+                    "Sat.variable(String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Sat"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "sat",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "fixtures_used": [
+                    "setUp"
+                ],
+                "description": "Tests the creation of a new Sat.Variable and verifies its properties."
+            },
+            {
+                "name": "testVariableRetrieval",
+                "primary_tested": [
+                    "Sat.variable(String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Sat"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "sat",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "fixtures_used": [
+                    "setUp"
+                ],
+                "description": "Tests the retrieval of an existing Sat.Variable and verifies that it returns the same instance."
+            },
+            {
+                "name": "testVariableIdIncrement",
+                "primary_tested": [
+                    "Sat.variable(String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Sat"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "sat",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "fixtures_used": [
+                    "setUp"
+                ],
+                "description": "Tests the increment of the ID property for each new Sat.Variable created."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Static_findTest.java",
+        "testclass_name": "Static_findTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import com.google.common.collect.ImmutableList;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.Collection;",
+            "import java.util.Iterator;",
+            "import java.util.List;",
+            "import java.util.ListIterator;",
+            "import java.util.function.Predicate;",
+            "import static org.junit.jupiter.api.Assertions.assertEquals;"
+        ],
+        "name": "Static_findTest",
+        "description": "Unit tests for the Static.find method, which finds the index of an element in a list based on a predicate.",
+        "class_members": {
+            "nested_classes": [
+                {
+                    "name": "NonRandomAccessList",
+                    "description": "Internal class implementing List interface with non-random access behavior."
+                }
+            ]
+        },
+        "test_cases": [
+            {
+                "name": "testFindRandomAccessList",
+                "primary_tested": [
+                    "Static.find(List<Integer>,Predicate<Integer>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "com.google.common.collect.ImmutableList",
+                        "java.util.function.Predicate",
+                        "net.hydromatic.morel.util.Static"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the Static.find method with a random access list."
+            },
+            {
+                "name": "testFindNonRandomAccessList",
+                "primary_tested": [
+                    "Static.find(List<Integer>,Predicate<Integer>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "com.google.common.collect.ImmutableList",
+                        "java.util.function.Predicate",
+                        "net.hydromatic.morel.util.Static"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "NonRandomAccessList",
+                            "type": "nested_class"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the Static.find method with a non-random access list."
+            },
+            {
+                "name": "testFindNoMatch",
+                "primary_tested": [
+                    "Static.find(List<Integer>,Predicate<Integer>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "com.google.common.collect.ImmutableList",
+                        "java.util.function.Predicate",
+                        "net.hydromatic.morel.util.Static"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the Static.find method when no matching element is found."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Pair_equalsTest.java",
+        "testclass_name": "Pair_equalsTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.AbstractMap;",
+            "import java.util.Map;",
+            "import static org.junit.jupiter.api.Assertions.*;"
+        ],
+        "name": "Pair_equalsTest",
+        "description": "Unit tests for the equals method in the Pair class.",
+        "class_members": {
+            "variables": [],
+            "methods": [],
+            "nested_classes": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testEquals_SameInstance",
+                "primary_tested": [
+                    "Pair.equals(Object)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the equals method with the same instance."
+            },
+            {
+                "name": "testEquals_DifferentInstanceSameValues",
+                "primary_tested": [
+                    "Pair.equals(Object)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the equals method with different instances but same values."
+            },
+            {
+                "name": "testEquals_DifferentInstanceDifferentValues",
+                "primary_tested": [
+                    "Pair.equals(Object)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the equals method with different instances and different values."
+            },
+            {
+                "name": "testEquals_NotInstanceOfMapEntry",
+                "primary_tested": [
+                    "Pair.equals(Object)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the equals method with an object that is not an instance of Map.Entry."
+            },
+            {
+                "name": "testEquals_Null",
+                "primary_tested": [
+                    "Pair.equals(Object)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the equals method with a null object."
+            },
+            {
+                "name": "testEquals_MapEntrySameValues",
+                "primary_tested": [
+                    "Pair.equals(Object)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair",
+                        "Map.Entry"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the equals method with a Map.Entry having the same values."
+            },
+            {
+                "name": "testEquals_MapEntryDifferentValues",
+                "primary_tested": [
+                    "Pair.equals(Object)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair",
+                        "Map.Entry"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the equals method with a Map.Entry having different values."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/net/hydromatic/morel/util/Pair_allMatchTest.java",
+        "testclass_name": "Pair_allMatchTest",
+        "dependencies": [
+            "package net.hydromatic.morel.util;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.util.Arrays;",
+            "import java.util.Collections;",
+            "import java.util.List;",
+            "import java.util.function.BiPredicate;",
+            "import static org.junit.jupiter.api.Assertions.assertFalse;",
+            "import static org.junit.jupiter.api.Assertions.assertTrue;"
+        ],
+        "name": "Pair_allMatchTest",
+        "description": "Unit tests for the Pair.allMatch method, which checks if all elements in two lists match based on a given predicate.",
+        "class_members": {
+            "variables": [
+                {
+                    "name": "ks",
+                    "type": "List<Integer>"
+                },
+                {
+                    "name": "vs",
+                    "type": "List<Integer>"
+                },
+                {
+                    "name": "predicate",
+                    "type": "BiPredicate<Integer, Integer>"
+                }
+            ]
+        },
+        "test_cases": [
+            {
+                "name": "testAllMatch_AllTrue",
+                "primary_tested": [
+                    "Pair.allMatch(List<Integer>,List<Integer>,BiPredicate<Integer,Integer>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair",
+                        "Arrays",
+                        "BiPredicate"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "ks",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "vs",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "predicate",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the Pair.allMatch method with two lists where all elements match based on the predicate."
+            },
+            {
+                "name": "testAllMatch_OneFalse",
+                "primary_tested": [
+                    "Pair.allMatch(List<Integer>,List<Integer>,BiPredicate<Integer,Integer>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair",
+                        "Arrays",
+                        "BiPredicate"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "ks",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "vs",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "predicate",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the Pair.allMatch method with two lists where one element does not match based on the predicate."
+            },
+            {
+                "name": "testAllMatch_DifferentLengths",
+                "primary_tested": [
+                    "Pair.allMatch(List<Integer>,List<Integer>,BiPredicate<Integer,Integer>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair",
+                        "Arrays",
+                        "BiPredicate"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "ks",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "vs",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "predicate",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the Pair.allMatch method with two lists of different lengths."
+            },
+            {
+                "name": "testAllMatch_EmptyLists",
+                "primary_tested": [
+                    "Pair.allMatch(List<Integer>,List<Integer>,BiPredicate<Integer,Integer>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Pair",
+                        "Collections",
+                        "BiPredicate"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "ks",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "vs",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "predicate",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the Pair.allMatch method with two empty lists."
+            }
+        ]
+    }
+]

@@ -1,0 +1,1 @@
+[{"strategy": "generate", "code": "\npackage org.apache.commons.validator.util;\n\nimport static org.junit.jupiter.api.Assertions.assertEquals;\nimport org.junit.jupiter.api.Test;\n\npublic class Flags_hashCodeTest {\n\n    @Test\n    public void testHashCode() {\n        Flags flags = new Flags(45);\n        assertEquals(45, flags.hashCode());\n    }\n}\n"}]

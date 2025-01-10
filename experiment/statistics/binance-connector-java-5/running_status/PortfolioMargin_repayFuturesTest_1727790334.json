@@ -1,0 +1,1 @@
+{"name": "PortfolioMargin_repayFuturesTest", "status": "coverage get success", "coverage_result": {"repayFutures": [{"Instruction Coverage": 1.0}, {"Branch Coverage": -1.0}, {"Line Coverage": 1.0}]}}

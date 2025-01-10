@@ -1,0 +1,5 @@
+# encoding: utf-8
+_BG:
+  faker:
+    passport:
+      valid: "[0-9]{9}"

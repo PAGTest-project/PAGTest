@@ -1,0 +1,208 @@
+{
+    "inherit_relations": [
+        [
+            "Unit",
+            "AbstractList"
+        ],
+        [
+            "Relationalizer",
+            "EnvShuttle"
+        ],
+        [
+            "CalciteCompiler",
+            "Compiler"
+        ],
+        [
+            "Inliner",
+            "EnvShuttle"
+        ],
+        [
+            "SuchThatShuttle",
+            "Shuttle"
+        ],
+        [
+            "Replacer",
+            "EnvShuttle"
+        ],
+        [
+            "RefChecker",
+            "EnvVisitor"
+        ],
+        [
+            "CompileException",
+            "RuntimeException"
+        ],
+        [
+            "Analyzer",
+            "EnvVisitor"
+        ],
+        [
+            "MartelliUnifier",
+            "Unifier"
+        ],
+        [
+            "RobinsonUnifier",
+            "Unifier"
+        ],
+        [
+            "TupleType",
+            "BaseType"
+        ],
+        [
+            "DataType",
+            "ParameterizedType"
+        ],
+        [
+            "ForallType",
+            "BaseType"
+        ],
+        [
+            "ListType",
+            "BaseType"
+        ],
+        [
+            "FnType",
+            "BaseType"
+        ],
+        [
+            "RecordType",
+            "BaseType"
+        ],
+        [
+            "ProgressiveRecordType",
+            "RecordType"
+        ],
+        [
+            "TokenMgrError",
+            "Error"
+        ],
+        [
+            "ParseException",
+            "Exception"
+        ]
+    ],
+    "childs": {
+        "AbstractList": [
+            "Unit"
+        ],
+        "EnvShuttle": [
+            "Relationalizer",
+            "Inliner",
+            "Replacer"
+        ],
+        "Compiler": [
+            "CalciteCompiler"
+        ],
+        "Shuttle": [
+            "SuchThatShuttle"
+        ],
+        "EnvVisitor": [
+            "RefChecker",
+            "Analyzer"
+        ],
+        "RuntimeException": [
+            "CompileException"
+        ],
+        "Unifier": [
+            "MartelliUnifier",
+            "RobinsonUnifier"
+        ],
+        "BaseType": [
+            "TupleType",
+            "ForallType",
+            "ListType",
+            "FnType",
+            "RecordType"
+        ],
+        "ParameterizedType": [
+            "DataType"
+        ],
+        "RecordType": [
+            "ProgressiveRecordType"
+        ],
+        "Error": [
+            "TokenMgrError"
+        ],
+        "Exception": [
+            "ParseException"
+        ]
+    },
+    "parents": {
+        "Unit": "AbstractList",
+        "Relationalizer": "EnvShuttle",
+        "CalciteCompiler": "Compiler",
+        "Inliner": "EnvShuttle",
+        "SuchThatShuttle": "Shuttle",
+        "Replacer": "EnvShuttle",
+        "RefChecker": "EnvVisitor",
+        "CompileException": "RuntimeException",
+        "Analyzer": "EnvVisitor",
+        "MartelliUnifier": "Unifier",
+        "RobinsonUnifier": "Unifier",
+        "TupleType": "BaseType",
+        "DataType": "ParameterizedType",
+        "ForallType": "BaseType",
+        "ListType": "BaseType",
+        "FnType": "BaseType",
+        "RecordType": "BaseType",
+        "ProgressiveRecordType": "RecordType",
+        "TokenMgrError": "Error",
+        "ParseException": "Exception"
+    },
+    "brother_relations": {
+        "Relationalizer": [
+            "Inliner",
+            "Replacer"
+        ],
+        "Inliner": [
+            "Relationalizer",
+            "Replacer"
+        ],
+        "Replacer": [
+            "Relationalizer",
+            "Inliner"
+        ],
+        "RefChecker": [
+            "Analyzer"
+        ],
+        "Analyzer": [
+            "RefChecker"
+        ],
+        "MartelliUnifier": [
+            "RobinsonUnifier"
+        ],
+        "RobinsonUnifier": [
+            "MartelliUnifier"
+        ],
+        "TupleType": [
+            "ForallType",
+            "ListType",
+            "FnType",
+            "RecordType"
+        ],
+        "ForallType": [
+            "TupleType",
+            "ListType",
+            "FnType",
+            "RecordType"
+        ],
+        "ListType": [
+            "TupleType",
+            "ForallType",
+            "FnType",
+            "RecordType"
+        ],
+        "FnType": [
+            "TupleType",
+            "ForallType",
+            "ListType",
+            "RecordType"
+        ],
+        "RecordType": [
+            "TupleType",
+            "ForallType",
+            "ListType",
+            "FnType"
+        ]
+    }
+}

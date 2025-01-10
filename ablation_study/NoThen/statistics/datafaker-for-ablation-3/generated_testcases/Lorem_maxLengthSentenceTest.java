@@ -1,0 +1,53 @@
+
+package net.datafaker.providers.base;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class Lorem_maxLengthSentenceTest {
+    private Lorem lorem;
+
+    @BeforeEach
+    public void setUp() {
+        lorem = new Lorem(new BaseProviders() {
+            @Override
+            public Lorem lorem() {
+                return new Lorem(this);
+            }
+
+            @Override
+            public void addUrl(java.util.Locale locale, java.net.URL url) {
+                // Implementation not needed for this test
+            }
+        });
+    }
+
+    @Test
+    void testMaxLengthSentenceWithPositiveLength() {
+        int fixedLength = 20;
+        String result = lorem.maxLengthSentence(fixedLength);
+        assertEquals(fixedLength, result.length());
+    }
+
+    @Test
+    void testMaxLengthSentenceWithZeroLength() {
+        int fixedLength = 0;
+        String result = lorem.maxLengthSentence(fixedLength);
+        assertEquals("", result);
+    }
+
+    @Test
+    void testMaxLengthSentenceWithNegativeLength() {
+        int fixedLength = -5;
+        String result = lorem.maxLengthSentence(fixedLength);
+        assertEquals("", result);
+    }
+
+    @Test
+    void testMaxLengthSentenceWithLengthOne() {
+        int fixedLength = 1;
+        String result = lorem.maxLengthSentence(fixedLength);
+        assertEquals(fixedLength, result.length());
+    }
+}

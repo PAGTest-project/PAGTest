@@ -1,0 +1,56 @@
+{
+    "Relationalizer": [
+        "Inliner",
+        "Replacer"
+    ],
+    "Inliner": [
+        "Relationalizer",
+        "Replacer"
+    ],
+    "Replacer": [
+        "Relationalizer",
+        "Inliner"
+    ],
+    "RefChecker": [
+        "Analyzer"
+    ],
+    "Analyzer": [
+        "RefChecker"
+    ],
+    "MartelliUnifier": [
+        "RobinsonUnifier"
+    ],
+    "RobinsonUnifier": [
+        "MartelliUnifier"
+    ],
+    "TupleType": [
+        "ForallType",
+        "ListType",
+        "FnType",
+        "RecordType"
+    ],
+    "ForallType": [
+        "TupleType",
+        "ListType",
+        "FnType",
+        "RecordType"
+    ],
+    "ListType": [
+        "TupleType",
+        "ForallType",
+        "FnType",
+        "RecordType"
+    ],
+    "FnType": [
+        "TupleType",
+        "ForallType",
+        "ListType",
+        "RecordType"
+    ],
+    "RecordType": [
+        "TupleType",
+        "ForallType",
+        "ListType",
+        "FnType"
+    ]
+}

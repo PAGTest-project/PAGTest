@@ -1,0 +1,14 @@
+{
+    "BinanceServerException": [
+        "BinanceClientException",
+        "BinanceConnectorException"
+    ],
+    "BinanceClientException": [
+        "BinanceServerException",
+        "BinanceConnectorException"
+    ],
+    "BinanceConnectorException": [
+        "BinanceServerException",
+        "BinanceClientException"
+    ]
+}

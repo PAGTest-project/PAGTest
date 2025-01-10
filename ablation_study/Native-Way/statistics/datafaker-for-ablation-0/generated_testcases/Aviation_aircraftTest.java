@@ -1,0 +1,44 @@
+
+package net.datafaker.providers.base;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
+
+public class Aviation_aircraftTest {
+    private Aviation aviation;
+
+    @BeforeEach
+    public void setUp() {
+        BaseProviders faker = new BaseProviders() {
+            @Override
+            public Number number() {
+                return new Number() {
+                    @Override
+                    public int numberBetween(int min, int max) {
+                        return (int) (Math.random() * (max - min) + min);
+                    }
+                };
+            }
+
+            @Override
+            public void addUrl(java.util.Locale locale, java.net.URL url) {
+                // Implementation not needed for testing
+            }
+        };
+        aviation = new Aviation(faker);
+    }
+
+    @Test
+    void aircraft_shouldReturnOneOfSixTypes() {
+        String result = aviation.aircraft();
+        assertThat(result).isIn(
+            "aviation.aircraft.airplane",
+            "aviation.aircraft.warplane",
+            "aviation.aircraft.army_helicopter",
+            "aviation.aircraft.civil_helicopter",
+            "aviation.aircraft.general",
+            "aviation.aircraft.cargo"
+        );
+    }
+}

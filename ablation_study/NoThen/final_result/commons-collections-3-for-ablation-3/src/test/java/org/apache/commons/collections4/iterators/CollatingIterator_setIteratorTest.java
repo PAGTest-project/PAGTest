@@ -1,0 +1,54 @@
+
+package org.apache.commons.collections4.iterators;
+
+import org.junit.jupiter.api.Test;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+
+class CollatingIterator_setIteratorTest {
+
+    @Test
+    void testSetIterator_Success() {
+        // Given
+        CollatingIterator<Integer> collatingIterator = new CollatingIterator<>();
+        Iterator<Integer> mockIterator = mock(Iterator.class);
+
+        // When
+        collatingIterator.addIterator(mockIterator); // Ensure the list has at least one iterator
+        collatingIterator.setIterator(0, mockIterator);
+
+        // Then
+        assertEquals(mockIterator, collatingIterator.getIterators().get(0));
+    }
+
+    @Test
+    void testSetIterator_NullIterator() {
+        // Given
+        CollatingIterator<Integer> collatingIterator = new CollatingIterator<>();
+
+        // When & Then
+        assertThrows(NullPointerException.class, () -> {
+            collatingIterator.setIterator(0, null);
+        });
+    }
+
+    @Test
+    void testSetIterator_IterationStarted() {
+        // Given
+        CollatingIterator<Integer> collatingIterator = new CollatingIterator<>();
+        Iterator<Integer> mockIterator = mock(Iterator.class);
+        when(mockIterator.hasNext()).thenReturn(true);
+        collatingIterator.addIterator(mockIterator);
+
+        // When
+        collatingIterator.next(); // Start iteration
+
+        // Then
+        assertThrows(IllegalStateException.class, () -> {
+            collatingIterator.setIterator(0, mockIterator);
+        });
+    }
+}

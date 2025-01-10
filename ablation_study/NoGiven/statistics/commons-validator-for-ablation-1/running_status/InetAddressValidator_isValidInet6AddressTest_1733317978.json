@@ -1,0 +1,1 @@
+{"name": "InetAddressValidator_isValidInet6AddressTest", "status": "coverage get success", "coverage_result": {"isValidInet6Address": [{"Instruction Coverage": 0.7256637168141593}, {"Branch Coverage": 0.5483870967741935}, {"Line Coverage": 0.7166666666666667}]}}

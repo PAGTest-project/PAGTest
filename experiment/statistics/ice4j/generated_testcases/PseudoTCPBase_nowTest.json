@@ -1,0 +1,1 @@
+[{"strategy": "generate", "code": "\npackage org.ice4j.pseudotcp;\n\nimport org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.assertTrue;\n\npublic class PseudoTCPBase_nowTest {\n\n    @Test\n    public void testNow() {\n        long result = PseudoTCPBase.now();\n        assertTrue(result >= 0);\n    }\n}\n"}]

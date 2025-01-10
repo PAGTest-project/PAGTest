@@ -1,0 +1,1 @@
+{"name": "AmericanIdNumber_generateValidTest", "status": "coverage get success", "coverage_result": {"generateValid": [{"Instruction Coverage": 0.8333333333333334}, {"Branch Coverage": 0.5}, {"Line Coverage": 1.0}]}}

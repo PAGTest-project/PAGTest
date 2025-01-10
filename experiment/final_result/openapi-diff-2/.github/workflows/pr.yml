@@ -1,0 +1,47 @@
+name: Pull Request Checks
+on:
+  - pull_request
+
+jobs:
+  cleanup:
+    name: Cleanup any previous jobs
+    runs-on: ubuntu-latest
+    if: "!startsWith(github.ref, 'refs/tags/') && github.ref != 'refs/heads/master'"
+    steps:
+      - uses: rokroskar/workflow-run-cleanup-action@v0.3.3
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+  build:
+    name: Build on JDK ${{ matrix.java_version }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        java_version: ['8', '11', '17', '21']
+    env:
+      JAVA_OPTS: "-XX:+TieredCompilation -XX:TieredStopAtLevel=1"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: ${{ matrix.java_version }}
+          cache: 'maven'
+      - name: Cache SonarCloud packages
+        uses: actions/cache@v4
+        if: ${{ env.SONAR_TOKEN != null && env.SONAR_TOKEN != '' && matrix.java_version == '17' }}
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+      - name: Run tests
+        run: ./mvnw -V -B -ntp -ff verify
+      - name: Static Analysis (Sonar)
+        if: ${{ env.SONAR_TOKEN != null && env.SONAR_TOKEN != '' && matrix.java_version == '17' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: ./mvnw -B -ntp -ff org.sonarsource.scanner.maven:sonar-maven-plugin:sonar

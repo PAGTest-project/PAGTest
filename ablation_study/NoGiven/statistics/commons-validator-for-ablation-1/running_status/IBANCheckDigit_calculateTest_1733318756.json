@@ -1,0 +1,1 @@
+{"name": "IBANCheckDigit_calculateTest", "status": "coverage get success", "coverage_result": {"calculate": [{"Instruction Coverage": 0.875}, {"Branch Coverage": 0.875}, {"Line Coverage": 1.0}]}}

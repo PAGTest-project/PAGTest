@@ -1,0 +1,116 @@
+{
+    "BoxFloat_": [
+        "PointDouble_",
+        "PointFloat_",
+        "LineFloat_",
+        "CircleDouble_",
+        "CircleFloat_",
+        "LineDouble_",
+        "BoxDouble_"
+    ],
+    "PointDouble_": [
+        "BoxFloat_",
+        "PointFloat_",
+        "LineFloat_",
+        "CircleDouble_",
+        "CircleFloat_",
+        "LineDouble_",
+        "BoxDouble_"
+    ],
+    "PointFloat_": [
+        "BoxFloat_",
+        "PointDouble_",
+        "LineFloat_",
+        "CircleDouble_",
+        "CircleFloat_",
+        "LineDouble_",
+        "BoxDouble_"
+    ],
+    "LineFloat_": [
+        "BoxFloat_",
+        "PointDouble_",
+        "PointFloat_",
+        "CircleDouble_",
+        "CircleFloat_",
+        "LineDouble_",
+        "BoxDouble_"
+    ],
+    "CircleDouble_": [
+        "BoxFloat_",
+        "PointDouble_",
+        "PointFloat_",
+        "LineFloat_",
+        "CircleFloat_",
+        "LineDouble_",
+        "BoxDouble_"
+    ],
+    "CircleFloat_": [
+        "BoxFloat_",
+        "PointDouble_",
+        "PointFloat_",
+        "LineFloat_",
+        "CircleDouble_",
+        "LineDouble_",
+        "BoxDouble_"
+    ],
+    "LineDouble_": [
+        "BoxFloat_",
+        "PointDouble_",
+        "PointFloat_",
+        "LineFloat_",
+        "CircleDouble_",
+        "CircleFloat_",
+        "BoxDouble_"
+    ],
+    "BoxDouble_": [
+        "BoxFloat_",
+        "PointDouble_",
+        "PointFloat_",
+        "LineFloat_",
+        "CircleDouble_",
+        "CircleFloat_",
+        "LineDouble_"
+    ],
+    "Tree_": [
+        "Geometry_",
+        "Bounds_",
+        "Entry_",
+        "Context_",
+        "Node_"
+    ],
+    "Geometry_": [
+        "Tree_",
+        "Bounds_",
+        "Entry_",
+        "Context_",
+        "Node_"
+    ],
+    "Bounds_": [
+        "Tree_",
+        "Geometry_",
+        "Entry_",
+        "Context_",
+        "Node_"
+    ],
+    "Entry_": [
+        "Tree_",
+        "Geometry_",
+        "Bounds_",
+        "Context_",
+        "Node_"
+    ],
+    "Context_": [
+        "Tree_",
+        "Geometry_",
+        "Bounds_",
+        "Entry_",
+        "Node_"
+    ],
+    "Node_": [
+        "Tree_",
+        "Geometry_",
+        "Bounds_",
+        "Entry_",
+        "Context_"
+    ]
+}

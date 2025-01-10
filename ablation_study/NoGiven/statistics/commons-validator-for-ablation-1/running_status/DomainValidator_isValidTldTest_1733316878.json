@@ -1,0 +1,1 @@
+{"name": "DomainValidator_isValidTldTest", "status": "coverage get success", "coverage_result": {"isValidTld": [{"Instruction Coverage": 1.0}, {"Branch Coverage": 0.9}, {"Line Coverage": 1.0}]}}

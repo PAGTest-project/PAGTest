@@ -1,0 +1,274 @@
+{
+    "inherit_relations": [
+        [
+            "GuavaTestlibTest",
+            "TestCase"
+        ],
+        [
+            "CatchAndRethrowClosureTest",
+            "AbstractClosureTest"
+        ],
+        [
+            "IndexExtractorFromSimpleBloomFilterTest",
+            "AbstractIndexExtractorTest"
+        ],
+        [
+            "BitMapExtractorFromWrappedBloomFilterTest",
+            "AbstractBitMapExtractorTest"
+        ],
+        [
+            "CellExtractorFromDefaultIndexExtractorTest",
+            "AbstractCellExtractorTest"
+        ],
+        [
+            "CellExtractorFromLayeredBloomFilterTest",
+            "AbstractCellExtractorTest"
+        ],
+        [
+            "IndexExtractorFromArrayCountingBloomFilterTest",
+            "AbstractIndexExtractorTest"
+        ],
+        [
+            "IndexExtractorFromUniqueHasherTest",
+            "AbstractIndexExtractorTest"
+        ],
+        [
+            "BitMapExtractorFromArrayCountingBloomFilterTest",
+            "AbstractBitMapExtractorTest"
+        ],
+        [
+            "IndexExtractorFromIntArrayTest",
+            "AbstractIndexExtractorTest"
+        ],
+        [
+            "BloomFilteExtractorFromLayeredBloomFilterTest",
+            "AbstractBloomFilterExtractorTest"
+        ],
+        [
+            "IndexExtractorFromSparseBloomFilterTest",
+            "AbstractIndexExtractorTest"
+        ],
+        [
+            "IndexExtractorFromHasherTest",
+            "AbstractIndexExtractorTest"
+        ],
+        [
+            "BitMapExtractorFromSparseBloomFilterTest",
+            "AbstractBitMapExtractorTest"
+        ],
+        [
+            "BitMapExtractorFromSimpleBloomFilterTest",
+            "AbstractBitMapExtractorTest"
+        ],
+        [
+            "DefaultBloomFilterExtractorTest",
+            "AbstractBloomFilterExtractorTest"
+        ],
+        [
+            "BloomFilterExtractorFromBloomFilterArrayTest",
+            "AbstractBloomFilterExtractorTest"
+        ],
+        [
+            "CellExtractorFromArrayCountingBloomFilterTest",
+            "AbstractCellExtractorTest"
+        ],
+        [
+            "BitMapExtractorFromLayeredBloomFilterTest",
+            "AbstractBitMapExtractorTest"
+        ],
+        [
+            "DefaultCellExtractorTest",
+            "AbstractCellExtractorTest"
+        ],
+        [
+            "FunctorException",
+            "RuntimeException"
+        ],
+        [
+            "OrderedProperties",
+            "Properties"
+        ],
+        [
+            "SortedProperties",
+            "Properties"
+        ]
+    ],
+    "childs": {
+        "TestCase": [
+            "GuavaTestlibTest"
+        ],
+        "AbstractClosureTest": [
+            "CatchAndRethrowClosureTest"
+        ],
+        "AbstractIndexExtractorTest": [
+            "IndexExtractorFromSimpleBloomFilterTest",
+            "IndexExtractorFromArrayCountingBloomFilterTest",
+            "IndexExtractorFromUniqueHasherTest",
+            "IndexExtractorFromIntArrayTest",
+            "IndexExtractorFromSparseBloomFilterTest",
+            "IndexExtractorFromHasherTest"
+        ],
+        "AbstractBitMapExtractorTest": [
+            "BitMapExtractorFromWrappedBloomFilterTest",
+            "BitMapExtractorFromArrayCountingBloomFilterTest",
+            "BitMapExtractorFromSparseBloomFilterTest",
+            "BitMapExtractorFromSimpleBloomFilterTest",
+            "BitMapExtractorFromLayeredBloomFilterTest"
+        ],
+        "AbstractCellExtractorTest": [
+            "CellExtractorFromDefaultIndexExtractorTest",
+            "CellExtractorFromLayeredBloomFilterTest",
+            "CellExtractorFromArrayCountingBloomFilterTest",
+            "DefaultCellExtractorTest"
+        ],
+        "AbstractBloomFilterExtractorTest": [
+            "BloomFilteExtractorFromLayeredBloomFilterTest",
+            "DefaultBloomFilterExtractorTest",
+            "BloomFilterExtractorFromBloomFilterArrayTest"
+        ],
+        "RuntimeException": [
+            "FunctorException"
+        ],
+        "Properties": [
+            "OrderedProperties",
+            "SortedProperties"
+        ]
+    },
+    "parents": {
+        "GuavaTestlibTest": "TestCase",
+        "CatchAndRethrowClosureTest": "AbstractClosureTest",
+        "IndexExtractorFromSimpleBloomFilterTest": "AbstractIndexExtractorTest",
+        "BitMapExtractorFromWrappedBloomFilterTest": "AbstractBitMapExtractorTest",
+        "CellExtractorFromDefaultIndexExtractorTest": "AbstractCellExtractorTest",
+        "CellExtractorFromLayeredBloomFilterTest": "AbstractCellExtractorTest",
+        "IndexExtractorFromArrayCountingBloomFilterTest": "AbstractIndexExtractorTest",
+        "IndexExtractorFromUniqueHasherTest": "AbstractIndexExtractorTest",
+        "BitMapExtractorFromArrayCountingBloomFilterTest": "AbstractBitMapExtractorTest",
+        "IndexExtractorFromIntArrayTest": "AbstractIndexExtractorTest",
+        "BloomFilteExtractorFromLayeredBloomFilterTest": "AbstractBloomFilterExtractorTest",
+        "IndexExtractorFromSparseBloomFilterTest": "AbstractIndexExtractorTest",
+        "IndexExtractorFromHasherTest": "AbstractIndexExtractorTest",
+        "BitMapExtractorFromSparseBloomFilterTest": "AbstractBitMapExtractorTest",
+        "BitMapExtractorFromSimpleBloomFilterTest": "AbstractBitMapExtractorTest",
+        "DefaultBloomFilterExtractorTest": "AbstractBloomFilterExtractorTest",
+        "BloomFilterExtractorFromBloomFilterArrayTest": "AbstractBloomFilterExtractorTest",
+        "CellExtractorFromArrayCountingBloomFilterTest": "AbstractCellExtractorTest",
+        "BitMapExtractorFromLayeredBloomFilterTest": "AbstractBitMapExtractorTest",
+        "DefaultCellExtractorTest": "AbstractCellExtractorTest",
+        "FunctorException": "RuntimeException",
+        "OrderedProperties": "Properties",
+        "SortedProperties": "Properties"
+    },
+    "brother_relations": {
+        "IndexExtractorFromSimpleBloomFilterTest": [
+            "IndexExtractorFromArrayCountingBloomFilterTest",
+            "IndexExtractorFromUniqueHasherTest",
+            "IndexExtractorFromIntArrayTest",
+            "IndexExtractorFromSparseBloomFilterTest",
+            "IndexExtractorFromHasherTest"
+        ],
+        "IndexExtractorFromArrayCountingBloomFilterTest": [
+            "IndexExtractorFromSimpleBloomFilterTest",
+            "IndexExtractorFromUniqueHasherTest",
+            "IndexExtractorFromIntArrayTest",
+            "IndexExtractorFromSparseBloomFilterTest",
+            "IndexExtractorFromHasherTest"
+        ],
+        "IndexExtractorFromUniqueHasherTest": [
+            "IndexExtractorFromSimpleBloomFilterTest",
+            "IndexExtractorFromArrayCountingBloomFilterTest",
+            "IndexExtractorFromIntArrayTest",
+            "IndexExtractorFromSparseBloomFilterTest",
+            "IndexExtractorFromHasherTest"
+        ],
+        "IndexExtractorFromIntArrayTest": [
+            "IndexExtractorFromSimpleBloomFilterTest",
+            "IndexExtractorFromArrayCountingBloomFilterTest",
+            "IndexExtractorFromUniqueHasherTest",
+            "IndexExtractorFromSparseBloomFilterTest",
+            "IndexExtractorFromHasherTest"
+        ],
+        "IndexExtractorFromSparseBloomFilterTest": [
+            "IndexExtractorFromSimpleBloomFilterTest",
+            "IndexExtractorFromArrayCountingBloomFilterTest",
+            "IndexExtractorFromUniqueHasherTest",
+            "IndexExtractorFromIntArrayTest",
+            "IndexExtractorFromHasherTest"
+        ],
+        "IndexExtractorFromHasherTest": [
+            "IndexExtractorFromSimpleBloomFilterTest",
+            "IndexExtractorFromArrayCountingBloomFilterTest",
+            "IndexExtractorFromUniqueHasherTest",
+            "IndexExtractorFromIntArrayTest",
+            "IndexExtractorFromSparseBloomFilterTest"
+        ],
+        "BitMapExtractorFromWrappedBloomFilterTest": [
+            "BitMapExtractorFromArrayCountingBloomFilterTest",
+            "BitMapExtractorFromSparseBloomFilterTest",
+            "BitMapExtractorFromSimpleBloomFilterTest",
+            "BitMapExtractorFromLayeredBloomFilterTest"
+        ],
+        "BitMapExtractorFromArrayCountingBloomFilterTest": [
+            "BitMapExtractorFromWrappedBloomFilterTest",
+            "BitMapExtractorFromSparseBloomFilterTest",
+            "BitMapExtractorFromSimpleBloomFilterTest",
+            "BitMapExtractorFromLayeredBloomFilterTest"
+        ],
+        "BitMapExtractorFromSparseBloomFilterTest": [
+            "BitMapExtractorFromWrappedBloomFilterTest",
+            "BitMapExtractorFromArrayCountingBloomFilterTest",
+            "BitMapExtractorFromSimpleBloomFilterTest",
+            "BitMapExtractorFromLayeredBloomFilterTest"
+        ],
+        "BitMapExtractorFromSimpleBloomFilterTest": [
+            "BitMapExtractorFromWrappedBloomFilterTest",
+            "BitMapExtractorFromArrayCountingBloomFilterTest",
+            "BitMapExtractorFromSparseBloomFilterTest",
+            "BitMapExtractorFromLayeredBloomFilterTest"
+        ],
+        "BitMapExtractorFromLayeredBloomFilterTest": [
+            "BitMapExtractorFromWrappedBloomFilterTest",
+            "BitMapExtractorFromArrayCountingBloomFilterTest",
+            "BitMapExtractorFromSparseBloomFilterTest",
+            "BitMapExtractorFromSimpleBloomFilterTest"
+        ],
+        "CellExtractorFromDefaultIndexExtractorTest": [
+            "CellExtractorFromLayeredBloomFilterTest",
+            "CellExtractorFromArrayCountingBloomFilterTest",
+            "DefaultCellExtractorTest"
+        ],
+        "CellExtractorFromLayeredBloomFilterTest": [
+            "CellExtractorFromDefaultIndexExtractorTest",
+            "CellExtractorFromArrayCountingBloomFilterTest",
+            "DefaultCellExtractorTest"
+        ],
+        "CellExtractorFromArrayCountingBloomFilterTest": [
+            "CellExtractorFromDefaultIndexExtractorTest",
+            "CellExtractorFromLayeredBloomFilterTest",
+            "DefaultCellExtractorTest"
+        ],
+        "DefaultCellExtractorTest": [
+            "CellExtractorFromDefaultIndexExtractorTest",
+            "CellExtractorFromLayeredBloomFilterTest",
+            "CellExtractorFromArrayCountingBloomFilterTest"
+        ],
+        "BloomFilteExtractorFromLayeredBloomFilterTest": [
+            "DefaultBloomFilterExtractorTest",
+            "BloomFilterExtractorFromBloomFilterArrayTest"
+        ],
+        "DefaultBloomFilterExtractorTest": [
+            "BloomFilteExtractorFromLayeredBloomFilterTest",
+            "BloomFilterExtractorFromBloomFilterArrayTest"
+        ],
+        "BloomFilterExtractorFromBloomFilterArrayTest": [
+            "BloomFilteExtractorFromLayeredBloomFilterTest",
+            "DefaultBloomFilterExtractorTest"
+        ],
+        "OrderedProperties": [
+            "SortedProperties"
+        ],
+        "SortedProperties": [
+            "OrderedProperties"
+        ]
+    }
+}

@@ -1,0 +1,69 @@
+name: Triggered Release
+on:
+  workflow_dispatch:
+    inputs:
+      releaseVersion:
+        description: 'Default version to use when preparing a release or a branch.'
+        required: true
+      developmentVersion:
+        description: 'Default version to use for new local working copy.'
+        required: true
+env:
+  OSS_USERNAME: ${{ secrets.OSS_USERNAME }}
+  OSS_PASSWORD: ${{ secrets.OSS_PASSWORD }}
+  GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 11
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: 11
+          cache: 'maven'
+          # Value of the distributionManagement/repository/id field of the pom.xml
+          server-id: sonatype-nexus-staging
+          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+          server-username: OSS_USERNAME
+          server-password: OSS_PASSWORD
+          gpg-passphrase: GPG_PASSPHRASE
+      - name: Setup Git
+        run: |
+          git config --global committer.email "noreply@github.com"
+          git config --global committer.name "GitHub Release"
+          git config --global author.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git config --global author.name "${GITHUB_ACTOR}"
+      - name: Release
+        run: ./mvnw -V -B -ntp -Prelease -DreleaseVersion=${{ github.event.inputs.releaseVersion }} -DdevelopmentVersion=${{ github.event.inputs.developmentVersion }} release:prepare release:perform
+      - name: Rollback on failure
+        if: ${{ failure() }}
+        run: |
+          ./mvnw -B release:rollback -Prelease -Dgpg.passphrase=${{secrets.GPG_PASSPHRASE}}
+          echo "You may need to manually delete the GitHub tag, if it was created."
+  docker:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.releaseVersion }}
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Login to DockerHub
+        uses: docker/login-action@v3 
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+      - name: Build & Push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          platforms: linux/amd64,linux/arm64
+          tags: |
+            openapitools/openapi-diff:${{ github.event.inputs.releaseVersion }}
+            openapitools/openapi-diff:latest

@@ -1,0 +1,23 @@
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+charset = utf-8
+
+# Matches multiple files with brace expansion notation
+# Set default charset
+[*.{java,kt}]
+indent_size = 4
+
+[*.java]
+# Disabling wildcard imports on Intellij IDE.
+# See https://www.jetbrains.com/help/idea/creating-and-optimizing-imports.html#disable-wildcards-for-class for details
+ij_java_class_count_to_use_import_on_demand = 999
+ij_java_names_count_to_use_import_on_demand = 999
+
+[*.yml]
+indent_size = 2

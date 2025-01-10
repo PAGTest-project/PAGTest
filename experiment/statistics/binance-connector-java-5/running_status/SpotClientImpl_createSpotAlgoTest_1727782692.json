@@ -1,0 +1,1 @@
+{"name": "SpotClientImpl_createSpotAlgoTest", "status": "coverage get success", "coverage_result": {"createSpotAlgo": [{"Instruction Coverage": 1.0}, {"Branch Coverage": -1.0}, {"Line Coverage": 1.0}]}}

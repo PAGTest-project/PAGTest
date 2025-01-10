@@ -1,0 +1,1 @@
+[{"strategy": "generate", "code": "\npackage org.jsoup.select;\n\nimport org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\npublic class QueryParser_toStringTest {\n\n    @Test\n    public void testToString() {\n        QueryParser parser = new QueryParser(\"div.class\");\n        assertEquals(\"div.class\", parser.toString());\n    }\n}\n"}]

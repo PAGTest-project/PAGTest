@@ -1,0 +1,104 @@
+{
+    "inherit_relations": [
+        [
+            "UnrecognizedOptionException",
+            "ParseException"
+        ],
+        [
+            "MissingArgumentException",
+            "ParseException"
+        ],
+        [
+            "BasicParser",
+            "Parser"
+        ],
+        [
+            "AlreadySelectedException",
+            "ParseException"
+        ],
+        [
+            "ParseException",
+            "Exception"
+        ],
+        [
+            "AmbiguousOptionException",
+            "UnrecognizedOptionException"
+        ],
+        [
+            "PosixParser",
+            "Parser"
+        ],
+        [
+            "MissingOptionException",
+            "ParseException"
+        ],
+        [
+            "GnuParser",
+            "Parser"
+        ]
+    ],
+    "childs": {
+        "ParseException": [
+            "UnrecognizedOptionException",
+            "MissingArgumentException",
+            "AlreadySelectedException",
+            "MissingOptionException"
+        ],
+        "Parser": [
+            "BasicParser",
+            "PosixParser",
+            "GnuParser"
+        ],
+        "Exception": [
+            "ParseException"
+        ],
+        "UnrecognizedOptionException": [
+            "AmbiguousOptionException"
+        ]
+    },
+    "parents": {
+        "UnrecognizedOptionException": "ParseException",
+        "MissingArgumentException": "ParseException",
+        "BasicParser": "Parser",
+        "AlreadySelectedException": "ParseException",
+        "ParseException": "Exception",
+        "AmbiguousOptionException": "UnrecognizedOptionException",
+        "PosixParser": "Parser",
+        "MissingOptionException": "ParseException",
+        "GnuParser": "Parser"
+    },
+    "brother_relations": {
+        "UnrecognizedOptionException": [
+            "MissingArgumentException",
+            "AlreadySelectedException",
+            "MissingOptionException"
+        ],
+        "MissingArgumentException": [
+            "UnrecognizedOptionException",
+            "AlreadySelectedException",
+            "MissingOptionException"
+        ],
+        "AlreadySelectedException": [
+            "UnrecognizedOptionException",
+            "MissingArgumentException",
+            "MissingOptionException"
+        ],
+        "MissingOptionException": [
+            "UnrecognizedOptionException",
+            "MissingArgumentException",
+            "AlreadySelectedException"
+        ],
+        "BasicParser": [
+            "PosixParser",
+            "GnuParser"
+        ],
+        "PosixParser": [
+            "BasicParser",
+            "GnuParser"
+        ],
+        "GnuParser": [
+            "BasicParser",
+            "PosixParser"
+        ]
+    }
+}

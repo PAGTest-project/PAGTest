@@ -1,0 +1,18 @@
+version: 2
+
+updates:
+  - package-ecosystem: maven
+    directory: /
+    schedule:
+      interval: weekly
+    ignore:
+      # Jetty 9.x needed for JDK8 compatibility; it still receives security updates. Only used in tests.
+      - dependency-name: "org.eclipse.jetty:jetty-server"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "org.eclipse.jetty:jetty-servlet"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

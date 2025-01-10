@@ -1,0 +1,1 @@
+{"name": "FakeValuesService_fetchTest", "status": "coverage get success", "coverage_result": {"fetch": [{"Instruction Coverage": 0.38461538461538464}, {"Branch Coverage": 0.25}, {"Line Coverage": 0.45454545454545453}]}}

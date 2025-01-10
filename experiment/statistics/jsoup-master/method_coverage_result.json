@@ -1,0 +1,702 @@
+[
+    {
+        "class": "Jsoup",
+        "method": "newSession",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Validate",
+        "method": "notEmptyParam",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Validate",
+        "method": "notNullParam",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Document",
+        "method": "createShell",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Document",
+        "method": "expectForm",
+        "instruction_coverage": 0.6774193548387096,
+        "branch_coverage": 1.0,
+        "line_coverage": 0.6
+    },
+    {
+        "class": "Document",
+        "method": "documentType",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Parser",
+        "method": "setTrackPosition",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Parser",
+        "method": "setTreeBuilder",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Parser",
+        "method": "parseXmlFragment",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Parser",
+        "method": "setTrackErrors",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Element",
+        "method": "appendText",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Element",
+        "method": "forEach",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Element",
+        "method": "getElementsByAttributeStarting",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Element",
+        "method": "cssSelector",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 0.9166666666666666,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Element",
+        "method": "previousElementSibling",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Element",
+        "method": "prependText",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Element",
+        "method": "getElementById",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Element",
+        "method": "getElementsByTag",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Element",
+        "method": "prependChild",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Element",
+        "method": "firstElementChild",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Element",
+        "method": "elementSiblingIndex",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Element",
+        "method": "lastElementChild",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Element",
+        "method": "nextElementSibling",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Element",
+        "method": "appendTo",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Element",
+        "method": "getElementsByClass",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Element",
+        "method": "siblingElements",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Element",
+        "method": "getElementsByAttribute",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Element",
+        "method": "lastElementSibling",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Element",
+        "method": "appendChild",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TextNode",
+        "method": "splitText",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TextNode",
+        "method": "getWholeText",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Elements",
+        "method": "removeIf",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Elements",
+        "method": "eachAttr",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Elements",
+        "method": "eachText",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Attributes",
+        "method": "hasKeyIgnoreCase",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Attributes",
+        "method": "removeIgnoreCase",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Attributes",
+        "method": "size",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Attributes",
+        "method": "hasDeclaredValueForKey",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Attributes",
+        "method": "hasDeclaredValueForKeyIgnoreCase",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Attributes",
+        "method": "getIgnoreCase",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Attributes",
+        "method": "asList",
+        "instruction_coverage": 0.9166666666666666,
+        "branch_coverage": 0.8333333333333334,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Attributes",
+        "method": "hasKey",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Tag",
+        "method": "formatAsBlock",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Tag",
+        "method": "isSelfClosing",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Tag",
+        "method": "namespace",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Tag",
+        "method": "isInline",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Safelist",
+        "method": "getEnforcedAttributes",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Safelist",
+        "method": "addTags",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Safelist",
+        "method": "removeEnforcedAttribute",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 0.8333333333333334,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Safelist",
+        "method": "isSafeTag",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Safelist",
+        "method": "addEnforcedAttribute",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Safelist",
+        "method": "isSafeAttribute",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 0.9444444444444444,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Safelist",
+        "method": "addProtocols",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Safelist",
+        "method": "addTags",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Safelist",
+        "method": "removeTags",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Safelist",
+        "method": "addAttributes",
+        "instruction_coverage": 0.984375,
+        "branch_coverage": 0.75,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Attribute",
+        "method": "setKey",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 0.8333333333333334,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Attribute",
+        "method": "setValue",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Attribute",
+        "method": "isBooleanAttribute",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Attribute",
+        "method": "getValue",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Attribute",
+        "method": "hasDeclaredValue",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Attribute",
+        "method": "getKey",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SoftPool",
+        "method": "borrow",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SoftPool",
+        "method": "release",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "DataNode",
+        "method": "setWholeData",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Comment",
+        "method": "getData",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Comment",
+        "method": "asXmlDeclaration",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Comment",
+        "method": "isXmlDeclaration",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Comment",
+        "method": "setData",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "FormElement",
+        "method": "submit",
+        "instruction_coverage": 0.9772727272727273,
+        "branch_coverage": 0.8333333333333334,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "FormElement",
+        "method": "elements",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "FormElement",
+        "method": "formData",
+        "instruction_coverage": 0.8863636363636364,
+        "branch_coverage": 0.8571428571428571,
+        "line_coverage": 0.8846153846153846
+    },
+    {
+        "class": "StringUtil",
+        "method": "appendNormalisedWhitespace",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "StringUtil",
+        "method": "isInvisibleChar",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "StringUtil",
+        "method": "isAscii",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "StringUtil",
+        "method": "startsWithNewline",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "StringUtil",
+        "method": "isWhitespace",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "StringUtil",
+        "method": "isActuallyWhitespace",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "StringUtil",
+        "method": "joining",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "StringUtil",
+        "method": "isNumeric",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TokenQueue",
+        "method": "consumeCssIdentifier",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TokenQueue",
+        "method": "chompBalanced",
+        "instruction_coverage": 0.9743589743589743,
+        "branch_coverage": 0.9565217391304348,
+        "line_coverage": 0.972972972972973
+    },
+    {
+        "class": "TokenQueue",
+        "method": "consumeWhitespace",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TokenQueue",
+        "method": "remainder",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TokenQueue",
+        "method": "chompTo",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TokenQueue",
+        "method": "chompToIgnoreCase",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TokenQueue",
+        "method": "matchChomp",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TokenQueue",
+        "method": "consumeToIgnoreCase",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TokenQueue",
+        "method": "consumeElementSelector",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TokenQueue",
+        "method": "consumeWord",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TokenQueue",
+        "method": "escapeCssIdentifier",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TokenQueue",
+        "method": "addFirst",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Entities",
+        "method": "getByName",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "NodeIterator",
+        "method": "hasNext",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "NodeIterator",
+        "method": "from",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "NodeIterator",
+        "method": "from",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "NodeIterator",
+        "method": "from",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "NodeIterator",
+        "method": "from",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "NodeIterator",
+        "method": "restart",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "DataUtil",
+        "method": "streamParser",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    }
+]

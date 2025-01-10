@@ -1,0 +1,1 @@
+{"name": "StaticBucketMap_removeTest", "status": "coverage get success", "coverage_result": {"remove": [{"Instruction Coverage": 0.84375}, {"Branch Coverage": 0.6666666666666666}, {"Line Coverage": 0.8}]}}

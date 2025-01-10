@@ -1,0 +1,1 @@
+[{"strategy": "generate", "code": "\npackage org.jsoup.nodes;\n\nimport org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\npublic class Document_nodeNameTest {\n\n    @Test\n    public void testNodeName() {\n        Document doc = new Document(\"https://example.com/\");\n        assertEquals(\"#document\", doc.nodeName());\n    }\n}\n"}]

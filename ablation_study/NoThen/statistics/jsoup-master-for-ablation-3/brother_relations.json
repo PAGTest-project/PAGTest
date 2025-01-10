@@ -1,0 +1,134 @@
+{
+    "DeflateServlet": [
+        "InterruptedServlet",
+        "RedirectServlet",
+        "CookieServlet",
+        "FileServlet",
+        "EchoServlet",
+        "SlowRider",
+        "HelloServlet"
+    ],
+    "InterruptedServlet": [
+        "DeflateServlet",
+        "RedirectServlet",
+        "CookieServlet",
+        "FileServlet",
+        "EchoServlet",
+        "SlowRider",
+        "HelloServlet"
+    ],
+    "RedirectServlet": [
+        "DeflateServlet",
+        "InterruptedServlet",
+        "CookieServlet",
+        "FileServlet",
+        "EchoServlet",
+        "SlowRider",
+        "HelloServlet"
+    ],
+    "CookieServlet": [
+        "DeflateServlet",
+        "InterruptedServlet",
+        "RedirectServlet",
+        "FileServlet",
+        "EchoServlet",
+        "SlowRider",
+        "HelloServlet"
+    ],
+    "FileServlet": [
+        "DeflateServlet",
+        "InterruptedServlet",
+        "RedirectServlet",
+        "CookieServlet",
+        "EchoServlet",
+        "SlowRider",
+        "HelloServlet"
+    ],
+    "EchoServlet": [
+        "DeflateServlet",
+        "InterruptedServlet",
+        "RedirectServlet",
+        "CookieServlet",
+        "FileServlet",
+        "SlowRider",
+        "HelloServlet"
+    ],
+    "SlowRider": [
+        "DeflateServlet",
+        "InterruptedServlet",
+        "RedirectServlet",
+        "CookieServlet",
+        "FileServlet",
+        "EchoServlet",
+        "HelloServlet"
+    ],
+    "HelloServlet": [
+        "DeflateServlet",
+        "InterruptedServlet",
+        "RedirectServlet",
+        "CookieServlet",
+        "FileServlet",
+        "EchoServlet",
+        "SlowRider"
+    ],
+    "HttpStatusException": [
+        "UnsupportedMimeTypeException"
+    ],
+    "UnsupportedMimeTypeException": [
+        "HttpStatusException"
+    ],
+    "XmlTreeBuilder": [
+        "HtmlTreeBuilder"
+    ],
+    "HtmlTreeBuilder": [
+        "XmlTreeBuilder"
+    ],
+    "SimpleBufferedInput": [
+        "ControllableInputStream"
+    ],
+    "ControllableInputStream": [
+        "SimpleBufferedInput"
+    ],
+    "Comment": [
+        "DocumentType",
+        "TextNode",
+        "XmlDeclaration",
+        "DataNode"
+    ],
+    "DocumentType": [
+        "Comment",
+        "TextNode",
+        "XmlDeclaration",
+        "DataNode"
+    ],
+    "TextNode": [
+        "Comment",
+        "DocumentType",
+        "XmlDeclaration",
+        "DataNode"
+    ],
+    "XmlDeclaration": [
+        "Comment",
+        "DocumentType",
+        "TextNode",
+        "DataNode"
+    ],
+    "DataNode": [
+        "Comment",
+        "DocumentType",
+        "TextNode",
+        "XmlDeclaration"
+    ],
+    "PseudoTextElement": [
+        "FormElement",
+        "Document"
+    ],
+    "FormElement": [
+        "PseudoTextElement",
+        "Document"
+    ],
+    "Document": [
+        "PseudoTextElement",
+        "FormElement"
+    ]
+}

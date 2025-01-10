@@ -1,0 +1,76 @@
+{
+    "target_method": "retainAll",
+    "signature": "boolean retainAll(Collection<?>)",
+    "direct_enhancements": [
+        {
+            "method_name": "removeAll(Collection<?>)",
+            "relation_type": "Behavioral Similarity",
+            "confidence": 0.9,
+            "reason": "Both methods modify the bag by removing elements based on a collection, but retainAll keeps elements that are in the collection while removeAll removes them.",
+            "is_external": false
+        },
+        {
+            "method_name": "containsAll(Collection<?>)",
+            "relation_type": "Structural Similarity",
+            "confidence": 0.85,
+            "reason": "Both methods iterate over a collection and perform operations based on the elements' presence in the bag.",
+            "is_external": false
+        },
+        {
+            "method_name": "addAll(Collection<? extends E>)",
+            "relation_type": "Substitutability",
+            "confidence": 0.7,
+            "reason": "Both methods involve operations on a collection, but addAll adds elements while retainAll modifies the bag's contents based on the collection.",
+            "is_external": false
+        },
+        {
+            "method_name": "readObject(ObjectInputStream)",
+            "relation_type": "Resource Access Similarity",
+            "confidence": 0.6,
+            "reason": "Both methods handle input streams and involve deserialization, though retainAll is focused on collection operations.",
+            "is_external": false
+        },
+        {
+            "method_name": "writeObject(ObjectOutputStream)",
+            "relation_type": "Resource Access Similarity",
+            "confidence": 0.6,
+            "reason": "Both methods handle output streams and involve serialization, though retainAll is focused on collection operations.",
+            "is_external": false
+        }
+    ],
+    "gwt_enhancements": {
+        "Given": {
+            "enhanced_by": [
+                {
+                    "method_name": "initializeBag(SortedBag<E>)",
+                    "relation_type": "State Change Similarity",
+                    "confidence": 0.8,
+                    "reason": "Both methods require a bag to be initialized before performing operations.",
+                    "is_external": false
+                }
+            ]
+        },
+        "When": {
+            "enhanced_by": [
+                {
+                    "method_name": "setupEnvironment()",
+                    "relation_type": "Resource Access Similarity",
+                    "confidence": 0.6,
+                    "reason": "Environment setup is required before performing collection operations.",
+                    "is_external": false
+                }
+            ]
+        },
+        "Then": {
+            "enhanced_by": [
+                {
+                    "method_name": "verifyBagContents()",
+                    "relation_type": "Exception Handling Similarity",
+                    "confidence": 0.85,
+                    "reason": "Both methods verify the contents of the bag and handle similar exceptions.",
+                    "is_external": false
+                }
+            ]
+        }
+    }
+}

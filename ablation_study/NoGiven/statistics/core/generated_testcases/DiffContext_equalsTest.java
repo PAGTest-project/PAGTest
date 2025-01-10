@@ -1,0 +1,62 @@
+
+package org.openapitools.openapidiff.core.model;
+
+import io.swagger.v3.oas.models.PathItem;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.junit.jupiter.api.Test;
+import org.openapitools.openapidiff.core.compare.OpenApiDiffOptions;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+public class DiffContext_equalsTest {
+
+    @Test
+    public void testEquals_SameInstance() {
+        DiffContext context = new DiffContext(new OpenApiDiffOptions(new org.apache.commons.configuration2.CompositeConfiguration()));
+        assertTrue(context.equals(context));
+    }
+
+    @Test
+    public void testEquals_DifferentClass() {
+        DiffContext context = new DiffContext(new OpenApiDiffOptions(new org.apache.commons.configuration2.CompositeConfiguration()));
+        assertFalse(context.equals(new Object()));
+    }
+
+    @Test
+    public void testEquals_DifferentState() {
+        DiffContext context1 = new DiffContext(new OpenApiDiffOptions(new org.apache.commons.configuration2.CompositeConfiguration()))
+                .setUrl("url1")
+                .setParameters(new HashMap<>(Map.of("param1", "value1")))
+                .copyWithMethod(PathItem.HttpMethod.GET)
+                .copyWithRequired(true);
+
+        DiffContext context2 = new DiffContext(new OpenApiDiffOptions(new org.apache.commons.configuration2.CompositeConfiguration()))
+                .setUrl("url2")
+                .setParameters(new HashMap<>(Map.of("param2", "value2")))
+                .copyWithMethod(PathItem.HttpMethod.POST)
+                .copyWithRequired(false);
+
+        assertFalse(context1.equals(context2));
+    }
+
+    @Test
+    public void testEquals_SameState() {
+        DiffContext context1 = new DiffContext(new OpenApiDiffOptions(new org.apache.commons.configuration2.CompositeConfiguration()))
+                .setUrl("url")
+                .setParameters(new HashMap<>(Map.of("param", "value")))
+                .copyWithMethod(PathItem.HttpMethod.GET)
+                .copyWithRequired(true);
+
+        DiffContext context2 = new DiffContext(new OpenApiDiffOptions(new org.apache.commons.configuration2.CompositeConfiguration()))
+                .setUrl("url")
+                .setParameters(new HashMap<>(Map.of("param", "value")))
+                .copyWithMethod(PathItem.HttpMethod.GET)
+                .copyWithRequired(true);
+
+        assertTrue(context1.equals(context2));
+    }
+}

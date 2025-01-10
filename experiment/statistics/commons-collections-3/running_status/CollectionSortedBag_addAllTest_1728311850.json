@@ -1,0 +1,1 @@
+{"name": "CollectionSortedBag_addAllTest", "status": "coverage get success", "coverage_result": {"addAll": [{"Instruction Coverage": 0.9285714285714286}, {"Branch Coverage": 0.8333333333333334}, {"Line Coverage": 1.0}]}}

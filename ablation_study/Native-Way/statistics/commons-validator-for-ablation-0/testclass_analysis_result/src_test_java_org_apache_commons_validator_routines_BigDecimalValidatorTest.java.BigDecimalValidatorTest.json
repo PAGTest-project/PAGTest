@@ -1,0 +1,168 @@
+{
+    "file_path": "src/test/java/org/apache/commons/validator/routines/BigDecimalValidatorTest.java",
+    "testclass_name": "BigDecimalValidatorTest",
+    "dependencies": [
+        "package org.apache.commons.validator.routines;",
+        "import static org.junit.jupiter.api.Assertions.assertEquals;",
+        "import static org.junit.jupiter.api.Assertions.assertFalse;",
+        "import static org.junit.jupiter.api.Assertions.assertNull;",
+        "import static org.junit.jupiter.api.Assertions.assertTrue;",
+        "import java.math.BigDecimal;",
+        "import java.util.Locale;",
+        "import org.junit.jupiter.api.BeforeEach;",
+        "import org.junit.jupiter.api.Test;"
+    ],
+    "name": "BigDecimalValidatorTest",
+    "description": "Unit tests for BigDecimalValidator, focusing on range checks and validation methods.",
+    "class_members": {
+        "variables": [
+            {
+                "name": "validator",
+                "type": "BigDecimalValidator"
+            },
+            {
+                "name": "strictValidator",
+                "type": "BigDecimalValidator"
+            },
+            {
+                "name": "testPattern",
+                "type": "String"
+            },
+            {
+                "name": "max",
+                "type": "BigDecimal"
+            },
+            {
+                "name": "maxPlusOne",
+                "type": "BigDecimal"
+            },
+            {
+                "name": "min",
+                "type": "BigDecimal"
+            },
+            {
+                "name": "minMinusOne",
+                "type": "BigDecimal"
+            },
+            {
+                "name": "invalidStrict",
+                "type": "String[]"
+            },
+            {
+                "name": "invalid",
+                "type": "String[]"
+            },
+            {
+                "name": "testNumber",
+                "type": "BigDecimal"
+            },
+            {
+                "name": "testZero",
+                "type": "BigDecimal"
+            },
+            {
+                "name": "validStrict",
+                "type": "String[]"
+            },
+            {
+                "name": "validStrictCompare",
+                "type": "Number[]"
+            },
+            {
+                "name": "valid",
+                "type": "String[]"
+            },
+            {
+                "name": "validCompare",
+                "type": "Number[]"
+            },
+            {
+                "name": "testStringUS",
+                "type": "String"
+            },
+            {
+                "name": "testStringDE",
+                "type": "String"
+            },
+            {
+                "name": "localeValue",
+                "type": "String"
+            },
+            {
+                "name": "localePattern",
+                "type": "String"
+            },
+            {
+                "name": "testLocale",
+                "type": "Locale"
+            },
+            {
+                "name": "localeExpected",
+                "type": "BigDecimal"
+            }
+        ],
+        "methods": [],
+        "nested_classes": []
+    },
+    "fixtures": [
+        "setUp"
+    ],
+    "test_cases": [
+        {
+            "name": "testBigDecimalRangeMinMax",
+            "primary_tested": [
+                "BigDecimalValidator.isInRange(BigDecimal,float,float)",
+                "BigDecimalValidator.minValue(BigDecimal,float)",
+                "BigDecimalValidator.maxValue(BigDecimal,float)"
+            ],
+            "external_dependencies": {
+                "modules": [
+                    "BigDecimalValidator",
+                    "BigDecimal"
+                ],
+                "class_members": [
+                    {
+                        "name": "validator",
+                        "type": "variable"
+                    }
+                ]
+            },
+            "category": "unit",
+            "fixtures_used": [
+                "setUp"
+            ],
+            "description": "Tests the range, minimum, and maximum validation methods of BigDecimalValidator."
+        },
+        {
+            "name": "testBigDecimalValidatorMethods",
+            "primary_tested": [
+                "BigDecimalValidator.validate(String)",
+                "BigDecimalValidator.validate(String,Locale)",
+                "BigDecimalValidator.validate(String,String)",
+                "BigDecimalValidator.validate(String,String,Locale)",
+                "BigDecimalValidator.isValid(String)",
+                "BigDecimalValidator.isValid(String,Locale)",
+                "BigDecimalValidator.isValid(String,String)",
+                "BigDecimalValidator.isValid(String,String,Locale)"
+            ],
+            "external_dependencies": {
+                "modules": [
+                    "BigDecimalValidator",
+                    "BigDecimal",
+                    "Locale"
+                ],
+                "class_members": [
+                    {
+                        "name": "validator",
+                        "type": "variable"
+                    }
+                ]
+            },
+            "category": "unit",
+            "fixtures_used": [
+                "setUp"
+            ],
+            "description": "Tests the validation methods of BigDecimalValidator with different locales and patterns."
+        }
+    ]
+}

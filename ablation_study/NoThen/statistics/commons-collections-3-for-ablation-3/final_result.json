@@ -1,0 +1,3237 @@
+{
+    "IndexedCollection.reindex": {
+        "status": "compile error"
+    },
+    "CollatingIterator.next": {
+        "status": "compile error"
+    },
+    "IteratorUtils.find": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IteratorUtils.indexOf": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "MultiMapUtils.getCollection": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "UnmodifiableBag.uniqueSet": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "LinkedMap.indexOf": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "FilterListIterator.next": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "MultiValueMap.putAll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 0.875
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CompositeMap.removeComposited": {
+        "status": "assertion error"
+    },
+    "CompositeMap.equals": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CompositeMap.entrySet": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SetUtils.difference": {
+        "status": "compile error"
+    },
+    "PredicatedBag.add": {
+        "status": "compile error"
+    },
+    "PassiveExpiringMap.containsValue": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ObjectGraphIterator.hasNext": {
+        "status": "compile error"
+    },
+    "FilterIterator.remove": {
+        "status": "assertion error"
+    },
+    "CollectionSortedBag.retainAll": {
+        "status": "compile error"
+    },
+    "SingletonListIterator.set": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "AllPredicate.allPredicate": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "UnmodifiableSortedMap.unmodifiableSortedMap": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SetUtils.intersection": {
+        "status": "compile error"
+    },
+    "CompositeMap.remove": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CircularFifoQueue.iterator": {
+        "status": "assertion error"
+    },
+    "CollatingIterator.setIterator": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ComparatorChain.compare": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 0.8695652173913043
+            },
+            {
+                "Branch Coverage": 0.6
+            },
+            {
+                "Line Coverage": 0.8571428571428571
+            }
+        ]
+    },
+    "UnmodifiableMap.unmodifiableMap": {
+        "status": "compile error"
+    },
+    "CompositeMap.get": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "MultiValueMap.put": {
+        "status": "assertion error"
+    },
+    "IndexedCollection.remove": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CompositeMap.isEmpty": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "FilterIterator.setPredicate": {
+        "status": "assertion error"
+    },
+    "BoundedIterator.remove": {
+        "status": "assertion error"
+    },
+    "ComparatorUtils.chainedComparator": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "TransformedSortedBag.transformedSortedBag": {
+        "status": "assertion error"
+    },
+    "MultiMapUtils.getValuesAsSet": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IteratorUtils.filteredIterator": {
+        "status": "compile error"
+    },
+    "LoopingIterator.next": {
+        "status": "compile error"
+    },
+    "IndexedCollection.removeIf": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CollectionBag.removeAll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 0.9722222222222222
+            },
+            {
+                "Branch Coverage": 0.875
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CompositeCollection.iterator": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ListOrderedMap.toString": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 0.971830985915493
+            },
+            {
+                "Branch Coverage": 0.9
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "PassiveExpiringMap.containsKey": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "UnmodifiableBag.unmodifiableBag": {
+        "status": "compile error"
+    },
+    "TransformedSortedMap.transformingSortedMap": {
+        "status": "assertion error"
+    },
+    "ClosureUtils.ifClosure": {
+        "status": "assertion error"
+    },
+    "CollectionSortedBag.removeAll": {
+        "status": "assertion error"
+    },
+    "ListOrderedMap.clear": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "FixedOrderComparator.addAsEqual": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 0.972972972972973
+            },
+            {
+                "Branch Coverage": 0.75
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IndexedCollection.containsAll": {
+        "status": "compile error"
+    },
+    "StaticBucketMap.hashCode": {
+        "status": "assertion error"
+    },
+    "MultiValueMap.values": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 0.875
+            },
+            {
+                "Branch Coverage": 0.5
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CollectionBag.addAll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 0.9629629629629629
+            },
+            {
+                "Branch Coverage": 0.8333333333333334
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CollectionSortedBag.addAll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 0.9629629629629629
+            },
+            {
+                "Branch Coverage": 0.8333333333333334
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SynchronizedQueue.equals": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 0.29411764705882354
+            },
+            {
+                "Branch Coverage": 0.5
+            },
+            {
+                "Line Coverage": 0.5
+            }
+        ]
+    },
+    "ObjectArrayIterator.next": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "UnmodifiableOrderedMap.values": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "EqualPredicate.equalPredicate": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ListOrderedMap.put": {
+        "status": "assertion error"
+    },
+    "BoundedIterator.hasNext": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CircularFifoQueue.peek": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CompositeMap.put": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ListOrderedMap.putAll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "FixedOrderComparator.compare": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 0.8375
+            },
+            {
+                "Branch Coverage": 0.9444444444444444
+            },
+            {
+                "Line Coverage": 0.9090909090909091
+            }
+        ]
+    },
+    "ObjectGraphIterator.next": {
+        "status": "compile error"
+    },
+    "CompositeMap.containsValue": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "MultiValueMap.clear": {
+        "status": "compile error"
+    },
+    "FixedOrderComparator.add": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IteratorUtils.asIterator": {
+        "status": "compile error"
+    },
+    "ComparatorPredicate.test": {
+        "status": "assertion error"
+    },
+    "SynchronizedQueue.element": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "PredicatedSortedMap.subMap": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "UnmodifiableSortedBag.unmodifiableSortedBag": {
+        "status": "compile error"
+    },
+    "SingletonMap.entrySet": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IndexedCollection.get": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SetUtils.isEqualSet": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SetUtils.hashCodeForSet": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "StaticBucketMap.equals": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IndexedCollection.contains": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "MultiKeyMap.removeMultiKey": {
+        "status": "compile error"
+    },
+    "UnmodifiableCollection.unmodifiableCollection": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "UnmodifiableTrie.mapIterator": {
+        "status": "compile error"
+    },
+    "SetUtils.union": {
+        "status": "compile error"
+    },
+    "SingletonListIterator.reset": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "MultiKeyMap.containsKey": {
+        "status": "compile error"
+    },
+    "MultiKeyMap.removeAll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 0.9
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CompositeMap.addComposited": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 0.875
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "StaticBucketMap.clear": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "LoopingListIterator.next": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "MultiValueMap.totalSize": {
+        "status": "assertion error"
+    },
+    "SingletonIterator.next": {
+        "status": "compile error"
+    },
+    "MultiKeyMap.put": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 0.9411764705882353
+            },
+            {
+                "Branch Coverage": 0.6666666666666666
+            },
+            {
+                "Line Coverage": 0.9090909090909091
+            }
+        ]
+    },
+    "UnmodifiableOrderedMap.unmodifiableOrderedMap": {
+        "status": "compile error"
+    },
+    "CompositeCollection.containsAll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "UnmodifiableListIterator.unmodifiableListIterator": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 0.75
+            },
+            {
+                "Branch Coverage": 0.5
+            },
+            {
+                "Line Coverage": 0.6
+            }
+        ]
+    },
+    "UnmodifiableSortedBag.uniqueSet": {
+        "status": "compile error"
+    },
+    "MultiValueMap.containsValue": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 0.8333333333333334
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "TransformedSortedMap.tailMap": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "EnumerationUtils.toList": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IndexedCollection.addAll": {
+        "status": "assertion error"
+    },
+    "MultiKeyMap.multiKeyMap": {
+        "status": "compile error"
+    },
+    "IteratorUtils.filteredListIterator": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "UnmodifiableOrderedMap.entrySet": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "PredicatedSortedMap.tailMap": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IndexedCollection.clear": {
+        "status": "compile error"
+    },
+    "SingletonMap.setValue": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CircularFifoQueue.size": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CompositeCollection.remove": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "FilterIterator.setIterator": {
+        "status": "assertion error"
+    },
+    "TransformedSortedMap.headMap": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "TransformedCollection.transformedCollection": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "UnmodifiableTrie.unmodifiableTrie": {
+        "status": "compile error"
+    },
+    "IteratorUtils.getIterator": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 0.9259259259259259
+            },
+            {
+                "Branch Coverage": 0.875
+            },
+            {
+                "Line Coverage": 0.9285714285714286
+            }
+        ]
+    },
+    "CollatingIterator.addIterator": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CompositeCollection.removeIf": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "MultiValueMap.removeMapping": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IteratorUtils.size": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IteratorUtils.toString": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 0.8333333333333334
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CircularFifoQueue.get": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ArrayStack.search": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 0.8
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ComparatorUtils.nullHighComparator": {
+        "status": "compile error"
+    },
+    "SynchronizedQueue.peek": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CompositeMap.keySet": {
+        "status": "compile error"
+    },
+    "IteratorUtils.zippingIterator": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ListOrderedMap.lastKey": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "LazySortedMap.tailMap": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SetUtils.disjunction": {
+        "status": "compile error"
+    },
+    "StaticBucketMap.put": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 0.68
+            },
+            {
+                "Branch Coverage": 0.6666666666666666
+            },
+            {
+                "Line Coverage": 0.6956521739130435
+            }
+        ]
+    },
+    "UnmodifiableOrderedMap.mapIterator": {
+        "status": "compile error"
+    },
+    "ComparatorPredicate.comparatorPredicate": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IndexedCollection.nonUniqueIndexedCollection": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IteratorUtils.collatedIterator": {
+        "status": "assertion error"
+    },
+    "CircularFifoQueue.add": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ZippingIterator.next": {
+        "status": "assertion error"
+    },
+    "ComparatorChain.addComparator": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "AllPredicate.test": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "PassiveExpiringMap.isEmpty": {
+        "status": "assertion error"
+    },
+    "MultiValueMap.iterator": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 0.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CircularFifoQueue.remove": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 0.926829268292683
+            },
+            {
+                "Branch Coverage": 0.6666666666666666
+            },
+            {
+                "Line Coverage": 0.8888888888888888
+            }
+        ]
+    },
+    "SynchronizedQueue.offer": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "LazyMap.get": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "TransformedMap.transformingMap": {
+        "status": "assertion error"
+    },
+    "PushbackIterator.pushbackIterator": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ArrayStack.peek": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CircularFifoQueue.poll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "LRUMap.get": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "UnmodifiableIterator.unmodifiableIterator": {
+        "status": "compile error"
+    },
+    "SingletonIterator.remove": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ReverseComparator.equals": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "PassiveExpiringMap.get": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "MultiKeyMap.clone": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 0.4
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 0.3333333333333333
+            }
+        ]
+    },
+    "SynchronizedQueue.hashCode": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IteratorUtils.forEachButLast": {
+        "status": "compile error"
+    },
+    "ZippingIterator.remove": {
+        "status": "compile error"
+    },
+    "ArrayStack.pop": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "TransformerUtils.ifTransformer": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "LoopingListIterator.nextIndex": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SingletonListIterator.remove": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "UnmodifiableOrderedMapIterator.unmodifiableOrderedMapIterator": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 0.75
+            },
+            {
+                "Branch Coverage": 0.5
+            },
+            {
+                "Line Coverage": 0.6
+            }
+        ]
+    },
+    "TransformedSplitMap.transformingMap": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ListOrderedMap.remove": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CompositeCollection.addComposited": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "PassiveExpiringMap.keySet": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IteratorUtils.transformedIterator": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CircularFifoQueue.element": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ComparatorChain.hashCode": {
+        "status": "compile error"
+    },
+    "PassiveExpiringMap.clear": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CollatingIterator.remove": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CircularFifoQueue.clear": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SingletonMap.putAll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ZippingIterator.hasNext": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "MultiMapUtils.getValuesAsBag": {
+        "status": "compile error"
+    },
+    "CollatingIterator.hasNext": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 0.75
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SetUtils.hashSet": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "MultiMapUtils.getValuesAsList": {
+        "status": "compile error"
+    },
+    "UnmodifiableMap.mapIterator": {
+        "status": "compile error"
+    },
+    "SynchronizedQueue.poll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "LazySortedMap.headMap": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CompositeMap.size": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IteratorUtils.chainedIterator": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "UnmodifiableMap.values": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "DefaultedMap.get": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SplitMapUtils.writableMap": {
+        "status": "compile error"
+    },
+    "SingletonMap.get": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SplitMapUtils.readableMap": {
+        "status": "compile error"
+    },
+    "IteratorUtils.toList": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "UnmodifiableQueue.unmodifiableQueue": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ComparatorUtils.max": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CollectionBag.retainAll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SingletonListIterator.next": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 0.75
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SkippingIterator.remove": {
+        "status": "compile error"
+    },
+    "BoundedIterator.next": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "TransformerUtils.switchMapTransformer": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "TransformingComparator.compare": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ComparatorChain.equals": {
+        "status": "assertion error"
+    },
+    "CompositeMap.values": {
+        "status": "compile error"
+    },
+    "BooleanComparator.compare": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IteratorIterable.iterator": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IndexedCollection.uniqueIndexedCollection": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "UnmodifiableMapIterator.unmodifiableMapIterator": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "LazySortedMap.subMap": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SetUtils.unmodifiableSet": {
+        "status": "compile error"
+    },
+    "PassiveExpiringMap.remove": {
+        "status": "compile error"
+    },
+    "CompositeCollection.add": {
+        "status": "assertion error"
+    },
+    "CollectionSortedBag.add": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "UnmodifiableMap.entrySet": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SingletonMap.clone": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 0.4
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 0.3333333333333333
+            }
+        ]
+    },
+    "FilterIterator.next": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 0.75
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "UnmodifiableBoundedCollection.unmodifiableBoundedCollection": {
+        "status": "compile error"
+    },
+    "UnmodifiableMap.keySet": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SingletonMap.toString": {
+        "status": "compile error"
+    },
+    "FixedOrderComparator.equals": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 0.9285714285714286
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "PredicatedCollection.addAll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "TransformedBag.transformedBag": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SkippingIterator.next": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IndexedCollection.add": {
+        "status": "assertion error"
+    },
+    "MultiValueMap.size": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "BooleanComparator.equals": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 0.8333333333333334
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "TransformedMap.putAll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "TransformedBag.uniqueSet": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "TransformedQueue.transformedQueue": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "PeekingIterator.element": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CompositeCollection.isEmpty": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CompositeCollection.retainAll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "PassiveExpiringMap.put": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CompositeCollection.size": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SequencesComparator.getScript": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ComparatorUtils.nullLowComparator": {
+        "status": "compile error"
+    },
+    "CompositeCollection.clear": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CompositeMap.clear": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ListOrderedMap.nextKey": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SingletonMap.hashCode": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ComparatorUtils.min": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "TransformingComparator.equals": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SingletonMap.put": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "StaticBucketMap.size": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SingletonMap.equals": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IndexedCollection.retainAll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "FilterListIterator.previous": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 0.75
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "StaticBucketMap.get": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "TreeBag.add": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "StaticBucketMap.remove": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 0.84375
+            },
+            {
+                "Branch Coverage": 0.6666666666666666
+            },
+            {
+                "Line Coverage": 0.8
+            }
+        ]
+    },
+    "TransformedMap.transformedMap": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "StaticBucketMap.containsKey": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 0.8888888888888888
+            },
+            {
+                "Branch Coverage": 0.75
+            },
+            {
+                "Line Coverage": 0.8888888888888888
+            }
+        ]
+    },
+    "CompositeCollection.addAll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "TransformedMap.put": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IteratorUtils.get": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "PeekingIterator.hasNext": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "PassiveExpiringMap.values": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "PassiveExpiringMap.size": {
+        "status": "compile error"
+    },
+    "CompositeMap.putAll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "PassiveExpiringMap.entrySet": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CompositeCollection.contains": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CompositeCollection.removeAll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ListOrderedMap.previousKey": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "MultiKeyMap.get": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 0.8974358974358975
+            },
+            {
+                "Branch Coverage": 0.6666666666666666
+            },
+            {
+                "Line Coverage": 0.875
+            }
+        ]
+    },
+    "MultiMapUtils.transformedMultiValuedMap": {
+        "status": "compile error"
+    },
+    "SingletonListIterator.previous": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "PredicatedCollection.add": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "PeekingIterator.remove": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "TransformingComparator.hashCode": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CollatingIterator.getIteratorIndex": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IteratorUtils.matchesAll": {
+        "status": "compile error"
+    },
+    "PeekingIterator.next": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ClosureUtils.switchMapClosure": {
+        "status": "compile error"
+    },
+    "NodeListIterator.next": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 0.75
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "PeekingIterator.peekingIterator": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "MultiKeyMap.putAll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "UnmodifiableOrderedMap.keySet": {
+        "status": "compile error"
+    },
+    "TransformerUtils.switchTransformer": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ObjectGraphIterator.remove": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ComparatorChain.setComparator": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "PermutationIterator.next": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 0.9946808510638298
+            },
+            {
+                "Branch Coverage": 0.8928571428571429
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CompositeMap.containsKey": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "SynchronizedQueue.remove": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CompositeMap.hashCode": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "StaticBucketMap.containsValue": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "EqualPredicate.test": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IteratorUtils.forEach": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "CollectionBag.add": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "EnumerationUtils.get": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "TransformedSortedMap.subMap": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "PredicatedSortedMap.headMap": {
+        "status": "compile error"
+    },
+    "ListOrderedMap.firstKey": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "ComparatorUtils.transformedComparator": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "StaticBucketMap.putAll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "PassiveExpiringMap.putAll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "TransformedSortedMap.transformedSortedMap": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "BooleanComparator.hashCode": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    },
+    "IndexedCollection.removeAll": {
+        "status": "coverage get success",
+        "coverage_result": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    }
+}

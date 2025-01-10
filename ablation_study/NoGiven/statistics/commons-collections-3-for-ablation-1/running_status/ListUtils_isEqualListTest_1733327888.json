@@ -1,0 +1,1 @@
+{"name": "ListUtils_isEqualListTest", "status": "coverage get success", "coverage_result": {"isEqualList": [{"Instruction Coverage": 0.9803921568627451}, {"Branch Coverage": 0.8333333333333334}, {"Line Coverage": 1.0}]}}

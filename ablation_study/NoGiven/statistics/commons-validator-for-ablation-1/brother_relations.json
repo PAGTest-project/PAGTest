@@ -1,0 +1,352 @@
+{
+    "CASNumberCheckDigitTest": [
+        "ISBN10CheckDigitTest",
+        "ISSNCheckDigitTest",
+        "EAN13CheckDigitTest",
+        "ModulusTenEAN13CheckDigitTest",
+        "ModulusTenABACheckDigitTest",
+        "ABANumberCheckDigitTest",
+        "ECNumberCheckDigitTest",
+        "ModulusTenLuhnCheckDigitTest",
+        "LuhnCheckDigitTest"
+    ],
+    "ISBN10CheckDigitTest": [
+        "CASNumberCheckDigitTest",
+        "ISSNCheckDigitTest",
+        "EAN13CheckDigitTest",
+        "ModulusTenEAN13CheckDigitTest",
+        "ModulusTenABACheckDigitTest",
+        "ABANumberCheckDigitTest",
+        "ECNumberCheckDigitTest",
+        "ModulusTenLuhnCheckDigitTest",
+        "LuhnCheckDigitTest"
+    ],
+    "ISSNCheckDigitTest": [
+        "CASNumberCheckDigitTest",
+        "ISBN10CheckDigitTest",
+        "EAN13CheckDigitTest",
+        "ModulusTenEAN13CheckDigitTest",
+        "ModulusTenABACheckDigitTest",
+        "ABANumberCheckDigitTest",
+        "ECNumberCheckDigitTest",
+        "ModulusTenLuhnCheckDigitTest",
+        "LuhnCheckDigitTest"
+    ],
+    "EAN13CheckDigitTest": [
+        "CASNumberCheckDigitTest",
+        "ISBN10CheckDigitTest",
+        "ISSNCheckDigitTest",
+        "ModulusTenEAN13CheckDigitTest",
+        "ModulusTenABACheckDigitTest",
+        "ABANumberCheckDigitTest",
+        "ECNumberCheckDigitTest",
+        "ModulusTenLuhnCheckDigitTest",
+        "LuhnCheckDigitTest"
+    ],
+    "ModulusTenEAN13CheckDigitTest": [
+        "CASNumberCheckDigitTest",
+        "ISBN10CheckDigitTest",
+        "ISSNCheckDigitTest",
+        "EAN13CheckDigitTest",
+        "ModulusTenABACheckDigitTest",
+        "ABANumberCheckDigitTest",
+        "ECNumberCheckDigitTest",
+        "ModulusTenLuhnCheckDigitTest",
+        "LuhnCheckDigitTest"
+    ],
+    "ModulusTenABACheckDigitTest": [
+        "CASNumberCheckDigitTest",
+        "ISBN10CheckDigitTest",
+        "ISSNCheckDigitTest",
+        "EAN13CheckDigitTest",
+        "ModulusTenEAN13CheckDigitTest",
+        "ABANumberCheckDigitTest",
+        "ECNumberCheckDigitTest",
+        "ModulusTenLuhnCheckDigitTest",
+        "LuhnCheckDigitTest"
+    ],
+    "ABANumberCheckDigitTest": [
+        "CASNumberCheckDigitTest",
+        "ISBN10CheckDigitTest",
+        "ISSNCheckDigitTest",
+        "EAN13CheckDigitTest",
+        "ModulusTenEAN13CheckDigitTest",
+        "ModulusTenABACheckDigitTest",
+        "ECNumberCheckDigitTest",
+        "ModulusTenLuhnCheckDigitTest",
+        "LuhnCheckDigitTest"
+    ],
+    "ECNumberCheckDigitTest": [
+        "CASNumberCheckDigitTest",
+        "ISBN10CheckDigitTest",
+        "ISSNCheckDigitTest",
+        "EAN13CheckDigitTest",
+        "ModulusTenEAN13CheckDigitTest",
+        "ModulusTenABACheckDigitTest",
+        "ABANumberCheckDigitTest",
+        "ModulusTenLuhnCheckDigitTest",
+        "LuhnCheckDigitTest"
+    ],
+    "ModulusTenLuhnCheckDigitTest": [
+        "CASNumberCheckDigitTest",
+        "ISBN10CheckDigitTest",
+        "ISSNCheckDigitTest",
+        "EAN13CheckDigitTest",
+        "ModulusTenEAN13CheckDigitTest",
+        "ModulusTenABACheckDigitTest",
+        "ABANumberCheckDigitTest",
+        "ECNumberCheckDigitTest",
+        "LuhnCheckDigitTest"
+    ],
+    "LuhnCheckDigitTest": [
+        "CASNumberCheckDigitTest",
+        "ISBN10CheckDigitTest",
+        "ISSNCheckDigitTest",
+        "EAN13CheckDigitTest",
+        "ModulusTenEAN13CheckDigitTest",
+        "ModulusTenABACheckDigitTest",
+        "ABANumberCheckDigitTest",
+        "ECNumberCheckDigitTest",
+        "ModulusTenLuhnCheckDigitTest"
+    ],
+    "ValidatorException": [
+        "CheckDigitException"
+    ],
+    "CheckDigitException": [
+        "ValidatorException"
+    ],
+    "CalendarValidator": [
+        "TimeValidator",
+        "DateValidator"
+    ],
+    "TimeValidator": [
+        "CalendarValidator",
+        "DateValidator"
+    ],
+    "DateValidator": [
+        "CalendarValidator",
+        "TimeValidator"
+    ],
+    "FloatValidator": [
+        "ShortValidator",
+        "BigDecimalValidator",
+        "LongValidator",
+        "IntegerValidator",
+        "BigIntegerValidator",
+        "ByteValidator",
+        "DoubleValidator"
+    ],
+    "ShortValidator": [
+        "FloatValidator",
+        "BigDecimalValidator",
+        "LongValidator",
+        "IntegerValidator",
+        "BigIntegerValidator",
+        "ByteValidator",
+        "DoubleValidator"
+    ],
+    "BigDecimalValidator": [
+        "FloatValidator",
+        "ShortValidator",
+        "LongValidator",
+        "IntegerValidator",
+        "BigIntegerValidator",
+        "ByteValidator",
+        "DoubleValidator"
+    ],
+    "LongValidator": [
+        "FloatValidator",
+        "ShortValidator",
+        "BigDecimalValidator",
+        "IntegerValidator",
+        "BigIntegerValidator",
+        "ByteValidator",
+        "DoubleValidator"
+    ],
+    "IntegerValidator": [
+        "FloatValidator",
+        "ShortValidator",
+        "BigDecimalValidator",
+        "LongValidator",
+        "BigIntegerValidator",
+        "ByteValidator",
+        "DoubleValidator"
+    ],
+    "BigIntegerValidator": [
+        "FloatValidator",
+        "ShortValidator",
+        "BigDecimalValidator",
+        "LongValidator",
+        "IntegerValidator",
+        "ByteValidator",
+        "DoubleValidator"
+    ],
+    "ByteValidator": [
+        "FloatValidator",
+        "ShortValidator",
+        "BigDecimalValidator",
+        "LongValidator",
+        "IntegerValidator",
+        "BigIntegerValidator",
+        "DoubleValidator"
+    ],
+    "DoubleValidator": [
+        "FloatValidator",
+        "ShortValidator",
+        "BigDecimalValidator",
+        "LongValidator",
+        "IntegerValidator",
+        "BigIntegerValidator",
+        "ByteValidator"
+    ],
+    "CurrencyValidator": [
+        "PercentValidator"
+    ],
+    "PercentValidator": [
+        "CurrencyValidator"
+    ],
+    "CUSIPCheckDigit": [
+        "EAN13CheckDigit",
+        "ECNumberCheckDigit",
+        "SedolCheckDigit",
+        "ISINCheckDigit",
+        "LuhnCheckDigit",
+        "CASNumberCheckDigit",
+        "ABANumberCheckDigit",
+        "ISBN10CheckDigit",
+        "ModulusTenCheckDigit",
+        "ISSNCheckDigit"
+    ],
+    "EAN13CheckDigit": [
+        "CUSIPCheckDigit",
+        "ECNumberCheckDigit",
+        "SedolCheckDigit",
+        "ISINCheckDigit",
+        "LuhnCheckDigit",
+        "CASNumberCheckDigit",
+        "ABANumberCheckDigit",
+        "ISBN10CheckDigit",
+        "ModulusTenCheckDigit",
+        "ISSNCheckDigit"
+    ],
+    "ECNumberCheckDigit": [
+        "CUSIPCheckDigit",
+        "EAN13CheckDigit",
+        "SedolCheckDigit",
+        "ISINCheckDigit",
+        "LuhnCheckDigit",
+        "CASNumberCheckDigit",
+        "ABANumberCheckDigit",
+        "ISBN10CheckDigit",
+        "ModulusTenCheckDigit",
+        "ISSNCheckDigit"
+    ],
+    "SedolCheckDigit": [
+        "CUSIPCheckDigit",
+        "EAN13CheckDigit",
+        "ECNumberCheckDigit",
+        "ISINCheckDigit",
+        "LuhnCheckDigit",
+        "CASNumberCheckDigit",
+        "ABANumberCheckDigit",
+        "ISBN10CheckDigit",
+        "ModulusTenCheckDigit",
+        "ISSNCheckDigit"
+    ],
+    "ISINCheckDigit": [
+        "CUSIPCheckDigit",
+        "EAN13CheckDigit",
+        "ECNumberCheckDigit",
+        "SedolCheckDigit",
+        "LuhnCheckDigit",
+        "CASNumberCheckDigit",
+        "ABANumberCheckDigit",
+        "ISBN10CheckDigit",
+        "ModulusTenCheckDigit",
+        "ISSNCheckDigit"
+    ],
+    "LuhnCheckDigit": [
+        "CUSIPCheckDigit",
+        "EAN13CheckDigit",
+        "ECNumberCheckDigit",
+        "SedolCheckDigit",
+        "ISINCheckDigit",
+        "CASNumberCheckDigit",
+        "ABANumberCheckDigit",
+        "ISBN10CheckDigit",
+        "ModulusTenCheckDigit",
+        "ISSNCheckDigit"
+    ],
+    "CASNumberCheckDigit": [
+        "CUSIPCheckDigit",
+        "EAN13CheckDigit",
+        "ECNumberCheckDigit",
+        "SedolCheckDigit",
+        "ISINCheckDigit",
+        "LuhnCheckDigit",
+        "ABANumberCheckDigit",
+        "ISBN10CheckDigit",
+        "ModulusTenCheckDigit",
+        "ISSNCheckDigit"
+    ],
+    "ABANumberCheckDigit": [
+        "CUSIPCheckDigit",
+        "EAN13CheckDigit",
+        "ECNumberCheckDigit",
+        "SedolCheckDigit",
+        "ISINCheckDigit",
+        "LuhnCheckDigit",
+        "CASNumberCheckDigit",
+        "ISBN10CheckDigit",
+        "ModulusTenCheckDigit",
+        "ISSNCheckDigit"
+    ],
+    "ISBN10CheckDigit": [
+        "CUSIPCheckDigit",
+        "EAN13CheckDigit",
+        "ECNumberCheckDigit",
+        "SedolCheckDigit",
+        "ISINCheckDigit",
+        "LuhnCheckDigit",
+        "CASNumberCheckDigit",
+        "ABANumberCheckDigit",
+        "ModulusTenCheckDigit",
+        "ISSNCheckDigit"
+    ],
+    "ModulusTenCheckDigit": [
+        "CUSIPCheckDigit",
+        "EAN13CheckDigit",
+        "ECNumberCheckDigit",
+        "SedolCheckDigit",
+        "ISINCheckDigit",
+        "LuhnCheckDigit",
+        "CASNumberCheckDigit",
+        "ABANumberCheckDigit",
+        "ISBN10CheckDigit",
+        "ISSNCheckDigit"
+    ],
+    "ISSNCheckDigit": [
+        "CUSIPCheckDigit",
+        "EAN13CheckDigit",
+        "ECNumberCheckDigit",
+        "SedolCheckDigit",
+        "ISINCheckDigit",
+        "LuhnCheckDigit",
+        "CASNumberCheckDigit",
+        "ABANumberCheckDigit",
+        "ISBN10CheckDigit",
+        "ModulusTenCheckDigit"
+    ],
+    "ISBNCheckDigit": [
+        "IBANCheckDigit",
+        "VerhoeffCheckDigit"
+    ],
+    "IBANCheckDigit": [
+        "ISBNCheckDigit",
+        "VerhoeffCheckDigit"
+    ],
+    "VerhoeffCheckDigit": [
+        "ISBNCheckDigit",
+        "IBANCheckDigit"
+    ]
+}

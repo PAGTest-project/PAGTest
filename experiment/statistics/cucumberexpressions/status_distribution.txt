@@ -1,0 +1,6 @@
+Status Distribution:
+compile error: 7
+coverage get success: 15
+assertion error: 2
+
+Number of Line Coverage = 1: 13

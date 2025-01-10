@@ -1,0 +1,159 @@
+[
+    {
+        "uris": "src/main/java/com/binance/connector/client/WebSocketStreamClient.java.WebSocketStreamClient",
+        "name": "WebSocketStreamClient",
+        "methods": [
+            "[int]aggTradeStream(String,WebSocketMessageCallback)",
+            "[int]aggTradeStream(String,WebSocketOpenCallback,WebSocketMessageCallback,WebSocketClosingCallback,WebSocketClosedCallback,WebSocketFailureCallback)",
+            "[int]tradeStream(String,WebSocketMessageCallback)",
+            "[int]tradeStream(String,WebSocketOpenCallback,WebSocketMessageCallback,WebSocketClosingCallback,WebSocketClosedCallback,WebSocketFailureCallback)",
+            "[int]klineStream(String,String,WebSocketMessageCallback)",
+            "[int]klineStream(String,String,WebSocketOpenCallback,WebSocketMessageCallback,WebSocketClosingCallback,WebSocketClosedCallback,WebSocketFailureCallback)",
+            "[int]miniTickerStream(String,WebSocketMessageCallback)",
+            "[int]miniTickerStream(String,WebSocketOpenCallback,WebSocketMessageCallback,WebSocketClosingCallback,WebSocketClosedCallback,WebSocketFailureCallback)",
+            "[int]allMiniTickerStream(WebSocketMessageCallback)",
+            "[int]allMiniTickerStream(WebSocketOpenCallback,WebSocketMessageCallback,WebSocketClosingCallback,WebSocketClosedCallback,WebSocketFailureCallback)",
+            "[int]symbolTicker(String,WebSocketMessageCallback)",
+            "[int]symbolTicker(String,WebSocketOpenCallback,WebSocketMessageCallback,WebSocketClosingCallback,WebSocketClosedCallback,WebSocketFailureCallback)",
+            "[int]allTickerStream(WebSocketMessageCallback)",
+            "[int]allTickerStream(WebSocketOpenCallback,WebSocketMessageCallback,WebSocketClosingCallback,WebSocketClosedCallback,WebSocketFailureCallback)",
+            "[int]rollingWindowTicker(String,String,WebSocketMessageCallback)",
+            "[int]rollingWindowTicker(String,String,WebSocketOpenCallback,WebSocketMessageCallback,WebSocketClosingCallback,WebSocketClosedCallback,WebSocketFailureCallback)",
+            "[int]allRollingWindowTicker(String,WebSocketMessageCallback)",
+            "[int]allRollingWindowTicker(String,WebSocketOpenCallback,WebSocketMessageCallback,WebSocketClosingCallback,WebSocketClosedCallback,WebSocketFailureCallback)",
+            "[int]bookTicker(String,WebSocketMessageCallback)",
+            "[int]bookTicker(String,WebSocketOpenCallback,WebSocketMessageCallback,WebSocketClosingCallback,WebSocketClosedCallback,WebSocketFailureCallback)",
+            "[int]partialDepthStream(String,int,int,WebSocketMessageCallback)",
+            "[int]partialDepthStream(String,int,int,WebSocketOpenCallback,WebSocketMessageCallback,WebSocketClosingCallback,WebSocketClosedCallback,WebSocketFailureCallback)",
+            "[int]diffDepthStream(String,int,WebSocketMessageCallback)",
+            "[int]diffDepthStream(String,int,WebSocketOpenCallback,WebSocketMessageCallback,WebSocketClosingCallback,WebSocketClosedCallback,WebSocketFailureCallback)",
+            "[int]listenUserStream(String,WebSocketMessageCallback)",
+            "[int]listenUserStream(String,WebSocketOpenCallback,WebSocketMessageCallback,WebSocketClosingCallback,WebSocketClosedCallback,WebSocketFailureCallback)",
+            "[int]combineStreams(ArrayList<String>,WebSocketMessageCallback)",
+            "[int]combineStreams(ArrayList<String>,WebSocketOpenCallback,WebSocketMessageCallback,WebSocketClosingCallback,WebSocketClosedCallback,WebSocketFailureCallback)",
+            "[void]closeConnection(int)",
+            "[void]closeAllConnections()"
+        ],
+        "implementations": [
+            "src/main/java/com/binance/connector/client/impl/WebSocketStreamClientImpl.java.WebSocketStreamClientImpl"
+        ]
+    },
+    {
+        "uris": "src/main/java/com/binance/connector/client/SpotClient.java.SpotClient",
+        "name": "SpotClient",
+        "methods": [
+            "[void]setShowLimitUsage(boolean)",
+            "[void]setProxy(ProxyAuth)",
+            "[void]unsetProxy()",
+            "[AutoInvest]createAutoInvest()",
+            "[Blvt]createBlvt()",
+            "[C2C]createC2C()",
+            "[Convert]createConvert()",
+            "[CryptoLoans]createCryptoLoans()",
+            "[Fiat]createFiat()",
+            "[Futures]createFutures()",
+            "[GiftCard]createGiftCard()",
+            "[Market]createMarket()",
+            "[Margin]createMargin()",
+            "[Mining]createMining()",
+            "[NFT]createNFT()",
+            "[Pay]createPay()",
+            "[PortfolioMargin]createPortfolioMargin()",
+            "[Rebate]createRebate()",
+            "[SimpleEarn]createSimpleEarn()",
+            "[SpotAlgo]createSpotAlgo()",
+            "[Staking]createStaking()",
+            "[SubAccount]createSubAccount()",
+            "[Trade]createTrade()",
+            "[UserData]createUserData()",
+            "[VIPLoans]createVIPLoans()",
+            "[Wallet]createWallet()"
+        ],
+        "implementations": [
+            "src/main/java/com/binance/connector/client/impl/SpotClientImpl.java.SpotClientImpl"
+        ]
+    },
+    {
+        "uris": "src/main/java/com/binance/connector/client/WebSocketApiClient.java.WebSocketApiClient",
+        "name": "WebSocketApiClient",
+        "methods": [
+            "[void]connect(WebSocketMessageCallback)",
+            "[void]connect(WebSocketOpenCallback,WebSocketMessageCallback,WebSocketClosingCallback,WebSocketClosedCallback,WebSocketFailureCallback)",
+            "[void]close()",
+            "[WebSocketApiAccount]account()",
+            "[WebSocketApiAuth]auth()",
+            "[WebSocketApiGeneral]general()",
+            "[WebSocketApiMarket]market()",
+            "[WebSocketApiTrade]trade()",
+            "[WebSocketApiUserDataStream]userDataStream()"
+        ],
+        "implementations": [
+            "src/main/java/com/binance/connector/client/impl/WebSocketApiClientImpl.java.WebSocketApiClientImpl"
+        ]
+    },
+    {
+        "uris": "src/main/java/com/binance/connector/client/utils/signaturegenerator/SignatureGenerator.java.SignatureGenerator",
+        "name": "SignatureGenerator",
+        "methods": [
+            "[String]getSignature(String)"
+        ],
+        "implementations": [
+            "src/main/java/com/binance/connector/client/utils/signaturegenerator/Ed25519SignatureGenerator.java.Ed25519SignatureGenerator",
+            "src/main/java/com/binance/connector/client/utils/signaturegenerator/HmacSignatureGenerator.java.HmacSignatureGenerator",
+            "src/main/java/com/binance/connector/client/utils/signaturegenerator/RsaSignatureGenerator.java.RsaSignatureGenerator"
+        ]
+    },
+    {
+        "uris": "src/main/java/com/binance/connector/client/utils/websocketcallback/WebSocketClosedCallback.java.WebSocketClosedCallback",
+        "name": "WebSocketClosedCallback",
+        "methods": [
+            "[void]onClosed(int,String)"
+        ],
+        "implementations": []
+    },
+    {
+        "uris": "src/main/java/com/binance/connector/client/utils/websocketcallback/WebSocketMessageCallback.java.WebSocketMessageCallback",
+        "name": "WebSocketMessageCallback",
+        "methods": [
+            "[void]onMessage(String)"
+        ],
+        "implementations": []
+    },
+    {
+        "uris": "src/main/java/com/binance/connector/client/utils/websocketcallback/WebSocketFailureCallback.java.WebSocketFailureCallback",
+        "name": "WebSocketFailureCallback",
+        "methods": [
+            "[void]onFailure(Throwable,Response)"
+        ],
+        "implementations": []
+    },
+    {
+        "uris": "src/main/java/com/binance/connector/client/utils/websocketcallback/WebSocketOpenCallback.java.WebSocketOpenCallback",
+        "name": "WebSocketOpenCallback",
+        "methods": [
+            "[void]onOpen(Response)"
+        ],
+        "implementations": []
+    },
+    {
+        "uris": "src/main/java/com/binance/connector/client/utils/websocketcallback/WebSocketClosingCallback.java.WebSocketClosingCallback",
+        "name": "WebSocketClosingCallback",
+        "methods": [
+            "[void]onClosing(int,String)"
+        ],
+        "implementations": []
+    },
+    {
+        "uris": "src/main/java/com/binance/connector/client/impl/websocketapi/WebSocketApiModule.java.WebSocketApiModule",
+        "name": "WebSocketApiModule",
+        "methods": [],
+        "implementations": [
+            "src/main/java/com/binance/connector/client/impl/websocketapi/WebSocketApiMarket.java.WebSocketApiMarket",
+            "src/main/java/com/binance/connector/client/impl/websocketapi/WebSocketApiUserDataStream.java.WebSocketApiUserDataStream",
+            "src/main/java/com/binance/connector/client/impl/websocketapi/WebSocketApiGeneral.java.WebSocketApiGeneral",
+            "src/main/java/com/binance/connector/client/impl/websocketapi/WebSocketApiAccount.java.WebSocketApiAccount",
+            "src/main/java/com/binance/connector/client/impl/websocketapi/WebSocketApiTrade.java.WebSocketApiTrade",
+            "src/main/java/com/binance/connector/client/impl/websocketapi/WebSocketApiAuth.java.WebSocketApiAuth"
+        ]
+    }
+]

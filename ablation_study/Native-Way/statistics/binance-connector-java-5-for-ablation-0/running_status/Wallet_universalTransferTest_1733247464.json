@@ -1,0 +1,1 @@
+{"name": "Wallet_universalTransferTest", "status": "coverage get success", "coverage_result": {"universalTransfer": [{"Instruction Coverage": 1.0}, {"Branch Coverage": -1.0}, {"Line Coverage": 1.0}]}}

@@ -1,0 +1,1 @@
+{"name": "SynchronizedQueue_offerTest", "status": "coverage get success", "coverage_result": {"offer": [{"Instruction Coverage": 1.0}, {"Branch Coverage": -1.0}, {"Line Coverage": 1.0}]}}

@@ -1,0 +1,5 @@
+# encoding: utf-8
+_MK:
+  faker:
+    phone_number:
+      country_code: ['389']

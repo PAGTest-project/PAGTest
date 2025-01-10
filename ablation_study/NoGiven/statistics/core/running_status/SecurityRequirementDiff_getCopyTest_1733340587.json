@@ -1,0 +1,1 @@
+{"name": "SecurityRequirementDiff_getCopyTest", "status": "coverage get success", "coverage_result": {"getCopy": [{"Instruction Coverage": 1.0}, {"Branch Coverage": -1.0}, {"Line Coverage": 1.0}]}}

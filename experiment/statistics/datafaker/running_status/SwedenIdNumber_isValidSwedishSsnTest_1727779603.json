@@ -1,0 +1,1 @@
+{"name": "SwedenIdNumber_isValidSwedishSsnTest", "status": "coverage get success", "coverage_result": {"isValidSwedishSsn": [{"Instruction Coverage": 1.0}, {"Branch Coverage": 1.0}, {"Line Coverage": 1.0}]}}

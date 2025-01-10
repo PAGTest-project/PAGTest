@@ -1,0 +1,50 @@
+{
+    "inherit_relations": [
+        [
+            "WebSocketConnection",
+            "WebSocketListener"
+        ],
+        [
+            "BinanceServerException",
+            "RuntimeException"
+        ],
+        [
+            "BinanceClientException",
+            "RuntimeException"
+        ],
+        [
+            "BinanceConnectorException",
+            "RuntimeException"
+        ]
+    ],
+    "childs": {
+        "WebSocketListener": [
+            "WebSocketConnection"
+        ],
+        "RuntimeException": [
+            "BinanceServerException",
+            "BinanceClientException",
+            "BinanceConnectorException"
+        ]
+    },
+    "parents": {
+        "WebSocketConnection": "WebSocketListener",
+        "BinanceServerException": "RuntimeException",
+        "BinanceClientException": "RuntimeException",
+        "BinanceConnectorException": "RuntimeException"
+    },
+    "brother_relations": {
+        "BinanceServerException": [
+            "BinanceClientException",
+            "BinanceConnectorException"
+        ],
+        "BinanceClientException": [
+            "BinanceServerException",
+            "BinanceConnectorException"
+        ],
+        "BinanceConnectorException": [
+            "BinanceServerException",
+            "BinanceClientException"
+        ]
+    }
+}

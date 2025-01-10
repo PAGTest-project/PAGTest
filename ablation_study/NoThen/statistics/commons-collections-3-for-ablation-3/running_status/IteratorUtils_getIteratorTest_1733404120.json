@@ -1,0 +1,1 @@
+{"name": "IteratorUtils_getIteratorTest", "status": "coverage get success", "coverage_result": {"getIterator": [{"Instruction Coverage": 0.9259259259259259}, {"Branch Coverage": 0.875}, {"Line Coverage": 0.9285714285714286}]}}

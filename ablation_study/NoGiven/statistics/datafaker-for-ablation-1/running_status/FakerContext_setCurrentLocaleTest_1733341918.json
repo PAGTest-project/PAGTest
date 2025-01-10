@@ -1,0 +1,1 @@
+{"name": "FakerContext_setCurrentLocaleTest", "status": "coverage get success", "coverage_result": {"setCurrentLocale": [{"Instruction Coverage": 1.0}, {"Branch Coverage": 1.0}, {"Line Coverage": 1.0}]}}

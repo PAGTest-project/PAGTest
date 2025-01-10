@@ -1,0 +1,1 @@
+{"name": "ValidatorResources_addValidatorActionTest", "status": "coverage get success", "coverage_result": {"addValidatorAction": [{"Instruction Coverage": 0.45161290322580644}, {"Branch Coverage": 0.5}, {"Line Coverage": 0.8}]}}

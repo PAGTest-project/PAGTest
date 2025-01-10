@@ -1,0 +1,759 @@
+[
+    {
+        "file_path": "src/test/java/com/binance/connector/client/utils/JSONParser_sortJSONObjectTest.java",
+        "testclass_name": "JSONParser_sortJSONObjectTest",
+        "dependencies": [
+            "package com.binance.connector.client.utils;",
+            "import org.json.JSONObject;",
+            "import org.junit.Test;",
+            "import java.util.LinkedHashMap;",
+            "import java.util.Map;",
+            "import static org.junit.Assert.assertEquals;"
+        ],
+        "name": "JSONParser_sortJSONObjectTest",
+        "description": "Unit test for the JSONParser.sortJSONObject method.",
+        "class_members": {
+            "variables": [],
+            "methods": [],
+            "nested_classes": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testSortJSONObject",
+                "primary_tested": [
+                    "JSONParser.sortJSONObject(JSONObject)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "JSONObject",
+                        "JSONParser",
+                        "LinkedHashMap",
+                        "Map"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the sorting functionality of the JSONParser.sortJSONObject method."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/com/binance/connector/client/utils/JSONParser_getJSONIntValueTest.java",
+        "testclass_name": "JSONParser_getJSONIntValueTest",
+        "dependencies": [
+            "package com.binance.connector.client.utils;",
+            "import org.json.JSONException;",
+            "import org.junit.Test;",
+            "import static org.junit.Assert.*;"
+        ],
+        "name": "JSONParser_getJSONIntValueTest",
+        "description": "Unit tests for the JSONParser.getJSONIntValue method.",
+        "test_cases": [
+            {
+                "name": "testGetJSONIntValue_Success",
+                "primary_tested": [
+                    "JSONParser.getJSONIntValue(String,String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "JSONParser"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the successful retrieval of an integer value from a JSON string."
+            },
+            {
+                "name": "testGetJSONIntValue_Failure",
+                "primary_tested": [
+                    "JSONParser.getJSONIntValue(String,String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "JSONParser"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the failure scenario where a non-integer value is expected to throw a JSONException."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/com/binance/connector/client/utils/JSONParser_addKeyValueTest.java",
+        "testclass_name": "JSONParser_addKeyValueTest",
+        "dependencies": [
+            "package com.binance.connector.client.utils;",
+            "import org.json.JSONObject;",
+            "import org.junit.Test;",
+            "import static org.junit.Assert.*;"
+        ],
+        "name": "JSONParser_addKeyValueTest",
+        "description": "Unit tests for the addKeyValue method in the JSONParser class.",
+        "class_members": {},
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testAddKeyValue_NullParameters",
+                "primary_tested": [
+                    "JSONParser.addKeyValue(JSONObject,String,String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "JSONParser",
+                        "JSONObject"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the addKeyValue method with null parameters."
+            },
+            {
+                "name": "testAddKeyValue_NonNullParameters",
+                "primary_tested": [
+                    "JSONParser.addKeyValue(JSONObject,String,String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "JSONParser",
+                        "JSONObject"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the addKeyValue method with non-null parameters."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/com/binance/connector/client/utils/JSONParser_getJSONStringValueTest.java",
+        "testclass_name": "JSONParser_getJSONStringValueTest",
+        "dependencies": [
+            "package com.binance.connector.client.utils;",
+            "import org.json.JSONException;",
+            "import org.junit.Test;",
+            "import static org.junit.Assert.*;"
+        ],
+        "name": "JSONParser_getJSONStringValueTest",
+        "description": "Unit tests for the JSONParser.getJSONStringValue method.",
+        "class_members": {
+            "variables": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testGetJSONStringValue_Success",
+                "primary_tested": [
+                    "JSONParser.getJSONStringValue(String,String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "JSONParser"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the successful retrieval of a JSON string value."
+            },
+            {
+                "name": "testGetJSONStringValue_Failure",
+                "primary_tested": [
+                    "JSONParser.getJSONStringValue(String,String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "JSONParser"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the failure scenario where an invalid key is used to retrieve a JSON string value, expecting a JSONException."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/com/binance/connector/client/utils/RequestBuilder_buildPublicRequestTest.java",
+        "testclass_name": "RequestBuilder_buildPublicRequestTest",
+        "dependencies": [
+            "package com.binance.connector.client.utils;",
+            "import com.binance.connector.client.enums.HttpMethod;",
+            "import com.binance.connector.client.exceptions.BinanceConnectorException;",
+            "import okhttp3.Request;",
+            "import org.junit.Test;",
+            "import static org.junit.Assert.assertEquals;",
+            "import static org.junit.Assert.assertThrows;"
+        ],
+        "name": "RequestBuilder_buildPublicRequestTest",
+        "description": "Unit tests for the buildPublicRequest method in the RequestBuilder class.",
+        "class_members": {},
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testBuildPublicRequest_GET",
+                "primary_tested": [
+                    "RequestBuilder.buildPublicRequest(String,HttpMethod)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "RequestBuilder",
+                        "HttpMethod",
+                        "Request"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the buildPublicRequest method with a GET request, ensuring the URL and method are correctly set."
+            },
+            {
+                "name": "testBuildPublicRequest_InvalidMethod",
+                "primary_tested": [
+                    "RequestBuilder.buildPublicRequest(String,HttpMethod)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "RequestBuilder",
+                        "HttpMethod",
+                        "BinanceConnectorException"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the buildPublicRequest method with an invalid HTTP method, expecting a BinanceConnectorException to be thrown."
+            },
+            {
+                "name": "testBuildPublicRequest_InvalidUrl",
+                "primary_tested": [
+                    "RequestBuilder.buildPublicRequest(String,HttpMethod)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "RequestBuilder",
+                        "HttpMethod",
+                        "BinanceConnectorException"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the buildPublicRequest method with an invalid URL, expecting a BinanceConnectorException to be thrown."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/com/binance/connector/client/utils/JSONParser_pullValueTest.java",
+        "testclass_name": "JSONParser_pullValueTest",
+        "dependencies": [
+            "package com.binance.connector.client.utils;",
+            "import org.json.JSONObject;",
+            "import org.junit.Test;",
+            "import static org.junit.Assert.*;"
+        ],
+        "name": "JSONParser_pullValueTest",
+        "description": "Unit tests for the JSONParser.pullValue method.",
+        "class_members": {
+            "variables": [],
+            "methods": [],
+            "nested_classes": []
+        },
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testPullValue_WithExistingKey",
+                "primary_tested": [
+                    "JSONParser.pullValue(JSONObject,String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "JSONObject",
+                        "JSONParser"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the pullValue method with an existing key in the JSONObject."
+            },
+            {
+                "name": "testPullValue_WithNonExistingKey",
+                "primary_tested": [
+                    "JSONParser.pullValue(JSONObject,String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "JSONObject",
+                        "JSONParser"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the pullValue method with a non-existing key in the JSONObject."
+            },
+            {
+                "name": "testPullValue_WithNullParameters",
+                "primary_tested": [
+                    "JSONParser.pullValue(JSONObject,String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "JSONParser"
+                    ],
+                    "class_members": []
+                },
+                "category": "unit",
+                "fixtures_used": [],
+                "description": "Tests the pullValue method with null parameters."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/com/binance/connector/client/utils/UrlBuilder_buildFullUrlTest.java",
+        "testclass_name": "UrlBuilder_buildFullUrlTest",
+        "dependencies": [
+            "package com.binance.connector.client.utils;",
+            "import org.junit.Before;",
+            "import org.junit.Test;",
+            "import java.util.HashMap;",
+            "import java.util.Map;",
+            "import static org.junit.Assert.assertEquals;"
+        ],
+        "name": "UrlBuilder_buildFullUrlTest",
+        "description": "Unit tests for the buildFullUrl method in the UrlBuilder class.",
+        "class_members": {
+            "variables": [
+                {
+                    "name": "baseUrl",
+                    "type": "String"
+                },
+                {
+                    "name": "urlPath",
+                    "type": "String"
+                },
+                {
+                    "name": "parameters",
+                    "type": "Map<String, Object>"
+                }
+            ]
+        },
+        "fixtures": [
+            "setUp"
+        ],
+        "test_cases": [
+            {
+                "name": "testBuildFullUrlWithoutParameters",
+                "primary_tested": [
+                    "UrlBuilder.buildFullUrl(String,String,Map<String,Object>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "UrlBuilder"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "baseUrl",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "urlPath",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "fixtures_used": [
+                    "setUp"
+                ],
+                "description": "Tests the buildFullUrl method without parameters."
+            },
+            {
+                "name": "testBuildFullUrlWithParameters",
+                "primary_tested": [
+                    "UrlBuilder.buildFullUrl(String,String,Map<String,Object>)"
+                ],
+                "associated_methods": [
+                    "Map.put(String,Object)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "UrlBuilder",
+                        "Map"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "baseUrl",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "urlPath",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "parameters",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "fixtures_used": [
+                    "setUp"
+                ],
+                "description": "Tests the buildFullUrl method with parameters."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/com/binance/connector/client/utils/signaturegenerator/Ed25519SignatureGenerator_getSignatureTest.java",
+        "testclass_name": "Ed25519SignatureGenerator_getSignatureTest",
+        "dependencies": [
+            "package com.binance.connector.client.utils.signaturegenerator;",
+            "import org.junit.Before;",
+            "import org.junit.Test;",
+            "import org.bouncycastle.crypto.params.Ed25519PrivateKeyParameters;",
+            "import org.bouncycastle.crypto.signers.Ed25519Signer;",
+            "import org.bouncycastle.crypto.util.PrivateKeyFactory;",
+            "import org.bouncycastle.jce.provider.BouncyCastleProvider;",
+            "import org.bouncycastle.util.io.pem.PemObject;",
+            "import org.bouncycastle.util.io.pem.PemReader;",
+            "import java.io.FileReader;",
+            "import java.io.IOException;",
+            "import java.nio.charset.StandardCharsets;",
+            "import java.security.Security;",
+            "import java.util.Base64;",
+            "import static org.junit.Assert.assertEquals;",
+            "import static org.mockito.Mockito.*;"
+        ],
+        "name": "Ed25519SignatureGenerator_getSignatureTest",
+        "description": "Unit tests for the getSignature method of the Ed25519SignatureGenerator class.",
+        "class_members": {
+            "variables": [
+                {
+                    "name": "generator",
+                    "type": "Ed25519SignatureGenerator"
+                },
+                {
+                    "name": "mockPrivateKey",
+                    "type": "Ed25519PrivateKeyParameters"
+                }
+            ],
+            "methods": []
+        },
+        "fixtures": [
+            "setUp"
+        ],
+        "test_cases": [
+            {
+                "name": "testGetSignature",
+                "primary_tested": [
+                    "Ed25519SignatureGenerator.getSignature(String)"
+                ],
+                "associated_methods": [
+                    "Ed25519Signer.init(boolean,Ed25519PrivateKeyParameters)",
+                    "Ed25519Signer.update(byte[],int,int)",
+                    "Ed25519Signer.generateSignature()"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "Ed25519SignatureGenerator",
+                        "Ed25519PrivateKeyParameters",
+                        "Ed25519Signer",
+                        "Base64",
+                        "StandardCharsets"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "generator",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "mockPrivateKey",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "fixtures_used": [
+                    "setUp"
+                ],
+                "description": "Tests the getSignature method of the Ed25519SignatureGenerator class by verifying the generated signature."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/com/binance/connector/client/utils/UrlBuilder_joinStreamUrlsTest.java",
+        "testclass_name": "UrlBuilder_joinStreamUrlsTest",
+        "dependencies": [
+            "package com.binance.connector.client.utils;",
+            "import org.junit.Before;",
+            "import org.junit.Test;",
+            "import static org.junit.Assert.*;",
+            "import java.util.ArrayList;"
+        ],
+        "name": "UrlBuilder_joinStreamUrlsTest",
+        "description": "Unit tests for the joinStreamUrls method in the UrlBuilder class.",
+        "class_members": {
+            "variables": [
+                {
+                    "name": "sb",
+                    "type": "StringBuilder"
+                }
+            ]
+        },
+        "fixtures": [
+            "setUp"
+        ],
+        "test_cases": [
+            {
+                "name": "testJoinStreamUrlsWithValidStreams",
+                "primary_tested": [
+                    "UrlBuilder.joinStreamUrls(StringBuilder,ArrayList<String>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "UrlBuilder",
+                        "ArrayList"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "sb",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "fixtures_used": [
+                    "setUp"
+                ],
+                "description": "Tests the joinStreamUrls method with a list of valid streams."
+            },
+            {
+                "name": "testJoinStreamUrlsWithEmptyStreams",
+                "primary_tested": [
+                    "UrlBuilder.joinStreamUrls(StringBuilder,ArrayList<String>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "UrlBuilder",
+                        "ArrayList"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "sb",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "fixtures_used": [
+                    "setUp"
+                ],
+                "description": "Tests the joinStreamUrls method with an empty list of streams."
+            },
+            {
+                "name": "testJoinStreamUrlsWithNullStreams",
+                "primary_tested": [
+                    "UrlBuilder.joinStreamUrls(StringBuilder,ArrayList<String>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "UrlBuilder"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "sb",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "fixtures_used": [
+                    "setUp"
+                ],
+                "description": "Tests the joinStreamUrls method with a null list of streams."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/com/binance/connector/client/utils/UrlBuilder_joinQueryParametersTest.java",
+        "testclass_name": "UrlBuilder_joinQueryParametersTest",
+        "dependencies": [
+            "package com.binance.connector.client.utils;",
+            "import org.junit.Before;",
+            "import org.junit.Test;",
+            "import static org.junit.Assert.*;",
+            "import java.util.HashMap;",
+            "import java.util.Map;"
+        ],
+        "name": "UrlBuilder_joinQueryParametersTest",
+        "description": "Unit tests for the joinQueryParameters method in the UrlBuilder class.",
+        "class_members": {
+            "variables": [
+                {
+                    "name": "sb",
+                    "type": "StringBuilder"
+                }
+            ]
+        },
+        "fixtures": [
+            "setUp"
+        ],
+        "test_cases": [
+            {
+                "name": "testJoinQueryParametersWithEmptyMap",
+                "primary_tested": [
+                    "UrlBuilder.joinQueryParameters(StringBuilder,Map<String,Object>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "UrlBuilder",
+                        "HashMap",
+                        "Map"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "sb",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "fixtures_used": [
+                    "setUp"
+                ],
+                "description": "Tests the joinQueryParameters method with an empty map."
+            },
+            {
+                "name": "testJoinQueryParametersWithNonEmptyMap",
+                "primary_tested": [
+                    "UrlBuilder.joinQueryParameters(StringBuilder,Map<String,Object>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "UrlBuilder",
+                        "HashMap",
+                        "Map"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "sb",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "fixtures_used": [
+                    "setUp"
+                ],
+                "description": "Tests the joinQueryParameters method with a non-empty map."
+            },
+            {
+                "name": "testJoinQueryParametersWithNullMap",
+                "primary_tested": [
+                    "UrlBuilder.joinQueryParameters(StringBuilder,Map<String,Object>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "UrlBuilder"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "sb",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "fixtures_used": [
+                    "setUp"
+                ],
+                "description": "Tests the joinQueryParameters method with a null map."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/com/binance/connector/client/utils/UrlBuilder_buildStreamUrlTest.java",
+        "testclass_name": "UrlBuilder_buildStreamUrlTest",
+        "dependencies": [
+            "package com.binance.connector.client.utils;",
+            "import org.junit.Before;",
+            "import org.junit.Test;",
+            "import static org.junit.Assert.*;",
+            "import java.util.ArrayList;"
+        ],
+        "name": "UrlBuilder_buildStreamUrlTest",
+        "description": "Unit tests for the buildStreamUrl method in the UrlBuilder class.",
+        "class_members": {
+            "variables": [
+                {
+                    "name": "baseUrl",
+                    "type": "String"
+                }
+            ]
+        },
+        "fixtures": [
+            "setUp"
+        ],
+        "test_cases": [
+            {
+                "name": "testBuildStreamUrlWithStreams",
+                "primary_tested": [
+                    "UrlBuilder.buildStreamUrl(String,ArrayList<String>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "UrlBuilder",
+                        "ArrayList"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "baseUrl",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "fixtures_used": [
+                    "setUp"
+                ],
+                "description": "Tests the buildStreamUrl method with a list of streams."
+            },
+            {
+                "name": "testBuildStreamUrlWithoutStreams",
+                "primary_tested": [
+                    "UrlBuilder.buildStreamUrl(String,ArrayList<String>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "UrlBuilder",
+                        "ArrayList"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "baseUrl",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "fixtures_used": [
+                    "setUp"
+                ],
+                "description": "Tests the buildStreamUrl method without any streams."
+            },
+            {
+                "name": "testBuildStreamUrlWithNullStreams",
+                "primary_tested": [
+                    "UrlBuilder.buildStreamUrl(String,ArrayList<String>)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "UrlBuilder",
+                        "ArrayList"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "baseUrl",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "fixtures_used": [
+                    "setUp"
+                ],
+                "description": "Tests the buildStreamUrl method with null streams."
+            }
+        ]
+    }
+]

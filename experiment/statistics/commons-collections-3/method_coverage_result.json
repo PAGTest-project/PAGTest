@@ -1,0 +1,632 @@
+[
+    {
+        "class": "MultiValueMap",
+        "method": "totalSize",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TransformedBag",
+        "method": "transformedBag",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SetUniqueList",
+        "method": "setUniqueList",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SetUniqueList",
+        "method": "setUniqueList",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "FixedOrderComparator",
+        "method": "setUnknownObjectBehavior",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "FixedOrderComparator",
+        "method": "addAsEqual",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "FixedOrderComparator",
+        "method": "getUnknownObjectBehavior",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "ArrayStack",
+        "method": "search",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "ArrayStack",
+        "method": "push",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "ArrayStack",
+        "method": "pop",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "CompositeCollection",
+        "method": "toCollection",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "MultiKey",
+        "method": "getKeys",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "UnmodifiableOrderedBidiMap",
+        "method": "unmodifiableOrderedBidiMap",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TransformedQueue",
+        "method": "transformedQueue",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TransformedCollection",
+        "method": "transformedCollection",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "ComparatorUtils",
+        "method": "nullHighComparator",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 0.5,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "ComparatorUtils",
+        "method": "min",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "ComparatorUtils",
+        "method": "max",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "ComparatorUtils",
+        "method": "nullLowComparator",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 0.5,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "BooleanComparator",
+        "method": "getTrueFirstComparator",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "BooleanComparator",
+        "method": "getFalseFirstComparator",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "MultiSetUtils",
+        "method": "emptyMultiSet",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TransformedSortedBag",
+        "method": "transformedSortedBag",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "QueueUtils",
+        "method": "emptyQueue",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "MultiKeyMap",
+        "method": "multiKeyMap",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "IndexedCollection",
+        "method": "reindex",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "UnmodifiableOrderedMap",
+        "method": "unmodifiableOrderedMap",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "CollatingIterator",
+        "method": "getIteratorIndex",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "CollatingIterator",
+        "method": "getComparator",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SplitMapUtils",
+        "method": "writableMap",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SplitMapUtils",
+        "method": "readableMap",
+        "instruction_coverage": 0.8695652173913043,
+        "branch_coverage": 0.75,
+        "line_coverage": 0.8333333333333334
+    },
+    {
+        "class": "SplitMapUtils",
+        "method": "writableMap",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SplitMapUtils",
+        "method": "readableMap",
+        "instruction_coverage": 0.8695652173913043,
+        "branch_coverage": 0.75,
+        "line_coverage": 0.8333333333333334
+    },
+    {
+        "class": "LayerManager",
+        "method": "getTarget",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "DefaultKeyValue",
+        "method": "toMapEntry",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "MultiMapUtils",
+        "method": "getValuesAsSet",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "MultiMapUtils",
+        "method": "getValuesAsBag",
+        "instruction_coverage": 0.8421052631578947,
+        "branch_coverage": 0.75,
+        "line_coverage": 0.8333333333333334
+    },
+    {
+        "class": "MultiMapUtils",
+        "method": "emptyMultiValuedMap",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "MultiMapUtils",
+        "method": "getValuesAsList",
+        "instruction_coverage": 0.7368421052631579,
+        "branch_coverage": 0.75,
+        "line_coverage": 0.8333333333333334
+    },
+    {
+        "class": "OrderedProperties",
+        "method": "computeIfAbsent",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 0.5,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "OrderedProperties",
+        "method": "compute",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 0.5,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "OrderedProperties",
+        "method": "putIfAbsent",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 0.5,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TransformedSortedMap",
+        "method": "transformingSortedMap",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "IteratorEnumeration",
+        "method": "hasMoreElements",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "IteratorEnumeration",
+        "method": "nextElement",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "UnmodifiableOrderedMapIterator",
+        "method": "unmodifiableOrderedMapIterator",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "FactoryUtils",
+        "method": "nullFactory",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SetUtils",
+        "method": "hashCodeForSet",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SetUtils",
+        "method": "isEqualSet",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SetUtils",
+        "method": "difference",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SetUtils",
+        "method": "newIdentityHashSet",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "ClosureUtils",
+        "method": "switchMapClosure",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "ClosureUtils",
+        "method": "asClosure",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "ClosureUtils",
+        "method": "doWhileClosure",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TransformerUtils",
+        "method": "switchMapTransformer",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "IteratorUtils",
+        "method": "filteredIterator",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Shape",
+        "method": "getNumberOfHashFunctions",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Shape",
+        "method": "getProbability",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Shape",
+        "method": "fromNP",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Shape",
+        "method": "fromKM",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Shape",
+        "method": "isSparse",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Shape",
+        "method": "getNumberOfBits",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Shape",
+        "method": "fromNM",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Shape",
+        "method": "fromPMK",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "Shape",
+        "method": "fromNMK",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TransformedNavigableSet",
+        "method": "transformingNavigableSet",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TransformedSet",
+        "method": "transformingSet",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "UnmodifiableBidiMap",
+        "method": "unmodifiableBidiMap",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "ArrayListValuedHashMap",
+        "method": "trimToSize",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TransformedSortedSet",
+        "method": "transformingSortedSet",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "UnmodifiableSortedBidiMap",
+        "method": "unmodifiableSortedBidiMap",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "TransformedList",
+        "method": "transformingList",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "BitMaps",
+        "method": "getLongBit",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "BitMaps",
+        "method": "numberOfBitMaps",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "BitMaps",
+        "method": "mod",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "BitMaps",
+        "method": "getLongIndex",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SetOperations",
+        "method": "jaccardSimilarity",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SetOperations",
+        "method": "andCardinality",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SetOperations",
+        "method": "orCardinality",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SetOperations",
+        "method": "cosineDistance",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SetOperations",
+        "method": "jaccardDistance",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SetOperations",
+        "method": "xorCardinality",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SetOperations",
+        "method": "hammingDistance",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SetOperations",
+        "method": "jaccardSimilarity",
+        "instruction_coverage": 1.0,
+        "branch_coverage": 1.0,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SetOperations",
+        "method": "andCardinality",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SetOperations",
+        "method": "cosineDistance",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SetOperations",
+        "method": "jaccardDistance",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SetOperations",
+        "method": "orCardinality",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SetOperations",
+        "method": "xorCardinality",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    },
+    {
+        "class": "SetOperations",
+        "method": "hammingDistance",
+        "instruction_coverage": 1.0,
+        "branch_coverage": -1,
+        "line_coverage": 1.0
+    }
+]

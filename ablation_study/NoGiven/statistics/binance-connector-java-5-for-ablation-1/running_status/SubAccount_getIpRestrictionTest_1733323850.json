@@ -1,0 +1,1 @@
+{"name": "SubAccount_getIpRestrictionTest", "status": "coverage get success", "coverage_result": {"getIpRestriction": [{"Instruction Coverage": 0.0}, {"Branch Coverage": -1.0}, {"Line Coverage": 0.0}]}}

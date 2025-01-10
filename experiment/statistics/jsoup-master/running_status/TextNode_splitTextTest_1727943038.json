@@ -1,0 +1,17 @@
+{
+    "name": "TextNode_splitTextTest",
+    "status": "coverage get success",
+    "coverage_result": {
+        "splitText": [
+            {
+                "Instruction Coverage": 0.7636363636363637
+            },
+            {
+                "Branch Coverage": 0.8333333333333334
+            },
+            {
+                "Line Coverage": 0.9
+            }
+        ]
+    }
+}

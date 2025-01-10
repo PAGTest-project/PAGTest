@@ -1,0 +1,1 @@
+{"name": "PermutationIterator_nextTest", "status": "coverage get success", "coverage_result": {"next": [{"Instruction Coverage": 0.9946808510638298}, {"Branch Coverage": 0.8928571428571429}, {"Line Coverage": 1.0}]}}

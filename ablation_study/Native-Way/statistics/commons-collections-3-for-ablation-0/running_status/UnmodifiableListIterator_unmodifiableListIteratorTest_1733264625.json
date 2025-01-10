@@ -1,0 +1,1 @@
+{"name": "UnmodifiableListIterator_unmodifiableListIteratorTest", "status": "coverage get success", "coverage_result": {"unmodifiableListIterator": [{"Instruction Coverage": 0.75}, {"Branch Coverage": 0.5}, {"Line Coverage": 0.6}]}}

@@ -1,0 +1,16 @@
+[
+    {
+        "class_name": "src/main/java/com/github/davidmoten/rtree/SplitterQuadratic.java.SplitterQuadratic",
+        "interface_brother": "src/main/java/com/github/davidmoten/rtree/SplitterRStar.java.SplitterRStar",
+        "methods": [
+            "[ListPair<T>]split(List<T>,int)"
+        ]
+    },
+    {
+        "class_name": "src/main/java/com/github/davidmoten/rtree/SplitterRStar.java.SplitterRStar",
+        "interface_brother": "src/main/java/com/github/davidmoten/rtree/SplitterQuadratic.java.SplitterQuadratic",
+        "methods": [
+            "[ListPair<T>]split(List<T>,int)"
+        ]
+    }
+]

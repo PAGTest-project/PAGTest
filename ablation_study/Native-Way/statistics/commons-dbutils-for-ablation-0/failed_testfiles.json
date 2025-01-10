@@ -1,0 +1,1 @@
+{"failed_testfiles": ["/home/zhangzhe/fuzzing-repo/targets/commons-dbutils-for-ablation-0/src/test/java/org/apache/commons/dbutils/ResultSetIterator_removeTest.java", "/home/zhangzhe/fuzzing-repo/targets/commons-dbutils-for-ablation-0/src/test/java/org/apache/commons/dbutils/OutParameter_toStringTest.java"]}

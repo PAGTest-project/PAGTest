@@ -1,0 +1,284 @@
+# encoding: utf-8
+tr:
+  faker:
+    name:
+      first_name: [Mehmet, Ali, Fatma, Mustafa, Ahmet, Ayşe, Muhammed, Zeynep, Elif, Emine, Hatice, Nur, Hüseyin, İbrahim, Hasan, Yusuf, Ömer, Murat, İsmail, Emre, Osman, Halil, Can, Zehra, Havva, Ramazan, Efe, Meryem, Merve, Fatih, Emir, Abdullah, Salih, Esma, Mert, Yunus, Kadir, Enes, Emin, Şerife, Kemal, Rabia, Furkan, Recep, Esra, Melek, Burak, Süleyman, Büşra, Hakan, Kübra, Sultan, Eren, Özlem, Hanife, Nisa, Yüğüt, Adem, Zeliha, Yasemin, Mahmut, Yasin, Hacer, Umut, Eymen, İrem, Hülya, Metin, Sevim, Berat, Leyla, Faruk, Uğur, Dilek, Keziban, Yaşar, Bayram, Yağmur, Musa, Hamza, Betül, Serkan, Onur, Orhan, Gülsüm, Aysel, Songül, Bekir, Beyza, Gökhan, Cemile, Tuğba, Sude, Kerem, Eda, Ayşegül, Aynur, Arda, Aslı, Veli, Aydın, Serhat, Rıza, Oğuzhan, Neslihan, Zekiye, Asaf, Safiye, Nuriye, İlknur]
+      last_name: [Şen, Kandemir, Çevik, Erkuran, Tüten, Öztürk, Yüzbaşıoğlu, Vural, Yücel, Sönmez, Ertekin, Dede, Uyanık, Aslan, Akbulut, Orhon, Uz, Yavuz, Erdem, Kulaç, Kaya, Selvi, Akpınar, Abacıoğlu, Çay, Işık, Özer, Tahtacı, Büyükcam, Kulaksız, Aksel, Eroğlu, Karakum, Dal, Öcal, Ayhan, Yarbil, Canacankatan, Gümüşay, Murt, Halhallı, Uluöz, Şeyhanlı, Çalışkantürk, Yılmaz, Saraçoğlu, Sezer, Demir, Kayayurt, Sürüm, Yavaşi, Turgut, Tanrıkulu, Barbaros, Aldinç, Tekin, Gülşan, Küfeciler, Almacıoğlu, Çildir, Türkdoğan, Öner, Şeliman, Yaman, Atik, Giray, Yalçınkaya, Kılıç, Şentürk, Karabağ, Değirmenci, Boduroğlu, Yıldız, Güler, Eraslan, Üzer, Pişirgen, Adanır, Koç, Korkmaz, Yenidoğan, Aydoğan, Acarbulut, Erge, Erdoğan, Öğüt, Kuşku, Pektaş, Kayacan, Gülen, Akküçük, Candan, Temel, Yenigün, Yıldırım]
+      prefix: [Sn., Av., Dr.]
+      title:
+        job: ['Müdür', 'Şef', 'Koordinatör', 'Ajan', 'Mühendis', 'Doktor', 'Avukat', 'Hemşire', 'Asker', 'Polis', 'Zabıta', 'Öğretmen', 'Marangoz', 'Psikolog', 'Garson', 'Yazar', 'Veteriner', 'Satış Temsilcisi']
+      name:
+        - "#{prefix} #{first_name} #{last_name}"
+        - "#{first_name} #{last_name}"
+        - "#{last_name} #{first_name}"
+      name_with_middle:
+        - "#{prefix} #{first_name} #{last_name} #{last_name}"
+        - "#{first_name} #{last_name} #{last_name}"
+        - "#{first_name} #{last_name} #{last_name}"
+        - "#{first_name} #{last_name} #{last_name}"
+        - "#{first_name} #{last_name} #{last_name}"
+
+    internet:
+      free_email: [gmail.com, hotmail.com, outlook.com, outlook.com.tr, yandex.com yandex.com.tr]
+      domain_suffix: [co, com, com.tr, net, net.tr, org, org.tr, info, info.tr, biz, biz.tr, tv, tv.tr, gen.tr, web.tr, bbs.tr]
+      safe_email: ['kep.tr']
+
+    address:
+      city_name: ['Adana', 'Adıyaman', 'Afyonkarahisar', 'Ağrı', 'Amasya', 'Ankara', 'Antalya', 'Artvin', 'Aydın', 'Balıkesir', 'Bilecik', 'Bingöl', 'Bitlis', 'Bolu', 'Burdur', 'Bursa', 'Çanakkale', 'Çankırı', 'Çorum', 'Denizli', 'Diyarbakır', 'Edirne', 'Elazığ', 'Erzincan', 'Erzurum', 'Eskişehir', 'Gaziantep', 'Giresun', 'Gümüşhane', 'Hakkari', 'Hatay', 'Isparta', 'Mersin İçel', 'İstanbul', 'İzmir', 'Kars', 'Kastamonu', 'Kayseri', 'Kırklareli', 'Kırşehir', 'Kocaeli', 'Konya', 'Kütahya', 'Malatya', 'Manisa', 'Kahramanmaraş', 'Mardin', 'Muğla', 'Muş', 'Nevşehir', 'Niğde', 'Ordu', 'Rize', 'Sakarya', 'Samsun', 'Siirt', 'Sinop', 'Sivas', 'Tekirdağ', 'Tokat', 'Trabzon', 'Tunceli', 'Şanlıurfa', 'Uşak', 'Van', 'Yozgat', 'Zonguldak', 'Aksaray', 'Bayburt', 'Karaman', 'Kırıkkale', 'Batman', 'Şırnak', 'Bartın', 'Ardahan', 'Iğdır', 'Yalova', 'Karabük', 'Kilis', 'Osmaniye', 'Düzce']
+      city:
+        - "#{city_name}"
+      country: [Afganistan, Almanya, Amerika Birleşik Devletleri, Andora, Angola, Antigua ve Barbuda, Arnavutluk, Arjantin, Avustralya, Avusturya, Azerbaycan, Bahamalar, Bahreyn, Bangladeş, Barbados, Belarus, Belçika, Belize, Benin, Birleşik Arap Emirlikleri, Birleşik Krallık, Bolivya, Bosna-Hersek, Botsvana, Brezilya, Brunei, Bulgaristan, Burkina Faso, Burundi, Cabo Verde, Çad, Çek Cumhuriyeti, Çin, Danimarka, Doğu Timor, Dominika, Dominik Cumhuriyeti, Ekvador, Ekvator Ginesi, El Salvador, Endonezya, Eritre, Ermenistan, Estonya, Esvatini, Ethiopia, Fas, Fiji, Filipinler, Fildişi Sahili, Finlandiya, Fransa, Gabon, Gambiya, Gana, Granada, Güney Afrika, Güney Kore, Gürcistan, Guatemala, Guyana, Haiti, Hindistan, Hırvatistan, Hollanda, Honduras, Irak, İran, İrlanda, İspanya, İsrail, İsveç, İsviçre, İtalya, İzlanda, Jamaika, Japonya, Kamboçya, Kanada, Katar, Kazakistan, Kenya, Kırgızistan, Kiribati, Kolombiya, Komorlar, Kosova, Kosta Rika, Kuveyt, Kuzey Kore, Küba, Laos, Lesotho, Letonya, Liberya, Libya, Liechtenstein, Litvanya, Lüksemburg, Makedonya, Madagaskar, Malavi, Malezya, Maldivler, Mali, Malta, Marshall Adaları, Mauritius, Meksika, Mikronezya, Moğolistan, Moldova, Monako, Moritanya, Mozambik, Namibya, Nauru, Nepal, Nijer, Nijerya, Norveç, Umman, Özbekistan, Pakistan, Palau, Panama, Papua Yeni Gine, Paraguay, Peru, Portekiz, Romanya, Ruanda, Rusya, Saint Kitts ve Nevis, Saint Lucia, Saint Vincent ve Grenadinler, Samoa, San Marino, Sao Tome ve Principe, Senegal, Seyşeller, Sırbistan, Sierra Leone, Singapur, Slovakya, Slovenya, Solomon Adaları, Somali, Sri Lanka, Sudan, Surinam, Suriye, Suudi Arabistan, Swaziland, Tacikistan, Tanzanya, Tayland, Tayvan, Togo, Tonga, Trinidad ve Tobago, Tunus, Tuvalu, Türkmenistan, Ürdün, Uganda, Ukrayna, Umman, Uruguay, Ürdün, Vanuatu, Vatikan Şehri, Venezuela, Vietnam, Yemen, Yeni Zelanda, Yeşil Burun, Zambiya, Zimbabve]
+      default_country: [Türkiye]
+
+    compass:
+      cardinal:
+        word: ['kuzey', 'doğu', 'güney', 'batı']
+        abbreviation: ['K', 'D', 'G', 'B']
+        azimuth: ['0', '90', '180', '270']
+      ordinal:
+        word: ['kuzeydoğu', 'güneydoğu', 'güneybatı', 'kuzeybatı']
+        abbreviation: ['KD', 'GD', 'GB', 'KB']
+        azimuth: ['45', '135', '225', '315']
+      half-wind:
+        word: ['kuzey-kuzeydoğu', 'doğu-kuzeydoğu', 'doğu-güneydoğu', 'güney-güneydoğu', 'güney-güneybatı', 'batı-güneybatı', 'batı-kuzeybatı', 'kuzey-kuzeybatı']
+        abbreviation: ['KKD', 'DKD', 'DGD', 'GGD', 'GGB', 'BGB', 'BKB', 'KKB']
+        azimuth: ['22.5', '67.5', '112.5', '157.5', '202.5', '247.5', '292.5', '337.5']
+      quarter-wind:
+        word: ['kuzeyden doğuya', 'kuzeydoğudan kuzeye', 'kuzeydoğudan doğuya', 'doğudan kuzeye', 'doğudan güneye', 'doğudan güneydoğuya', 'güneydoğudan güneye', 'güneyden doğuya', 'güneyden batıya', 'güneybatıdan güneye', 'güneybatıdan batıya', 'güneyden batıya', 'batıdan kuzeye', 'kuzeybatıdan batıya', 'kuzeybatıdan kuzeye', 'kuzeyden batıya']
+        abbreviation: ['K>D', 'K>K', 'KD>D', 'D>K', 'D>G', 'GD>D', 'GD>G', 'G>D', 'G>B', 'GB>G', 'GB>B', 'B>G', 'B>K', 'KB>B', 'KB>K', 'K>B']
+        azimuth: ['11.25', '33.75', '56.25', '78.75', '101.25', '123.75', '146.25', '168.75', '191.25', '213.75', '236.25', '258.75', '281.25', '303.75', '326.25', '348.75']
+      direction:
+      - "#{Compass.cardinal.word}"
+      - "#{Compass.ordinal.word}"
+      - "#{Compass.half-wind.word}"
+      - "#{Compass.quarter-wind.word}"
+      abbreviation:
+      - "#{Compass.cardinal.abbreviation}"
+      - "#{Compass.ordinal.abbreviation}"
+      - "#{Compass.half-wind.abbreviation}"
+      - "#{Compass.quarter-wind.abbreviation}"
+      azimuth:
+      - "#{Compass.cardinal.azimuth}"
+      - "#{Compass.ordinal.azimuth}"
+      - "#{Compass.half-wind.azimuth}"
+      - "#{Compass.quarter-wind.azimuth}"
+
+    gender:
+      types:
+      - "Kadın"
+      - "Erkek"
+      - "Diğer"
+      - "Belirtilmedi"
+      binary_types:
+      - "Kadın"
+      - "Erkek"
+      short_binary_types:
+      - "k"
+      - "e"
+
+    relationship:
+      familial:
+        direct:
+        - "Baba"
+        - "Anne"
+        - "Abla"
+        - "Abi"
+        - "Kardeş"
+        extended:
+        - "Anneanne"
+        - "Babaanne"
+        - "Dede"
+        - "Amca"
+        - "Dayı"
+        - "Enişte"
+        - "Hala"
+        - "Teyze"
+        - "Yenge"
+        - "Kuzen"
+        - "Yeğen"
+        - "Torun"
+      in_law:
+      - "Kayınpeder"
+      - "Kayınvalide"
+      - "Baldız"
+      - "Kayınbirader"
+      spouse:
+      - "Koca"
+      - "Karı"
+      parent:
+      - "Baba"
+      - "Anne"
+      sibling:
+      - "Abla"
+      - "Abi"
+      - "Kız kardeş"
+      - "Erkek kardeş"
+
+    creature:
+      animal:
+        name:
+        - "ahtapot"
+        - "akbaba"
+        - "akrep"
+        - "anakonda"
+        - "antilop"
+        - "arı"
+        - "armadillo"
+        - "aslan"
+        - "at"
+        - "atmaca"
+        - "ayı"
+        - "babun"
+        - "balık"
+        - "balıkçıl"
+        - "bıldırcın"
+        - "bülbül"
+        - "ceylan"
+        - "çakal"
+        - "çekirge"
+        - "çinçilla"
+        - "çita"
+        - "deniz anası"
+        - "deve"
+        - "domuz"
+        - "engerek"
+        - "eşek"
+        - "fare"
+        - "fil"
+        - "flamingo"
+        - "fok"
+        - "geyik"
+        - "goril"
+        - "güve"
+        - "güvercin"
+        - "hamster"
+        - "horoz"
+        - "ıstakoz"
+        - "iguana"
+        - "inek"
+        - "ispinoz"
+        - "istavrit"
+        - "istiridye"
+        - "jaguar"
+        - "kalamar"
+        - "kanguru"
+        - "kaplan"
+        - "karga"
+        - "karınca"
+        - "karides"
+        - "kartal"
+        - "katır"
+        - "kaz"
+        - "keçi"
+        - "kedi"
+        - "keklik"
+        - "kelebek"
+        - "kene"
+        - "kırkayak"
+        - "kirpi"
+        - "kirpi balığı"
+        - "kobra"
+        - "koç"
+        - "komodo ejderi"
+        - "koyun"
+        - "köpek"
+        - "köpek balığı"
+        - "köstebek"
+        - "kuğu"
+        - "kumru"
+        - "kunduz"
+        - "kurt"
+        - "kuzu"
+        - "leopar"
+        - "martı"
+        - "maymun"
+        - "midilli"
+        - "ördek"
+        - "örümcek"
+        - "papağan"
+        - "pelikan"
+        - "penguen"
+        - "rakun"
+        - "serçe"
+        - "şahin"
+        - "tavşan"
+        - "tavuk"
+        - "tilki"
+        - "timsah"
+        - "yarasa"
+        - "yunus"
+        - "zebra"
+        - "zürafa"
+
+    book:
+      title: ['Taht Oyunları', 'Maymunlar Gezegeni', 'Benim Adım Kırmızı', 'Uykuların Doğusu', 'Yılanların Öcü']
+      author: "#{Name.name}"
+      publisher: ['Babıali Kültür Yayıncılığı', 'İletişim Yayınları', 'Turkuvaz Kitap', 'Kaynak Yayınları', 'İş Bankası Kültür Yayınları', 'Nobel Yayınları']
+      quote: ['Sabır acıdır, meyvesi tatlıdır', 'Dost kara günde belli olur', 'Çıkmamış candan umit kesilmez', 'Gözden uzak olan gönülden de uzak olur.']
+
+    weather:
+      description:
+      - "Açık"
+      - "Güneşli"
+      - "Bulutlu"
+      - "Parçalı bulutlu"
+      - "Çoğunlukla bulutlu"
+      - "Bulutlu"
+      - "Yağmurlu"
+      - "Sağanak yağışlı"
+      - "Gök gürültülü sağanak yağışlı"
+      - "Yer yer yağışlı"
+      - "Gök gürültülü"
+      - "Sisli"
+      - "Karlı"
+      - "Karla karışı yağmurlu"
+      - "Dolu"
+      temperature:
+        celsius: "°C"
+        fahrenheit: "°F"
+        kelvin: "°K"
+        rankine: "°R"
+
+    color:
+      name:
+      - "kırmızı"
+      - "yeşil"
+      - "mavi"
+      - "sarı"
+      - "mor"
+      - "pembe"
+      - "beyaz"
+      - "siyah"
+      - "turuncu"
+      - "gri"
+      - "bordo"
+      - "açık mavi"
+      - "zeytin yeşili"
+      - "turkuaz"
+      - "camgöbeği"
+      - "kahverengi"
+      - "açık yeşil"
+      - "kestane rengi"
+      - "deniz mavisi"
+      - "lacivert"
+      - "kremrengi"
+      - "lila"
+      - "fildişi"
+
+    coin:
+      flip:
+      - "Yazı"
+      - "Tura"
+
+    university:
+      degree:
+      - "Önlisans"
+      - "Lisans"
+      - "Yüksek Lisans"
+      - "Doktora"
+      - "Post-doktora"
+      suffix:
+      - "Üniversitesi"
+      - "Enstitüsü"
+      - "Fakültesi"
+      - "Kampüsü"

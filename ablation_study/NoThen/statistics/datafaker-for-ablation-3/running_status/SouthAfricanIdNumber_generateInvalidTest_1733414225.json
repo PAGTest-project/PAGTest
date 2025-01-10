@@ -1,0 +1,1 @@
+{"name": "SouthAfricanIdNumber_generateInvalidTest", "status": "coverage get success", "coverage_result": {"generateInvalid": [{"Instruction Coverage": 0.5714285714285714}, {"Branch Coverage": 0.5}, {"Line Coverage": 0.5}]}}

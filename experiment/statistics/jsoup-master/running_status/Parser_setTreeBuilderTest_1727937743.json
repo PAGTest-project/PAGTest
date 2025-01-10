@@ -1,0 +1,17 @@
+{
+    "name": "Parser_setTreeBuilderTest",
+    "status": "coverage get success",
+    "coverage_result": {
+        "setTreeBuilder": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": -1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    }
+}

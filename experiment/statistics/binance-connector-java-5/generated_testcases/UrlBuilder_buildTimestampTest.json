@@ -1,0 +1,1 @@
+[{"strategy": "generate", "code": "\npackage com.binance.connector.client.utils;\n\nimport org.junit.Test;\nimport static org.junit.Assert.assertTrue;\n\npublic class UrlBuilder_buildTimestampTest {\n\n    @Test\n    public void testBuildTimestamp() {\n        String timestamp = UrlBuilder.buildTimestamp();\n        assertTrue(timestamp.matches(\"\\\\d+\"));\n    }\n}\n"}]

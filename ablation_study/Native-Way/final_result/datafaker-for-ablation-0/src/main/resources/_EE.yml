@@ -1,0 +1,9 @@
+# encoding: utf-8
+_EE:
+  faker:
+    invoice:
+      reference:
+        # '#' means the place where check digit is placed
+        # Source: http://www.pangaliit.ee/en/settlements-and-standards/reference-number-of-the-invoice
+        check_digit_method: method_731
+        pattern: '\d{1,19}#'

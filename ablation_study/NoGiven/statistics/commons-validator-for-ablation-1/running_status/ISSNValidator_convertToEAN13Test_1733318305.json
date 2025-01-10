@@ -1,0 +1,1 @@
+{"name": "ISSNValidator_convertToEAN13Test", "status": "coverage get success", "coverage_result": {"convertToEAN13": [{"Instruction Coverage": 0.7777777777777778}, {"Branch Coverage": 0.8333333333333334}, {"Line Coverage": 0.8333333333333334}]}}

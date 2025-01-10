@@ -1,0 +1,17 @@
+{
+    "name": "SoftPool_releaseTest",
+    "status": "coverage get success",
+    "coverage_result": {
+        "release": [
+            {
+                "Instruction Coverage": 1.0
+            },
+            {
+                "Branch Coverage": 1.0
+            },
+            {
+                "Line Coverage": 1.0
+            }
+        ]
+    }
+}

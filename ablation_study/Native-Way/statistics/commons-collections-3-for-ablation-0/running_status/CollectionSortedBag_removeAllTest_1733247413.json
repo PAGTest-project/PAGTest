@@ -1,0 +1,1 @@
+{"name": "CollectionSortedBag_removeAllTest", "status": "coverage get success", "coverage_result": {"removeAll": [{"Instruction Coverage": 0.9722222222222222}, {"Branch Coverage": 0.875}, {"Line Coverage": 1.0}]}}

@@ -1,0 +1,53 @@
+
+package org.openapitools.openapidiff.core.output;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.jupiter.api.Test;
+import org.openapitools.openapidiff.core.exception.RendererException;
+import org.openapitools.openapidiff.core.model.ChangedOpenApi;
+import org.mockito.Mockito;
+
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.Mockito.*;
+
+public class JsonRender_renderTest {
+
+    @Test
+    public void testRenderSuccess() throws IOException {
+        JsonRender jsonRender = new JsonRender();
+        ChangedOpenApi diff = mock(ChangedOpenApi.class);
+        OutputStreamWriter outputStreamWriter = mock(OutputStreamWriter.class);
+
+        jsonRender.render(diff, outputStreamWriter);
+
+        verify(outputStreamWriter).close();
+    }
+
+    @Test
+    public void testRenderJsonProcessingException() throws IOException {
+        JsonRender jsonRender = new JsonRender();
+        ChangedOpenApi diff = mock(ChangedOpenApi.class);
+        OutputStreamWriter outputStreamWriter = mock(OutputStreamWriter.class);
+        ObjectMapper mockObjectMapper = mock(ObjectMapper.class);
+        jsonRender.objectMapper = mockObjectMapper;
+        doThrow(JsonProcessingException.class).when(mockObjectMapper).writeValue(outputStreamWriter, diff);
+
+        assertThrows(RendererException.class, () -> jsonRender.render(diff, outputStreamWriter));
+    }
+
+    @Test
+    public void testRenderIOException() throws IOException {
+        JsonRender jsonRender = new JsonRender();
+        ChangedOpenApi diff = mock(ChangedOpenApi.class);
+        OutputStreamWriter outputStreamWriter = mock(OutputStreamWriter.class);
+        ObjectMapper mockObjectMapper = mock(ObjectMapper.class);
+        jsonRender.objectMapper = mockObjectMapper;
+        doThrow(IOException.class).when(mockObjectMapper).writeValue(outputStreamWriter, diff);
+
+        assertThrows(RendererException.class, () -> jsonRender.render(diff, outputStreamWriter));
+    }
+}

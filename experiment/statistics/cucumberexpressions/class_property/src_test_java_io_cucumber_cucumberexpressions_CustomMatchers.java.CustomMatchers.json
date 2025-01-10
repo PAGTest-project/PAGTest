@@ -1,0 +1,68 @@
+{
+    "class_uri": "src/test/java/io/cucumber/cucumberexpressions/CustomMatchers.java.CustomMatchers",
+    "class_docstring": "",
+    "superclasses": "",
+    "super_interfaces": [],
+    "methods": [
+        {
+            "method_name": "equalOrCloseTo",
+            "description": "Creates a matcher that matches an iterable if its elements are equal or close to the elements of the provided list. Handles numeric types with a focus on closeness for floating-point numbers.",
+            "expected_testcases": [
+                {
+                    "testcase_name": "EmptyList",
+                    "description": "Test with an empty list, expecting the matcher to return a matcher that matches an empty iterable."
+                },
+                {
+                    "testcase_name": "NullList",
+                    "description": "Test with a null list, expecting the matcher to return a matcher that matches a null iterable."
+                },
+                {
+                    "testcase_name": "ListWithIntegers",
+                    "description": "Test with a list of integers, expecting the matcher to return a matcher that matches an iterable with the same integers in the same order."
+                },
+                {
+                    "testcase_name": "ListWithFloats",
+                    "description": "Test with a list of floating-point numbers, expecting the matcher to return a matcher that matches an iterable with numbers close to the provided floats within a tolerance of 0.0001."
+                },
+                {
+                    "testcase_name": "ListWithMixedTypes",
+                    "description": "Test with a list containing mixed types (e.g., integers, floats, strings), expecting the matcher to return a matcher that matches an iterable with the same elements in the same order, handling floats with closeness."
+                }
+            ]
+        },
+        {
+            "method_name": "EqualOrCloseTo.matches",
+            "description": "Determines if the actual value matches the expected value, considering closeness for certain numeric types.",
+            "expected_testcases": [
+                {
+                    "testcase_name": "MatchInteger",
+                    "description": "Test with an integer, expecting the matcher to return true if the actual value is equal to the expected integer."
+                },
+                {
+                    "testcase_name": "MatchFloatWithinTolerance",
+                    "description": "Test with a floating-point number, expecting the matcher to return true if the actual value is within 0.0001 of the expected float."
+                },
+                {
+                    "testcase_name": "MatchFloatOutsideTolerance",
+                    "description": "Test with a floating-point number, expecting the matcher to return false if the actual value is outside 0.0001 of the expected float."
+                },
+                {
+                    "testcase_name": "MatchString",
+                    "description": "Test with a string, expecting the matcher to return true if the actual value is equal to the expected string."
+                },
+                {
+                    "testcase_name": "UnsupportedType",
+                    "description": "Test with an unsupported type (e.g., a custom object), expecting the matcher to throw a RuntimeException."
+                }
+            ]
+        },
+        {
+            "method_name": "EqualOrCloseTo.describeTo",
+            "description": "Describes the matcher by appending the expected value to the description.",
+            "expected_testcases": []
+        }
+    ],
+    "overrides": null,
+    "class_name": "CustomMatchers",
+    "description": "Class providing custom matchers for comparing iterables with a focus on equality or closeness for certain numeric types."
+}

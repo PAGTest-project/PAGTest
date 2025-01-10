@@ -1,0 +1,8 @@
+/target/
+/.settings/
+/.classpath
+/.project
+/site-content/
+/.vscode/
+/commons-validator.iml
+/.idea/

@@ -1,0 +1,1 @@
+{"name": "Line2D_ptSegDistSqTest", "status": "coverage get success", "coverage_result": {"ptSegDistSq": [{"Instruction Coverage": 0.9761904761904762}, {"Branch Coverage": 0.8333333333333334}, {"Line Coverage": 0.9473684210526315}]}}

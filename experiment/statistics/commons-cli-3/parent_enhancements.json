@@ -1,0 +1,1 @@
+{"UnrecognizedOptionException": ["ParseException"], "MissingArgumentException": ["ParseException"], "BasicParser": ["Parser"], "AlreadySelectedException": ["ParseException"], "AmbiguousOptionException": ["UnrecognizedOptionException"], "PosixParser": ["Parser"], "MissingOptionException": ["ParseException"], "GnuParser": ["Parser"]}

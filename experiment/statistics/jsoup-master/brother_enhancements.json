@@ -1,0 +1,526 @@
+{
+    "HtmlTreeBuilder": [
+        {
+            "methods": [],
+            "class": "XmlTreeBuilder"
+        }
+    ],
+    "XmlTreeBuilder": [
+        {
+            "methods": [],
+            "class": "HtmlTreeBuilder"
+        }
+    ],
+    "DocumentType": [
+        {
+            "methods": [],
+            "class": "Comment"
+        },
+        {
+            "methods": [
+                {
+                    "method_name": "attributes()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "hasAttributes()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "attr(String,String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "coreValue(String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "hasAttr(String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "removeAttr(String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "baseUri()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "absUrl(String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "childNodeSize()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "empty()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "ensureChildNodes()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                }
+            ],
+            "class": "TextNode"
+        },
+        {
+            "methods": [],
+            "class": "DataNode"
+        }
+    ],
+    "TextNode": [
+        {
+            "methods": [],
+            "class": "Comment"
+        },
+        {
+            "methods": [],
+            "class": "DocumentType"
+        },
+        {
+            "methods": [],
+            "class": "DataNode"
+        }
+    ],
+    "XmlDeclaration": [
+        {
+            "methods": [],
+            "class": "Comment"
+        },
+        {
+            "methods": [],
+            "class": "DocumentType"
+        },
+        {
+            "methods": [
+                {
+                    "method_name": "attributes()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "hasAttributes()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "attr(String,String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "coreValue(String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "hasAttr(String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "removeAttr(String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "baseUri()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "absUrl(String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "childNodeSize()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "empty()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "ensureChildNodes()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                }
+            ],
+            "class": "TextNode"
+        },
+        {
+            "methods": [],
+            "class": "DataNode"
+        }
+    ],
+    "DataNode": [
+        {
+            "methods": [],
+            "class": "Comment"
+        },
+        {
+            "methods": [],
+            "class": "DocumentType"
+        },
+        {
+            "methods": [
+                {
+                    "method_name": "attributes()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "hasAttributes()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "attr(String,String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "coreValue(String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "hasAttr(String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "removeAttr(String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "baseUri()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "absUrl(String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "childNodeSize()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "empty()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "ensureChildNodes()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                }
+            ],
+            "class": "TextNode"
+        }
+    ],
+    "Comment": [
+        {
+            "methods": [],
+            "class": "DocumentType"
+        },
+        {
+            "methods": [
+                {
+                    "method_name": "attributes()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "hasAttributes()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "attr(String,String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "coreValue(String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "hasAttr(String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "removeAttr(String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "baseUri()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "absUrl(String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "childNodeSize()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "empty()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                },
+                {
+                    "method_name": "ensureChildNodes()",
+                    "file_path": "src/test/java/org/jsoup/nodes/TextNodeTest.java",
+                    "testclass_name": "TextNodeTest",
+                    "testcase_name": "leafNodeAttributes"
+                }
+            ],
+            "class": "TextNode"
+        },
+        {
+            "methods": [],
+            "class": "DataNode"
+        }
+    ],
+    "PseudoTextElement": [
+        {
+            "methods": [
+                {
+                    "method_name": "clone()",
+                    "file_path": "src/test/java/org/jsoup/nodes/FormElement_cloneTest.java",
+                    "testclass_name": "FormElement_cloneTest",
+                    "testcase_name": "testClone"
+                }
+            ],
+            "class": "FormElement"
+        },
+        {
+            "methods": [
+                {
+                    "method_name": "select(Evaluator)",
+                    "file_path": "src/test/java/org/jsoup/select/SelectorIT.java",
+                    "testclass_name": "SelectorIT",
+                    "testcase_name": "multiThreadHas"
+                },
+                {
+                    "method_name": "select(String)",
+                    "file_path": "src/test/java/org/jsoup/select/QueryParserTest.java",
+                    "testclass_name": "QueryParserTest",
+                    "testcase_name": "testConsumeSubQuery"
+                },
+                {
+                    "method_name": "hasText()",
+                    "file_path": "src/test/java/org/jsoup/nodes/ElementIT.java",
+                    "testclass_name": "ElementIT",
+                    "testcase_name": "hasTextNoOverflow"
+                },
+                {
+                    "method_name": "html()",
+                    "file_path": "src/test/java/org/jsoup/nodes/CommentTest.java",
+                    "testclass_name": "CommentTest",
+                    "testcase_name": "testHtmlNoPretty"
+                },
+                {
+                    "method_name": "stream()",
+                    "file_path": "src/test/java/org/jsoup/nodes/NodeStreamTest.java",
+                    "testclass_name": "NodeStreamTest",
+                    "testcase_name": "elementStream"
+                },
+                {
+                    "method_name": "nodeName()",
+                    "file_path": "src/test/java/org/jsoup/nodes/Document_nodeNameTest.java",
+                    "testclass_name": "Document_nodeNameTest",
+                    "testcase_name": "testNodeName"
+                },
+                {
+                    "method_name": "clone()",
+                    "file_path": "src/test/java/org/jsoup/nodes/Document_cloneTest.java",
+                    "testclass_name": "Document_cloneTest",
+                    "testcase_name": "testClone"
+                },
+                {
+                    "method_name": "traverse(NodeVisitor)",
+                    "file_path": "src/test/java/org/jsoup/select/TraversorTest.java",
+                    "testclass_name": "TraversorTest",
+                    "testcase_name": "seesDocRoot"
+                },
+                {
+                    "method_name": "selectXpath(String)",
+                    "file_path": "src/test/java/org/jsoup/select/XpathTest.java",
+                    "testclass_name": "XpathTest",
+                    "testcase_name": "supportsXpath"
+                },
+                {
+                    "method_name": "text(String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/Document_textTest.java",
+                    "testclass_name": "Document_textTest",
+                    "testcase_name": "testText"
+                },
+                {
+                    "method_name": "shallowClone()",
+                    "file_path": "src/test/java/org/jsoup/nodes/Document_shallowCloneTest.java",
+                    "testclass_name": "Document_shallowCloneTest",
+                    "testcase_name": "testShallowClone"
+                }
+            ],
+            "class": "Document"
+        }
+    ],
+    "Document": [
+        {
+            "methods": [
+                {
+                    "method_name": "clone()",
+                    "file_path": "src/test/java/org/jsoup/nodes/FormElement_cloneTest.java",
+                    "testclass_name": "FormElement_cloneTest",
+                    "testcase_name": "testClone"
+                }
+            ],
+            "class": "FormElement"
+        }
+    ],
+    "FormElement": [
+        {
+            "methods": [
+                {
+                    "method_name": "select(Evaluator)",
+                    "file_path": "src/test/java/org/jsoup/select/SelectorIT.java",
+                    "testclass_name": "SelectorIT",
+                    "testcase_name": "multiThreadHas"
+                },
+                {
+                    "method_name": "select(String)",
+                    "file_path": "src/test/java/org/jsoup/select/QueryParserTest.java",
+                    "testclass_name": "QueryParserTest",
+                    "testcase_name": "testConsumeSubQuery"
+                },
+                {
+                    "method_name": "hasText()",
+                    "file_path": "src/test/java/org/jsoup/nodes/ElementIT.java",
+                    "testclass_name": "ElementIT",
+                    "testcase_name": "hasTextNoOverflow"
+                },
+                {
+                    "method_name": "html()",
+                    "file_path": "src/test/java/org/jsoup/nodes/CommentTest.java",
+                    "testclass_name": "CommentTest",
+                    "testcase_name": "testHtmlNoPretty"
+                },
+                {
+                    "method_name": "stream()",
+                    "file_path": "src/test/java/org/jsoup/nodes/NodeStreamTest.java",
+                    "testclass_name": "NodeStreamTest",
+                    "testcase_name": "elementStream"
+                },
+                {
+                    "method_name": "nodeName()",
+                    "file_path": "src/test/java/org/jsoup/nodes/Document_nodeNameTest.java",
+                    "testclass_name": "Document_nodeNameTest",
+                    "testcase_name": "testNodeName"
+                },
+                {
+                    "method_name": "clone()",
+                    "file_path": "src/test/java/org/jsoup/nodes/Document_cloneTest.java",
+                    "testclass_name": "Document_cloneTest",
+                    "testcase_name": "testClone"
+                },
+                {
+                    "method_name": "traverse(NodeVisitor)",
+                    "file_path": "src/test/java/org/jsoup/select/TraversorTest.java",
+                    "testclass_name": "TraversorTest",
+                    "testcase_name": "seesDocRoot"
+                },
+                {
+                    "method_name": "selectXpath(String)",
+                    "file_path": "src/test/java/org/jsoup/select/XpathTest.java",
+                    "testclass_name": "XpathTest",
+                    "testcase_name": "supportsXpath"
+                },
+                {
+                    "method_name": "text(String)",
+                    "file_path": "src/test/java/org/jsoup/nodes/Document_textTest.java",
+                    "testclass_name": "Document_textTest",
+                    "testcase_name": "testText"
+                },
+                {
+                    "method_name": "shallowClone()",
+                    "file_path": "src/test/java/org/jsoup/nodes/Document_shallowCloneTest.java",
+                    "testclass_name": "Document_shallowCloneTest",
+                    "testcase_name": "testShallowClone"
+                }
+            ],
+            "class": "Document"
+        }
+    ]
+}

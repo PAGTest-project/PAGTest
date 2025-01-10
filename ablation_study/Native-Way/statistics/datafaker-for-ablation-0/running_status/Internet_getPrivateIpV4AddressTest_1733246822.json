@@ -1,0 +1,1 @@
+{"name": "Internet_getPrivateIpV4AddressTest", "status": "coverage get success", "coverage_result": {"getPrivateIpV4Address": [{"Instruction Coverage": 0.9235668789808917}, {"Branch Coverage": 0.25}, {"Line Coverage": 0.75}]}}

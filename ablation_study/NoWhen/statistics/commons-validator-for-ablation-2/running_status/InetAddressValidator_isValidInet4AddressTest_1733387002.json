@@ -1,0 +1,1 @@
+{"name": "InetAddressValidator_isValidInet4AddressTest", "status": "coverage get success", "coverage_result": {"isValidInet4Address": [{"Instruction Coverage": 0.8}, {"Branch Coverage": 0.6666666666666666}, {"Line Coverage": 0.625}]}}

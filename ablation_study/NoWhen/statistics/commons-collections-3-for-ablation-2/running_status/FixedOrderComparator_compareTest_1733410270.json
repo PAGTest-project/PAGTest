@@ -1,0 +1,1 @@
+{"name": "FixedOrderComparator_compareTest", "status": "coverage get success", "coverage_result": {"compare": [{"Instruction Coverage": 0.8375}, {"Branch Coverage": 0.9444444444444444}, {"Line Coverage": 0.9090909090909091}]}}

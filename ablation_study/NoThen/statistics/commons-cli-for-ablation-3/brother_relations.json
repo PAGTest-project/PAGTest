@@ -1,0 +1,34 @@
+{
+    "UnrecognizedOptionException": [
+        "MissingArgumentException",
+        "AlreadySelectedException",
+        "MissingOptionException"
+    ],
+    "MissingArgumentException": [
+        "UnrecognizedOptionException",
+        "AlreadySelectedException",
+        "MissingOptionException"
+    ],
+    "AlreadySelectedException": [
+        "UnrecognizedOptionException",
+        "MissingArgumentException",
+        "MissingOptionException"
+    ],
+    "MissingOptionException": [
+        "UnrecognizedOptionException",
+        "MissingArgumentException",
+        "AlreadySelectedException"
+    ],
+    "BasicParser": [
+        "PosixParser",
+        "GnuParser"
+    ],
+    "PosixParser": [
+        "BasicParser",
+        "GnuParser"
+    ],
+    "GnuParser": [
+        "BasicParser",
+        "PosixParser"
+    ]
+}

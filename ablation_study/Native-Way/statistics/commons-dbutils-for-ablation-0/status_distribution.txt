@@ -1,0 +1,5 @@
+Status Distribution:
+coverage get success: 5
+compile error: 1
+
+Number of Line Coverage = 1: 3

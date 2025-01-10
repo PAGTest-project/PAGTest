@@ -1,0 +1,30 @@
+
+package net.hydromatic.morel.util;
+
+import org.junit.jupiter.api.Test;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class Pair_toMapTest {
+
+    @Test
+    public void testToMap() {
+        // Given
+        List<Pair<String, Integer>> pairs = Arrays.asList(
+            Pair.of("one", 1),
+            Pair.of("two", 2),
+            Pair.of("three", 3)
+        );
+
+        // When
+        Map<String, Integer> result = Pair.toMap(pairs);
+
+        // Then
+        assertEquals(3, result.size());
+        assertEquals(1, result.get("one"));
+        assertEquals(2, result.get("two"));
+        assertEquals(3, result.get("three"));
+    }
+}

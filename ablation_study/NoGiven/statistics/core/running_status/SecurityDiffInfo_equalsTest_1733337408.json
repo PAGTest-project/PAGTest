@@ -1,0 +1,1 @@
+{"name": "SecurityDiffInfo_equalsTest", "status": "coverage get success", "coverage_result": {"equals": [{"Instruction Coverage": 0.8125}, {"Branch Coverage": 0.625}, {"Line Coverage": 1.0}]}}

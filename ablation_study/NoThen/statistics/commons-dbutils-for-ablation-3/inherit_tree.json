@@ -1,0 +1,378 @@
+{
+    "inherit_relations": [
+        [
+            "BeanProcessorTest",
+            "BaseTestCase"
+        ],
+        [
+            "ProxyFactoryTest",
+            "BaseTestCase"
+        ],
+        [
+            "BaseTestCase",
+            "TestCase"
+        ],
+        [
+            "BasicRowProcessorTest",
+            "BaseTestCase"
+        ],
+        [
+            "QueryLoaderTest",
+            "BaseTestCase"
+        ],
+        [
+            "ArrayHandlerTest",
+            "BaseTestCase"
+        ],
+        [
+            "BeanHandlerTest",
+            "BaseTestCase"
+        ],
+        [
+            "MapHandlerTest",
+            "BaseTestCase"
+        ],
+        [
+            "KeyedHandlerTest",
+            "BaseTestCase"
+        ],
+        [
+            "ArrayListHandlerTest",
+            "BaseTestCase"
+        ],
+        [
+            "ColumnListHandlerTest",
+            "BaseTestCase"
+        ],
+        [
+            "ScalarHandlerTest",
+            "BaseTestCase"
+        ],
+        [
+            "BeanListHandlerTest",
+            "BaseTestCase"
+        ],
+        [
+            "MapListHandlerTest",
+            "BaseTestCase"
+        ],
+        [
+            "SqlNullCheckedResultSetTest",
+            "BaseTestCase"
+        ],
+        [
+            "StringTrimmedResultSetTest",
+            "BaseTestCase"
+        ],
+        [
+            "QueryRunner",
+            "AbstractQueryRunner"
+        ],
+        [
+            "AsyncQueryRunner",
+            "AbstractQueryRunner"
+        ],
+        [
+            "GenerousBeanProcessor",
+            "BeanProcessor"
+        ]
+    ],
+    "childs": {
+        "BaseTestCase": [
+            "BeanProcessorTest",
+            "ProxyFactoryTest",
+            "BasicRowProcessorTest",
+            "QueryLoaderTest",
+            "ArrayHandlerTest",
+            "BeanHandlerTest",
+            "MapHandlerTest",
+            "KeyedHandlerTest",
+            "ArrayListHandlerTest",
+            "ColumnListHandlerTest",
+            "ScalarHandlerTest",
+            "BeanListHandlerTest",
+            "MapListHandlerTest",
+            "SqlNullCheckedResultSetTest",
+            "StringTrimmedResultSetTest"
+        ],
+        "TestCase": [
+            "BaseTestCase"
+        ],
+        "AbstractQueryRunner": [
+            "QueryRunner",
+            "AsyncQueryRunner"
+        ],
+        "BeanProcessor": [
+            "GenerousBeanProcessor"
+        ]
+    },
+    "parents": {
+        "BeanProcessorTest": "BaseTestCase",
+        "ProxyFactoryTest": "BaseTestCase",
+        "BaseTestCase": "TestCase",
+        "BasicRowProcessorTest": "BaseTestCase",
+        "QueryLoaderTest": "BaseTestCase",
+        "ArrayHandlerTest": "BaseTestCase",
+        "BeanHandlerTest": "BaseTestCase",
+        "MapHandlerTest": "BaseTestCase",
+        "KeyedHandlerTest": "BaseTestCase",
+        "ArrayListHandlerTest": "BaseTestCase",
+        "ColumnListHandlerTest": "BaseTestCase",
+        "ScalarHandlerTest": "BaseTestCase",
+        "BeanListHandlerTest": "BaseTestCase",
+        "MapListHandlerTest": "BaseTestCase",
+        "SqlNullCheckedResultSetTest": "BaseTestCase",
+        "StringTrimmedResultSetTest": "BaseTestCase",
+        "QueryRunner": "AbstractQueryRunner",
+        "AsyncQueryRunner": "AbstractQueryRunner",
+        "GenerousBeanProcessor": "BeanProcessor"
+    },
+    "brother_relations": {
+        "BeanProcessorTest": [
+            "ProxyFactoryTest",
+            "BasicRowProcessorTest",
+            "QueryLoaderTest",
+            "ArrayHandlerTest",
+            "BeanHandlerTest",
+            "MapHandlerTest",
+            "KeyedHandlerTest",
+            "ArrayListHandlerTest",
+            "ColumnListHandlerTest",
+            "ScalarHandlerTest",
+            "BeanListHandlerTest",
+            "MapListHandlerTest",
+            "SqlNullCheckedResultSetTest",
+            "StringTrimmedResultSetTest"
+        ],
+        "ProxyFactoryTest": [
+            "BeanProcessorTest",
+            "BasicRowProcessorTest",
+            "QueryLoaderTest",
+            "ArrayHandlerTest",
+            "BeanHandlerTest",
+            "MapHandlerTest",
+            "KeyedHandlerTest",
+            "ArrayListHandlerTest",
+            "ColumnListHandlerTest",
+            "ScalarHandlerTest",
+            "BeanListHandlerTest",
+            "MapListHandlerTest",
+            "SqlNullCheckedResultSetTest",
+            "StringTrimmedResultSetTest"
+        ],
+        "BasicRowProcessorTest": [
+            "BeanProcessorTest",
+            "ProxyFactoryTest",
+            "QueryLoaderTest",
+            "ArrayHandlerTest",
+            "BeanHandlerTest",
+            "MapHandlerTest",
+            "KeyedHandlerTest",
+            "ArrayListHandlerTest",
+            "ColumnListHandlerTest",
+            "ScalarHandlerTest",
+            "BeanListHandlerTest",
+            "MapListHandlerTest",
+            "SqlNullCheckedResultSetTest",
+            "StringTrimmedResultSetTest"
+        ],
+        "QueryLoaderTest": [
+            "BeanProcessorTest",
+            "ProxyFactoryTest",
+            "BasicRowProcessorTest",
+            "ArrayHandlerTest",
+            "BeanHandlerTest",
+            "MapHandlerTest",
+            "KeyedHandlerTest",
+            "ArrayListHandlerTest",
+            "ColumnListHandlerTest",
+            "ScalarHandlerTest",
+            "BeanListHandlerTest",
+            "MapListHandlerTest",
+            "SqlNullCheckedResultSetTest",
+            "StringTrimmedResultSetTest"
+        ],
+        "ArrayHandlerTest": [
+            "BeanProcessorTest",
+            "ProxyFactoryTest",
+            "BasicRowProcessorTest",
+            "QueryLoaderTest",
+            "BeanHandlerTest",
+            "MapHandlerTest",
+            "KeyedHandlerTest",
+            "ArrayListHandlerTest",
+            "ColumnListHandlerTest",
+            "ScalarHandlerTest",
+            "BeanListHandlerTest",
+            "MapListHandlerTest",
+            "SqlNullCheckedResultSetTest",
+            "StringTrimmedResultSetTest"
+        ],
+        "BeanHandlerTest": [
+            "BeanProcessorTest",
+            "ProxyFactoryTest",
+            "BasicRowProcessorTest",
+            "QueryLoaderTest",
+            "ArrayHandlerTest",
+            "MapHandlerTest",
+            "KeyedHandlerTest",
+            "ArrayListHandlerTest",
+            "ColumnListHandlerTest",
+            "ScalarHandlerTest",
+            "BeanListHandlerTest",
+            "MapListHandlerTest",
+            "SqlNullCheckedResultSetTest",
+            "StringTrimmedResultSetTest"
+        ],
+        "MapHandlerTest": [
+            "BeanProcessorTest",
+            "ProxyFactoryTest",
+            "BasicRowProcessorTest",
+            "QueryLoaderTest",
+            "ArrayHandlerTest",
+            "BeanHandlerTest",
+            "KeyedHandlerTest",
+            "ArrayListHandlerTest",
+            "ColumnListHandlerTest",
+            "ScalarHandlerTest",
+            "BeanListHandlerTest",
+            "MapListHandlerTest",
+            "SqlNullCheckedResultSetTest",
+            "StringTrimmedResultSetTest"
+        ],
+        "KeyedHandlerTest": [
+            "BeanProcessorTest",
+            "ProxyFactoryTest",
+            "BasicRowProcessorTest",
+            "QueryLoaderTest",
+            "ArrayHandlerTest",
+            "BeanHandlerTest",
+            "MapHandlerTest",
+            "ArrayListHandlerTest",
+            "ColumnListHandlerTest",
+            "ScalarHandlerTest",
+            "BeanListHandlerTest",
+            "MapListHandlerTest",
+            "SqlNullCheckedResultSetTest",
+            "StringTrimmedResultSetTest"
+        ],
+        "ArrayListHandlerTest": [
+            "BeanProcessorTest",
+            "ProxyFactoryTest",
+            "BasicRowProcessorTest",
+            "QueryLoaderTest",
+            "ArrayHandlerTest",
+            "BeanHandlerTest",
+            "MapHandlerTest",
+            "KeyedHandlerTest",
+            "ColumnListHandlerTest",
+            "ScalarHandlerTest",
+            "BeanListHandlerTest",
+            "MapListHandlerTest",
+            "SqlNullCheckedResultSetTest",
+            "StringTrimmedResultSetTest"
+        ],
+        "ColumnListHandlerTest": [
+            "BeanProcessorTest",
+            "ProxyFactoryTest",
+            "BasicRowProcessorTest",
+            "QueryLoaderTest",
+            "ArrayHandlerTest",
+            "BeanHandlerTest",
+            "MapHandlerTest",
+            "KeyedHandlerTest",
+            "ArrayListHandlerTest",
+            "ScalarHandlerTest",
+            "BeanListHandlerTest",
+            "MapListHandlerTest",
+            "SqlNullCheckedResultSetTest",
+            "StringTrimmedResultSetTest"
+        ],
+        "ScalarHandlerTest": [
+            "BeanProcessorTest",
+            "ProxyFactoryTest",
+            "BasicRowProcessorTest",
+            "QueryLoaderTest",
+            "ArrayHandlerTest",
+            "BeanHandlerTest",
+            "MapHandlerTest",
+            "KeyedHandlerTest",
+            "ArrayListHandlerTest",
+            "ColumnListHandlerTest",
+            "BeanListHandlerTest",
+            "MapListHandlerTest",
+            "SqlNullCheckedResultSetTest",
+            "StringTrimmedResultSetTest"
+        ],
+        "BeanListHandlerTest": [
+            "BeanProcessorTest",
+            "ProxyFactoryTest",
+            "BasicRowProcessorTest",
+            "QueryLoaderTest",
+            "ArrayHandlerTest",
+            "BeanHandlerTest",
+            "MapHandlerTest",
+            "KeyedHandlerTest",
+            "ArrayListHandlerTest",
+            "ColumnListHandlerTest",
+            "ScalarHandlerTest",
+            "MapListHandlerTest",
+            "SqlNullCheckedResultSetTest",
+            "StringTrimmedResultSetTest"
+        ],
+        "MapListHandlerTest": [
+            "BeanProcessorTest",
+            "ProxyFactoryTest",
+            "BasicRowProcessorTest",
+            "QueryLoaderTest",
+            "ArrayHandlerTest",
+            "BeanHandlerTest",
+            "MapHandlerTest",
+            "KeyedHandlerTest",
+            "ArrayListHandlerTest",
+            "ColumnListHandlerTest",
+            "ScalarHandlerTest",
+            "BeanListHandlerTest",
+            "SqlNullCheckedResultSetTest",
+            "StringTrimmedResultSetTest"
+        ],
+        "SqlNullCheckedResultSetTest": [
+            "BeanProcessorTest",
+            "ProxyFactoryTest",
+            "BasicRowProcessorTest",
+            "QueryLoaderTest",
+            "ArrayHandlerTest",
+            "BeanHandlerTest",
+            "MapHandlerTest",
+            "KeyedHandlerTest",
+            "ArrayListHandlerTest",
+            "ColumnListHandlerTest",
+            "ScalarHandlerTest",
+            "BeanListHandlerTest",
+            "MapListHandlerTest",
+            "StringTrimmedResultSetTest"
+        ],
+        "StringTrimmedResultSetTest": [
+            "BeanProcessorTest",
+            "ProxyFactoryTest",
+            "BasicRowProcessorTest",
+            "QueryLoaderTest",
+            "ArrayHandlerTest",
+            "BeanHandlerTest",
+            "MapHandlerTest",
+            "KeyedHandlerTest",
+            "ArrayListHandlerTest",
+            "ColumnListHandlerTest",
+            "ScalarHandlerTest",
+            "BeanListHandlerTest",
+            "MapListHandlerTest",
+            "SqlNullCheckedResultSetTest"
+        ],
+        "QueryRunner": [
+            "AsyncQueryRunner"
+        ],
+        "AsyncQueryRunner": [
+            "QueryRunner"
+        ]
+    }
+}

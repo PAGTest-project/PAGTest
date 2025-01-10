@@ -1,0 +1,19 @@
+
+package io.cucumber.cucumberexpressions;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.util.Collections;
+import java.util.List;
+
+public class Argument_getGroupTest {
+
+    @Test
+    public void testGetGroup() {
+        Group group = new Group("testValue", 0, 4, Collections.emptyList());
+        ParameterType<String> parameterType = new ParameterType<>("type", ".*", String.class, (List<String> values) -> values.get(0));
+        Argument<String> argument = new Argument<>(group, parameterType);
+
+        assertEquals(group, argument.getGroup());
+    }
+}

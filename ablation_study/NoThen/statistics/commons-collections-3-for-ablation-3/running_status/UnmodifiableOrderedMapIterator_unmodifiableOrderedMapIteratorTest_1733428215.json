@@ -1,0 +1,1 @@
+{"name": "UnmodifiableOrderedMapIterator_unmodifiableOrderedMapIteratorTest", "status": "coverage get success", "coverage_result": {"unmodifiableOrderedMapIterator": [{"Instruction Coverage": 0.75}, {"Branch Coverage": 0.5}, {"Line Coverage": 0.6}]}}

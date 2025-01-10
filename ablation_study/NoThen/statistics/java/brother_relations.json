@@ -1,0 +1,14 @@
+{
+    "UndefinedParameterTypeException": [
+        "DuplicateTypeNameException",
+        "AmbiguousParameterTypeException"
+    ],
+    "DuplicateTypeNameException": [
+        "UndefinedParameterTypeException",
+        "AmbiguousParameterTypeException"
+    ],
+    "AmbiguousParameterTypeException": [
+        "UndefinedParameterTypeException",
+        "DuplicateTypeNameException"
+    ]
+}

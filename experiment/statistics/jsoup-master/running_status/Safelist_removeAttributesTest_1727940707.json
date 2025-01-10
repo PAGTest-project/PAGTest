@@ -1,0 +1,1 @@
+{"name": "Safelist_removeAttributesTest", "status": "coverage get success", "coverage_result": {"removeAttributes": [{"Instruction Coverage": 0.9313725490196079}, {"Branch Coverage": 0.8125}, {"Line Coverage": 0.9090909090909091}]}}

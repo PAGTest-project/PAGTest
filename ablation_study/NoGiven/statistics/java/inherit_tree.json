@@ -1,0 +1,50 @@
+{
+    "inherit_relations": [
+        [
+            "UndefinedParameterTypeException",
+            "CucumberExpressionException"
+        ],
+        [
+            "DuplicateTypeNameException",
+            "CucumberExpressionException"
+        ],
+        [
+            "AmbiguousParameterTypeException",
+            "CucumberExpressionException"
+        ],
+        [
+            "CucumberExpressionException",
+            "RuntimeException"
+        ]
+    ],
+    "childs": {
+        "CucumberExpressionException": [
+            "UndefinedParameterTypeException",
+            "DuplicateTypeNameException",
+            "AmbiguousParameterTypeException"
+        ],
+        "RuntimeException": [
+            "CucumberExpressionException"
+        ]
+    },
+    "parents": {
+        "UndefinedParameterTypeException": "CucumberExpressionException",
+        "DuplicateTypeNameException": "CucumberExpressionException",
+        "AmbiguousParameterTypeException": "CucumberExpressionException",
+        "CucumberExpressionException": "RuntimeException"
+    },
+    "brother_relations": {
+        "UndefinedParameterTypeException": [
+            "DuplicateTypeNameException",
+            "AmbiguousParameterTypeException"
+        ],
+        "DuplicateTypeNameException": [
+            "UndefinedParameterTypeException",
+            "AmbiguousParameterTypeException"
+        ],
+        "AmbiguousParameterTypeException": [
+            "UndefinedParameterTypeException",
+            "DuplicateTypeNameException"
+        ]
+    }
+}

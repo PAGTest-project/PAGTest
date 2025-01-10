@@ -1,0 +1,62 @@
+{
+    "target_method": "asMultipleUseIterable",
+    "signature": "Iterable<E> asMultipleUseIterable(Iterator<? extends E>)",
+    "direct_enhancements": [
+        {
+            "method_name": "asIterable(Iterator<? extends E>)",
+            "relation_type": "Behavioral Similarity",
+            "confidence": 0.9,
+            "reason": "Both methods convert an iterator to an iterable but with different usage patterns.",
+            "is_external": false
+        },
+        {
+            "method_name": "asEnumeration(Iterator<? extends E>)",
+            "relation_type": "Substitutability",
+            "confidence": 0.8,
+            "reason": "Both methods convert an iterator to another form (iterable vs. enumeration).",
+            "is_external": false
+        },
+        {
+            "method_name": "toList(Iterator<? extends E>)",
+            "relation_type": "Structural Similarity",
+            "confidence": 0.85,
+            "reason": "Both methods handle iterator conversion with similar control flows and exception handling.",
+            "is_external": false
+        }
+    ],
+    "gwt_enhancements": {
+        "Given": {
+            "enhanced_by": [
+                {
+                    "method_name": "initializeIterator()",
+                    "relation_type": "State Change Similarity",
+                    "confidence": 0.8,
+                    "reason": "Both methods require iterator initialization.",
+                    "is_external": false
+                }
+            ]
+        },
+        "When": {
+            "enhanced_by": [
+                {
+                    "method_name": "setupEnvironment()",
+                    "relation_type": "Resource Access Similarity",
+                    "confidence": 0.6,
+                    "reason": "Environment setup is required before converting iterators to iterables.",
+                    "is_external": false
+                }
+            ]
+        },
+        "Then": {
+            "enhanced_by": [
+                {
+                    "method_name": "verifyIterable()",
+                    "relation_type": "Exception Handling Similarity",
+                    "confidence": 0.85,
+                    "reason": "Both methods verify iterable formats and handle similar exceptions.",
+                    "is_external": false
+                }
+            ]
+        }
+    }
+}

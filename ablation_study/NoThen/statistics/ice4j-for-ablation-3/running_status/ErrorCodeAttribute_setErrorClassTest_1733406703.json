@@ -1,0 +1,1 @@
+{"name": "ErrorCodeAttribute_setErrorClassTest", "status": "coverage get success", "coverage_result": {"setErrorClass": [{"Instruction Coverage": 1.0}, {"Branch Coverage": 0.75}, {"Line Coverage": 1.0}]}}

@@ -1,0 +1,357 @@
+[
+    {
+        "file_path": "src/test/java/io/cucumber/cucumberexpressions/ParameterType_weightTest.java",
+        "testclass_name": "ParameterType_weightTest",
+        "dependencies": [
+            "package io.cucumber.cucumberexpressions;",
+            "import org.junit.jupiter.api.Test;",
+            "import static org.junit.jupiter.api.Assertions.assertEquals;"
+        ],
+        "name": "ParameterType_weightTest",
+        "description": "Unit tests for the weight method of the ParameterType class.",
+        "class_members": {},
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testWeightForIntegerClass",
+                "primary_tested": [
+                    "ParameterType.weight()"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "ParameterType",
+                        "Integer"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the weight method of ParameterType for Integer class."
+            },
+            {
+                "name": "testWeightForNonIntegerType",
+                "primary_tested": [
+                    "ParameterType.weight()"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "ParameterType",
+                        "String"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the weight method of ParameterType for non-Integer types."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/io/cucumber/cucumberexpressions/RegexpUtils_escapeRegexTest.java",
+        "testclass_name": "RegexpUtils_escapeRegexTest",
+        "dependencies": [
+            "package io.cucumber.cucumberexpressions;",
+            "import org.junit.jupiter.api.Test;",
+            "import static org.junit.jupiter.api.Assertions.assertEquals;"
+        ],
+        "name": "RegexpUtils_escapeRegexTest",
+        "description": "Unit tests for the RegexpUtils.escapeRegex method, which escapes special characters in a string for use in a regular expression.",
+        "class_members": {},
+        "fixtures": [],
+        "test_cases": [
+            {
+                "name": "testEscapeRegex_NoSpecialChars",
+                "primary_tested": [
+                    "RegexpUtils.escapeRegex(String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "RegexpUtils"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the escapeRegex method with a string containing no special characters."
+            },
+            {
+                "name": "testEscapeRegex_WithSpecialChars",
+                "primary_tested": [
+                    "RegexpUtils.escapeRegex(String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "RegexpUtils"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the escapeRegex method with a string containing special characters."
+            },
+            {
+                "name": "testEscapeRegex_AllSpecialChars",
+                "primary_tested": [
+                    "RegexpUtils.escapeRegex(String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "RegexpUtils"
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the escapeRegex method with a string containing all special characters."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/io/cucumber/cucumberexpressions/ExpressionFactory_createExpressionTest.java",
+        "testclass_name": "ExpressionFactory_createExpressionTest",
+        "dependencies": [
+            "package io.cucumber.cucumberexpressions;",
+            "import org.junit.jupiter.api.Test;",
+            "import static org.junit.jupiter.api.Assertions.*;",
+            "import java.util.Locale;"
+        ],
+        "name": "ExpressionFactory_createExpressionTest",
+        "description": "Unit tests for the ExpressionFactory's createExpression method.",
+        "class_members": {
+            "variables": [
+                {
+                    "name": "parameterTypeRegistry",
+                    "type": "ParameterTypeRegistry"
+                },
+                {
+                    "name": "expressionFactory",
+                    "type": "ExpressionFactory"
+                }
+            ]
+        },
+        "test_cases": [
+            {
+                "name": "testCreateExpression_EmptyString",
+                "primary_tested": [
+                    "ExpressionFactory.createExpression(String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "ExpressionFactory",
+                        "CucumberExpression"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "expressionFactory",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the creation of an Expression from an empty string, expecting a CucumberExpression."
+            },
+            {
+                "name": "testCreateExpression_RegularExpressionWithAnchors",
+                "primary_tested": [
+                    "ExpressionFactory.createExpression(String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "ExpressionFactory",
+                        "RegularExpression"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "expressionFactory",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the creation of an Expression from a string with anchors, expecting a RegularExpression."
+            },
+            {
+                "name": "testCreateExpression_RegularExpressionWithSlashes",
+                "primary_tested": [
+                    "ExpressionFactory.createExpression(String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "ExpressionFactory",
+                        "RegularExpression"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "expressionFactory",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the creation of an Expression from a string with slashes, expecting a RegularExpression."
+            },
+            {
+                "name": "testCreateExpression_CucumberExpression",
+                "primary_tested": [
+                    "ExpressionFactory.createExpression(String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "ExpressionFactory",
+                        "CucumberExpression"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "expressionFactory",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the creation of an Expression from a regular text string, expecting a CucumberExpression."
+            }
+        ]
+    },
+    {
+        "file_path": "src/test/java/io/cucumber/cucumberexpressions/CucumberExpression_matchTest.java",
+        "testclass_name": "CucumberExpression_matchTest",
+        "dependencies": [
+            "package io.cucumber.cucumberexpressions;",
+            "import org.junit.jupiter.api.Test;",
+            "import java.lang.reflect.Type;",
+            "import java.util.List;",
+            "import static org.junit.jupiter.api.Assertions.assertNotNull;",
+            "import static org.junit.jupiter.api.Assertions.assertNull;",
+            "import static org.mockito.Mockito.*;"
+        ],
+        "name": "CucumberExpression_matchTest",
+        "description": "Tests for the match functionality of the CucumberExpression class.",
+        "class_members": {
+            "variables": [
+                {
+                    "name": "text",
+                    "type": "String"
+                },
+                {
+                    "name": "typeHints",
+                    "type": "Type[]"
+                },
+                {
+                    "name": "treeRegexp",
+                    "type": "TreeRegexp"
+                },
+                {
+                    "name": "group",
+                    "type": "Group"
+                },
+                {
+                    "name": "parameterTypeRegistry",
+                    "type": "ParameterTypeRegistry"
+                },
+                {
+                    "name": "defaultTransformer",
+                    "type": "ParameterByTypeTransformer"
+                },
+                {
+                    "name": "parameterType",
+                    "type": "ParameterType<?>"
+                },
+                {
+                    "name": "cucumberExpression",
+                    "type": "CucumberExpression"
+                }
+            ]
+        },
+        "test_cases": [
+            {
+                "name": "testMatch_SuccessfulMatch",
+                "primary_tested": [
+                    "CucumberExpression.match(String,Type[])"
+                ],
+                "associated_methods": [
+                    "TreeRegexp.match(String)",
+                    "ParameterTypeRegistry.getDefaultParameterTransformer()",
+                    "ParameterType.isAnonymous()"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "TreeRegexp",
+                        "Group",
+                        "ParameterTypeRegistry",
+                        "ParameterByTypeTransformer",
+                        "ParameterType",
+                        "CucumberExpression",
+                        "Argument"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "text",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "typeHints",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "treeRegexp",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "group",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "parameterTypeRegistry",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "defaultTransformer",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "parameterType",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "cucumberExpression",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the successful match functionality of the CucumberExpression."
+            },
+            {
+                "name": "testMatch_NoMatch",
+                "primary_tested": [
+                    "CucumberExpression.match(String,Type[])"
+                ],
+                "associated_methods": [
+                    "TreeRegexp.match(String)"
+                ],
+                "external_dependencies": {
+                    "modules": [
+                        "TreeRegexp",
+                        "ParameterTypeRegistry",
+                        "CucumberExpression",
+                        "Argument"
+                    ],
+                    "class_members": [
+                        {
+                            "name": "text",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "typeHints",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "treeRegexp",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "parameterTypeRegistry",
+                            "type": "variable"
+                        },
+                        {
+                            "name": "cucumberExpression",
+                            "type": "variable"
+                        }
+                    ]
+                },
+                "category": "unit",
+                "description": "Tests the scenario where there is no match for the CucumberExpression."
+            }
+        ]
+    }
+]

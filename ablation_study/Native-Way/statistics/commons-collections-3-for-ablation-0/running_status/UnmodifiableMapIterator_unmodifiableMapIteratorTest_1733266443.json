@@ -1,0 +1,1 @@
+{"name": "UnmodifiableMapIterator_unmodifiableMapIteratorTest", "status": "coverage get success", "coverage_result": {"unmodifiableMapIterator": [{"Instruction Coverage": 0.75}, {"Branch Coverage": 0.5}, {"Line Coverage": 0.6}]}}

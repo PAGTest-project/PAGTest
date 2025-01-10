@@ -1,0 +1,1 @@
+{"file_path": "src/test/java/org/apache/commons/collections4/MultiMapUtils_getCollectionTest.java", "testclass_name": "MultiMapUtils_getCollectionTest", "dependencies": ["package org.apache.commons.collections4;", "import org.junit.jupiter.api.Test;", "import static org.junit.jupiter.api.Assertions.*;", "import static org.mockito.Mockito.*;", "import java.util.Collection;"]}

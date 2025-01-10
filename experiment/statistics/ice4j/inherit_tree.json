@@ -1,0 +1,1532 @@
+{
+    "inherit_relations": [
+        [
+            "MappingTest",
+            "Ice"
+        ],
+        [
+            "AwsTest",
+            "Ice"
+        ],
+        [
+            "IceLite",
+            "IceDistributed"
+        ],
+        [
+            "TrickleIce",
+            "Ice"
+        ],
+        [
+            "IceDistributed",
+            "Ice"
+        ],
+        [
+            "StunException",
+            "Exception"
+        ],
+        [
+            "StunMessageEvent",
+            "BaseStunMessageEvent"
+        ],
+        [
+            "StunTimeoutEvent",
+            "BaseStunMessageEvent"
+        ],
+        [
+            "StunFailureEvent",
+            "BaseStunMessageEvent"
+        ],
+        [
+            "StunResponseEvent",
+            "StunMessageEvent"
+        ],
+        [
+            "ChannelDataMessageEvent",
+            "EventObject"
+        ],
+        [
+            "PeerUdpMessageEvent",
+            "EventObject"
+        ],
+        [
+            "BaseStunMessageEvent",
+            "EventObject"
+        ],
+        [
+            "TransportAddress",
+            "InetSocketAddress"
+        ],
+        [
+            "Indication",
+            "Message"
+        ],
+        [
+            "Response",
+            "Message"
+        ],
+        [
+            "Request",
+            "Message"
+        ],
+        [
+            "BlockingRequestSender",
+            "AbstractResponseCollector"
+        ],
+        [
+            "DestinationAddressAttribute",
+            "AddressAttribute"
+        ],
+        [
+            "XorRelayedAddressAttribute",
+            "XorMappedAddressAttribute"
+        ],
+        [
+            "MessageIntegrityAttribute",
+            "Attribute"
+        ],
+        [
+            "UnknownAttributesAttribute",
+            "Attribute"
+        ],
+        [
+            "IceControllingAttribute",
+            "IceControlAttribute"
+        ],
+        [
+            "XorMappedAddressAttribute",
+            "AddressAttribute"
+        ],
+        [
+            "SoftwareAttribute",
+            "Attribute"
+        ],
+        [
+            "RemoteAddressAttribute",
+            "AddressAttribute"
+        ],
+        [
+            "SourceAddressAttribute",
+            "AddressAttribute"
+        ],
+        [
+            "XorOnlyAttribute",
+            "Attribute"
+        ],
+        [
+            "UsernameAttribute",
+            "Attribute"
+        ],
+        [
+            "PriorityAttribute",
+            "Attribute"
+        ],
+        [
+            "IceControlledAttribute",
+            "IceControlAttribute"
+        ],
+        [
+            "ReflectedFromAttribute",
+            "AddressAttribute"
+        ],
+        [
+            "ErrorCodeAttribute",
+            "Attribute"
+        ],
+        [
+            "ReservationTokenAttribute",
+            "Attribute"
+        ],
+        [
+            "RealmAttribute",
+            "Attribute"
+        ],
+        [
+            "EvenPortAttribute",
+            "Attribute"
+        ],
+        [
+            "ChangeRequestAttribute",
+            "Attribute"
+        ],
+        [
+            "RequestedAddressFamilyAttribute",
+            "Attribute"
+        ],
+        [
+            "RequestedTransportAttribute",
+            "Attribute"
+        ],
+        [
+            "MappedAddressAttribute",
+            "AddressAttribute"
+        ],
+        [
+            "OptionalAttribute",
+            "Attribute"
+        ],
+        [
+            "DataAttribute",
+            "Attribute"
+        ],
+        [
+            "ChangedAddressAttribute",
+            "AddressAttribute"
+        ],
+        [
+            "UseCandidateAttribute",
+            "Attribute"
+        ],
+        [
+            "NonceAttribute",
+            "Attribute"
+        ],
+        [
+            "ResponseAddressAttribute",
+            "AddressAttribute"
+        ],
+        [
+            "AlternateServerAttribute",
+            "AddressAttribute"
+        ],
+        [
+            "ChannelNumberAttribute",
+            "Attribute"
+        ],
+        [
+            "ConnectionIdAttribute",
+            "Attribute"
+        ],
+        [
+            "XorPeerAddressAttribute",
+            "XorMappedAddressAttribute"
+        ],
+        [
+            "MagicCookieAttribute",
+            "Attribute"
+        ],
+        [
+            "DontFragmentAttribute",
+            "Attribute"
+        ],
+        [
+            "FingerprintAttribute",
+            "Attribute"
+        ],
+        [
+            "LifetimeAttribute",
+            "Attribute"
+        ],
+        [
+            "PseudoTcpSocketFactory",
+            "SocketFactory"
+        ],
+        [
+            "PseudoTcpSocket",
+            "Socket"
+        ],
+        [
+            "PseudoTcpSocketImpl",
+            "SocketImpl"
+        ],
+        [
+            "PseudoTcpJavaSocket",
+            "Socket"
+        ],
+        [
+            "TcpHostCandidate",
+            "HostCandidate"
+        ],
+        [
+            "ComponentSocket",
+            "MergingDatagramSocket"
+        ],
+        [
+            "UPNPCandidate",
+            "LocalCandidate"
+        ],
+        [
+            "PeerReflexiveCandidate",
+            "LocalCandidate"
+        ],
+        [
+            "HostCandidate",
+            "LocalCandidate"
+        ],
+        [
+            "GoogleRelayedCandidate",
+            "LocalCandidate"
+        ],
+        [
+            "ServerReflexiveCandidate",
+            "LocalCandidate"
+        ],
+        [
+            "RelayedCandidate",
+            "LocalCandidate"
+        ],
+        [
+            "StunCandidateHarvest",
+            "AbstractResponseCollector"
+        ],
+        [
+            "SinglePortUdpHarvester",
+            "AbstractUdpListener"
+        ],
+        [
+            "TurnCandidateHarvest",
+            "StunCandidateHarvest"
+        ],
+        [
+            "GoogleTurnSSLCandidateHarvester",
+            "GoogleTurnCandidateHarvester"
+        ],
+        [
+            "TcpHarvester",
+            "AbstractTcpListener"
+        ],
+        [
+            "TurnCandidateHarvester",
+            "StunCandidateHarvester"
+        ],
+        [
+            "StunMappingCandidateHarvester",
+            "MappingCandidateHarvester"
+        ],
+        [
+            "GoogleTurnCandidateHarvest",
+            "StunCandidateHarvest"
+        ],
+        [
+            "StunCandidateHarvester",
+            "AbstractCandidateHarvester"
+        ],
+        [
+            "AwsCandidateHarvester",
+            "MappingCandidateHarvester"
+        ],
+        [
+            "GoogleTurnCandidateHarvester",
+            "StunCandidateHarvester"
+        ],
+        [
+            "UPNPHarvester",
+            "AbstractCandidateHarvester"
+        ],
+        [
+            "CandidateAttribute",
+            "AttributeField"
+        ],
+        [
+            "MultiplexingSocket",
+            "DelegatingSocket"
+        ],
+        [
+            "IceTcpSocketWrapper",
+            "IceSocketWrapper"
+        ],
+        [
+            "TurnDatagramPacketFilter",
+            "StunDatagramPacketFilter"
+        ],
+        [
+            "IceUdpSocketWrapper",
+            "IceSocketWrapper"
+        ],
+        [
+            "BaseDelegatingServerSocketChannel",
+            "ServerSocketChannel"
+        ],
+        [
+            "SafeCloseDatagramSocket",
+            "DelegatingDatagramSocket"
+        ],
+        [
+            "GoogleRelayedCandidateSocket",
+            "DelegatingSocket"
+        ],
+        [
+            "SocketClosedException",
+            "SocketException"
+        ],
+        [
+            "DelegatingSocket",
+            "Socket"
+        ],
+        [
+            "RelayedCandidateDatagramSocket",
+            "DatagramSocket"
+        ],
+        [
+            "DelegatingServerSocket",
+            "ServerSocket"
+        ],
+        [
+            "MultiplexingDatagramSocket",
+            "SafeCloseDatagramSocket"
+        ],
+        [
+            "GoogleRelayedCandidateDatagramSocket",
+            "DatagramSocket"
+        ],
+        [
+            "TCPInputStream",
+            "InputStream"
+        ],
+        [
+            "MultiplexedDatagramSocket",
+            "DelegatingDatagramSocket"
+        ],
+        [
+            "TCPOutputStream",
+            "OutputStream"
+        ],
+        [
+            "MultiplexedSocket",
+            "DelegatingSocket"
+        ],
+        [
+            "MergingDatagramSocket",
+            "DatagramSocket"
+        ],
+        [
+            "DelegatingDatagramSocket",
+            "DatagramSocket"
+        ],
+        [
+            "IceTcpServerSocketWrapper",
+            "IceSocketWrapper"
+        ],
+        [
+            "BaseDelegatingSocketChannel",
+            "SocketChannel"
+        ]
+    ],
+    "childs": {
+        "Ice": [
+            "MappingTest",
+            "AwsTest",
+            "TrickleIce",
+            "IceDistributed"
+        ],
+        "IceDistributed": [
+            "IceLite"
+        ],
+        "Exception": [
+            "StunException"
+        ],
+        "BaseStunMessageEvent": [
+            "StunMessageEvent",
+            "StunTimeoutEvent",
+            "StunFailureEvent"
+        ],
+        "StunMessageEvent": [
+            "StunResponseEvent"
+        ],
+        "EventObject": [
+            "ChannelDataMessageEvent",
+            "PeerUdpMessageEvent",
+            "BaseStunMessageEvent"
+        ],
+        "InetSocketAddress": [
+            "TransportAddress"
+        ],
+        "Message": [
+            "Indication",
+            "Response",
+            "Request"
+        ],
+        "AbstractResponseCollector": [
+            "BlockingRequestSender",
+            "StunCandidateHarvest"
+        ],
+        "AddressAttribute": [
+            "DestinationAddressAttribute",
+            "XorMappedAddressAttribute",
+            "RemoteAddressAttribute",
+            "SourceAddressAttribute",
+            "ReflectedFromAttribute",
+            "MappedAddressAttribute",
+            "ChangedAddressAttribute",
+            "ResponseAddressAttribute",
+            "AlternateServerAttribute"
+        ],
+        "XorMappedAddressAttribute": [
+            "XorRelayedAddressAttribute",
+            "XorPeerAddressAttribute"
+        ],
+        "Attribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "IceControlAttribute": [
+            "IceControllingAttribute",
+            "IceControlledAttribute"
+        ],
+        "SocketFactory": [
+            "PseudoTcpSocketFactory"
+        ],
+        "Socket": [
+            "PseudoTcpSocket",
+            "PseudoTcpJavaSocket",
+            "DelegatingSocket"
+        ],
+        "SocketImpl": [
+            "PseudoTcpSocketImpl"
+        ],
+        "HostCandidate": [
+            "TcpHostCandidate"
+        ],
+        "MergingDatagramSocket": [
+            "ComponentSocket"
+        ],
+        "LocalCandidate": [
+            "UPNPCandidate",
+            "PeerReflexiveCandidate",
+            "HostCandidate",
+            "GoogleRelayedCandidate",
+            "ServerReflexiveCandidate",
+            "RelayedCandidate"
+        ],
+        "AbstractUdpListener": [
+            "SinglePortUdpHarvester"
+        ],
+        "StunCandidateHarvest": [
+            "TurnCandidateHarvest",
+            "GoogleTurnCandidateHarvest"
+        ],
+        "GoogleTurnCandidateHarvester": [
+            "GoogleTurnSSLCandidateHarvester"
+        ],
+        "AbstractTcpListener": [
+            "TcpHarvester"
+        ],
+        "StunCandidateHarvester": [
+            "TurnCandidateHarvester",
+            "GoogleTurnCandidateHarvester"
+        ],
+        "MappingCandidateHarvester": [
+            "StunMappingCandidateHarvester",
+            "AwsCandidateHarvester"
+        ],
+        "AbstractCandidateHarvester": [
+            "StunCandidateHarvester",
+            "UPNPHarvester"
+        ],
+        "AttributeField": [
+            "CandidateAttribute"
+        ],
+        "DelegatingSocket": [
+            "MultiplexingSocket",
+            "GoogleRelayedCandidateSocket",
+            "MultiplexedSocket"
+        ],
+        "IceSocketWrapper": [
+            "IceTcpSocketWrapper",
+            "IceUdpSocketWrapper",
+            "IceTcpServerSocketWrapper"
+        ],
+        "StunDatagramPacketFilter": [
+            "TurnDatagramPacketFilter"
+        ],
+        "ServerSocketChannel": [
+            "BaseDelegatingServerSocketChannel"
+        ],
+        "DelegatingDatagramSocket": [
+            "SafeCloseDatagramSocket",
+            "MultiplexedDatagramSocket"
+        ],
+        "SocketException": [
+            "SocketClosedException"
+        ],
+        "DatagramSocket": [
+            "RelayedCandidateDatagramSocket",
+            "GoogleRelayedCandidateDatagramSocket",
+            "MergingDatagramSocket",
+            "DelegatingDatagramSocket"
+        ],
+        "ServerSocket": [
+            "DelegatingServerSocket"
+        ],
+        "SafeCloseDatagramSocket": [
+            "MultiplexingDatagramSocket"
+        ],
+        "InputStream": [
+            "TCPInputStream"
+        ],
+        "OutputStream": [
+            "TCPOutputStream"
+        ],
+        "SocketChannel": [
+            "BaseDelegatingSocketChannel"
+        ]
+    },
+    "parents": {
+        "MappingTest": "Ice",
+        "AwsTest": "Ice",
+        "IceLite": "IceDistributed",
+        "TrickleIce": "Ice",
+        "IceDistributed": "Ice",
+        "StunException": "Exception",
+        "StunMessageEvent": "BaseStunMessageEvent",
+        "StunTimeoutEvent": "BaseStunMessageEvent",
+        "StunFailureEvent": "BaseStunMessageEvent",
+        "StunResponseEvent": "StunMessageEvent",
+        "ChannelDataMessageEvent": "EventObject",
+        "PeerUdpMessageEvent": "EventObject",
+        "BaseStunMessageEvent": "EventObject",
+        "TransportAddress": "InetSocketAddress",
+        "Indication": "Message",
+        "Response": "Message",
+        "Request": "Message",
+        "BlockingRequestSender": "AbstractResponseCollector",
+        "DestinationAddressAttribute": "AddressAttribute",
+        "XorRelayedAddressAttribute": "XorMappedAddressAttribute",
+        "MessageIntegrityAttribute": "Attribute",
+        "UnknownAttributesAttribute": "Attribute",
+        "IceControllingAttribute": "IceControlAttribute",
+        "XorMappedAddressAttribute": "AddressAttribute",
+        "SoftwareAttribute": "Attribute",
+        "RemoteAddressAttribute": "AddressAttribute",
+        "SourceAddressAttribute": "AddressAttribute",
+        "XorOnlyAttribute": "Attribute",
+        "UsernameAttribute": "Attribute",
+        "PriorityAttribute": "Attribute",
+        "IceControlledAttribute": "IceControlAttribute",
+        "ReflectedFromAttribute": "AddressAttribute",
+        "ErrorCodeAttribute": "Attribute",
+        "ReservationTokenAttribute": "Attribute",
+        "RealmAttribute": "Attribute",
+        "EvenPortAttribute": "Attribute",
+        "ChangeRequestAttribute": "Attribute",
+        "RequestedAddressFamilyAttribute": "Attribute",
+        "RequestedTransportAttribute": "Attribute",
+        "MappedAddressAttribute": "AddressAttribute",
+        "OptionalAttribute": "Attribute",
+        "DataAttribute": "Attribute",
+        "ChangedAddressAttribute": "AddressAttribute",
+        "UseCandidateAttribute": "Attribute",
+        "NonceAttribute": "Attribute",
+        "ResponseAddressAttribute": "AddressAttribute",
+        "AlternateServerAttribute": "AddressAttribute",
+        "ChannelNumberAttribute": "Attribute",
+        "ConnectionIdAttribute": "Attribute",
+        "XorPeerAddressAttribute": "XorMappedAddressAttribute",
+        "MagicCookieAttribute": "Attribute",
+        "DontFragmentAttribute": "Attribute",
+        "FingerprintAttribute": "Attribute",
+        "LifetimeAttribute": "Attribute",
+        "PseudoTcpSocketFactory": "SocketFactory",
+        "PseudoTcpSocket": "Socket",
+        "PseudoTcpSocketImpl": "SocketImpl",
+        "PseudoTcpJavaSocket": "Socket",
+        "TcpHostCandidate": "HostCandidate",
+        "ComponentSocket": "MergingDatagramSocket",
+        "UPNPCandidate": "LocalCandidate",
+        "PeerReflexiveCandidate": "LocalCandidate",
+        "HostCandidate": "LocalCandidate",
+        "GoogleRelayedCandidate": "LocalCandidate",
+        "ServerReflexiveCandidate": "LocalCandidate",
+        "RelayedCandidate": "LocalCandidate",
+        "StunCandidateHarvest": "AbstractResponseCollector",
+        "SinglePortUdpHarvester": "AbstractUdpListener",
+        "TurnCandidateHarvest": "StunCandidateHarvest",
+        "GoogleTurnSSLCandidateHarvester": "GoogleTurnCandidateHarvester",
+        "TcpHarvester": "AbstractTcpListener",
+        "TurnCandidateHarvester": "StunCandidateHarvester",
+        "StunMappingCandidateHarvester": "MappingCandidateHarvester",
+        "GoogleTurnCandidateHarvest": "StunCandidateHarvest",
+        "StunCandidateHarvester": "AbstractCandidateHarvester",
+        "AwsCandidateHarvester": "MappingCandidateHarvester",
+        "GoogleTurnCandidateHarvester": "StunCandidateHarvester",
+        "UPNPHarvester": "AbstractCandidateHarvester",
+        "CandidateAttribute": "AttributeField",
+        "MultiplexingSocket": "DelegatingSocket",
+        "IceTcpSocketWrapper": "IceSocketWrapper",
+        "TurnDatagramPacketFilter": "StunDatagramPacketFilter",
+        "IceUdpSocketWrapper": "IceSocketWrapper",
+        "BaseDelegatingServerSocketChannel": "ServerSocketChannel",
+        "SafeCloseDatagramSocket": "DelegatingDatagramSocket",
+        "GoogleRelayedCandidateSocket": "DelegatingSocket",
+        "SocketClosedException": "SocketException",
+        "DelegatingSocket": "Socket",
+        "RelayedCandidateDatagramSocket": "DatagramSocket",
+        "DelegatingServerSocket": "ServerSocket",
+        "MultiplexingDatagramSocket": "SafeCloseDatagramSocket",
+        "GoogleRelayedCandidateDatagramSocket": "DatagramSocket",
+        "TCPInputStream": "InputStream",
+        "MultiplexedDatagramSocket": "DelegatingDatagramSocket",
+        "TCPOutputStream": "OutputStream",
+        "MultiplexedSocket": "DelegatingSocket",
+        "MergingDatagramSocket": "DatagramSocket",
+        "DelegatingDatagramSocket": "DatagramSocket",
+        "IceTcpServerSocketWrapper": "IceSocketWrapper",
+        "BaseDelegatingSocketChannel": "SocketChannel"
+    },
+    "brother_relations": {
+        "MappingTest": [
+            "AwsTest",
+            "TrickleIce",
+            "IceDistributed"
+        ],
+        "AwsTest": [
+            "MappingTest",
+            "TrickleIce",
+            "IceDistributed"
+        ],
+        "TrickleIce": [
+            "MappingTest",
+            "AwsTest",
+            "IceDistributed"
+        ],
+        "IceDistributed": [
+            "MappingTest",
+            "AwsTest",
+            "TrickleIce"
+        ],
+        "StunMessageEvent": [
+            "StunTimeoutEvent",
+            "StunFailureEvent"
+        ],
+        "StunTimeoutEvent": [
+            "StunMessageEvent",
+            "StunFailureEvent"
+        ],
+        "StunFailureEvent": [
+            "StunMessageEvent",
+            "StunTimeoutEvent"
+        ],
+        "ChannelDataMessageEvent": [
+            "PeerUdpMessageEvent",
+            "BaseStunMessageEvent"
+        ],
+        "PeerUdpMessageEvent": [
+            "ChannelDataMessageEvent",
+            "BaseStunMessageEvent"
+        ],
+        "BaseStunMessageEvent": [
+            "ChannelDataMessageEvent",
+            "PeerUdpMessageEvent"
+        ],
+        "Indication": [
+            "Response",
+            "Request"
+        ],
+        "Response": [
+            "Indication",
+            "Request"
+        ],
+        "Request": [
+            "Indication",
+            "Response"
+        ],
+        "BlockingRequestSender": [
+            "StunCandidateHarvest"
+        ],
+        "StunCandidateHarvest": [
+            "BlockingRequestSender"
+        ],
+        "DestinationAddressAttribute": [
+            "XorMappedAddressAttribute",
+            "RemoteAddressAttribute",
+            "SourceAddressAttribute",
+            "ReflectedFromAttribute",
+            "MappedAddressAttribute",
+            "ChangedAddressAttribute",
+            "ResponseAddressAttribute",
+            "AlternateServerAttribute"
+        ],
+        "XorMappedAddressAttribute": [
+            "DestinationAddressAttribute",
+            "RemoteAddressAttribute",
+            "SourceAddressAttribute",
+            "ReflectedFromAttribute",
+            "MappedAddressAttribute",
+            "ChangedAddressAttribute",
+            "ResponseAddressAttribute",
+            "AlternateServerAttribute"
+        ],
+        "RemoteAddressAttribute": [
+            "DestinationAddressAttribute",
+            "XorMappedAddressAttribute",
+            "SourceAddressAttribute",
+            "ReflectedFromAttribute",
+            "MappedAddressAttribute",
+            "ChangedAddressAttribute",
+            "ResponseAddressAttribute",
+            "AlternateServerAttribute"
+        ],
+        "SourceAddressAttribute": [
+            "DestinationAddressAttribute",
+            "XorMappedAddressAttribute",
+            "RemoteAddressAttribute",
+            "ReflectedFromAttribute",
+            "MappedAddressAttribute",
+            "ChangedAddressAttribute",
+            "ResponseAddressAttribute",
+            "AlternateServerAttribute"
+        ],
+        "ReflectedFromAttribute": [
+            "DestinationAddressAttribute",
+            "XorMappedAddressAttribute",
+            "RemoteAddressAttribute",
+            "SourceAddressAttribute",
+            "MappedAddressAttribute",
+            "ChangedAddressAttribute",
+            "ResponseAddressAttribute",
+            "AlternateServerAttribute"
+        ],
+        "MappedAddressAttribute": [
+            "DestinationAddressAttribute",
+            "XorMappedAddressAttribute",
+            "RemoteAddressAttribute",
+            "SourceAddressAttribute",
+            "ReflectedFromAttribute",
+            "ChangedAddressAttribute",
+            "ResponseAddressAttribute",
+            "AlternateServerAttribute"
+        ],
+        "ChangedAddressAttribute": [
+            "DestinationAddressAttribute",
+            "XorMappedAddressAttribute",
+            "RemoteAddressAttribute",
+            "SourceAddressAttribute",
+            "ReflectedFromAttribute",
+            "MappedAddressAttribute",
+            "ResponseAddressAttribute",
+            "AlternateServerAttribute"
+        ],
+        "ResponseAddressAttribute": [
+            "DestinationAddressAttribute",
+            "XorMappedAddressAttribute",
+            "RemoteAddressAttribute",
+            "SourceAddressAttribute",
+            "ReflectedFromAttribute",
+            "MappedAddressAttribute",
+            "ChangedAddressAttribute",
+            "AlternateServerAttribute"
+        ],
+        "AlternateServerAttribute": [
+            "DestinationAddressAttribute",
+            "XorMappedAddressAttribute",
+            "RemoteAddressAttribute",
+            "SourceAddressAttribute",
+            "ReflectedFromAttribute",
+            "MappedAddressAttribute",
+            "ChangedAddressAttribute",
+            "ResponseAddressAttribute"
+        ],
+        "XorRelayedAddressAttribute": [
+            "XorPeerAddressAttribute"
+        ],
+        "XorPeerAddressAttribute": [
+            "XorRelayedAddressAttribute"
+        ],
+        "MessageIntegrityAttribute": [
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "UnknownAttributesAttribute": [
+            "MessageIntegrityAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "SoftwareAttribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "XorOnlyAttribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "UsernameAttribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "PriorityAttribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "ErrorCodeAttribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "ReservationTokenAttribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "RealmAttribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "EvenPortAttribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "ChangeRequestAttribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "RequestedAddressFamilyAttribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "RequestedTransportAttribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "OptionalAttribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "DataAttribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "UseCandidateAttribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "NonceAttribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "ChannelNumberAttribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "ConnectionIdAttribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "MagicCookieAttribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "DontFragmentAttribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "FingerprintAttribute",
+            "LifetimeAttribute"
+        ],
+        "FingerprintAttribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "LifetimeAttribute"
+        ],
+        "LifetimeAttribute": [
+            "MessageIntegrityAttribute",
+            "UnknownAttributesAttribute",
+            "SoftwareAttribute",
+            "XorOnlyAttribute",
+            "UsernameAttribute",
+            "PriorityAttribute",
+            "ErrorCodeAttribute",
+            "ReservationTokenAttribute",
+            "RealmAttribute",
+            "EvenPortAttribute",
+            "ChangeRequestAttribute",
+            "RequestedAddressFamilyAttribute",
+            "RequestedTransportAttribute",
+            "OptionalAttribute",
+            "DataAttribute",
+            "UseCandidateAttribute",
+            "NonceAttribute",
+            "ChannelNumberAttribute",
+            "ConnectionIdAttribute",
+            "MagicCookieAttribute",
+            "DontFragmentAttribute",
+            "FingerprintAttribute"
+        ],
+        "IceControllingAttribute": [
+            "IceControlledAttribute"
+        ],
+        "IceControlledAttribute": [
+            "IceControllingAttribute"
+        ],
+        "PseudoTcpSocket": [
+            "PseudoTcpJavaSocket",
+            "DelegatingSocket"
+        ],
+        "PseudoTcpJavaSocket": [
+            "PseudoTcpSocket",
+            "DelegatingSocket"
+        ],
+        "DelegatingSocket": [
+            "PseudoTcpSocket",
+            "PseudoTcpJavaSocket"
+        ],
+        "UPNPCandidate": [
+            "PeerReflexiveCandidate",
+            "HostCandidate",
+            "GoogleRelayedCandidate",
+            "ServerReflexiveCandidate",
+            "RelayedCandidate"
+        ],
+        "PeerReflexiveCandidate": [
+            "UPNPCandidate",
+            "HostCandidate",
+            "GoogleRelayedCandidate",
+            "ServerReflexiveCandidate",
+            "RelayedCandidate"
+        ],
+        "HostCandidate": [
+            "UPNPCandidate",
+            "PeerReflexiveCandidate",
+            "GoogleRelayedCandidate",
+            "ServerReflexiveCandidate",
+            "RelayedCandidate"
+        ],
+        "GoogleRelayedCandidate": [
+            "UPNPCandidate",
+            "PeerReflexiveCandidate",
+            "HostCandidate",
+            "ServerReflexiveCandidate",
+            "RelayedCandidate"
+        ],
+        "ServerReflexiveCandidate": [
+            "UPNPCandidate",
+            "PeerReflexiveCandidate",
+            "HostCandidate",
+            "GoogleRelayedCandidate",
+            "RelayedCandidate"
+        ],
+        "RelayedCandidate": [
+            "UPNPCandidate",
+            "PeerReflexiveCandidate",
+            "HostCandidate",
+            "GoogleRelayedCandidate",
+            "ServerReflexiveCandidate"
+        ],
+        "TurnCandidateHarvest": [
+            "GoogleTurnCandidateHarvest"
+        ],
+        "GoogleTurnCandidateHarvest": [
+            "TurnCandidateHarvest"
+        ],
+        "TurnCandidateHarvester": [
+            "GoogleTurnCandidateHarvester"
+        ],
+        "GoogleTurnCandidateHarvester": [
+            "TurnCandidateHarvester"
+        ],
+        "StunMappingCandidateHarvester": [
+            "AwsCandidateHarvester"
+        ],
+        "AwsCandidateHarvester": [
+            "StunMappingCandidateHarvester"
+        ],
+        "StunCandidateHarvester": [
+            "UPNPHarvester"
+        ],
+        "UPNPHarvester": [
+            "StunCandidateHarvester"
+        ],
+        "MultiplexingSocket": [
+            "GoogleRelayedCandidateSocket",
+            "MultiplexedSocket"
+        ],
+        "GoogleRelayedCandidateSocket": [
+            "MultiplexingSocket",
+            "MultiplexedSocket"
+        ],
+        "MultiplexedSocket": [
+            "MultiplexingSocket",
+            "GoogleRelayedCandidateSocket"
+        ],
+        "IceTcpSocketWrapper": [
+            "IceUdpSocketWrapper",
+            "IceTcpServerSocketWrapper"
+        ],
+        "IceUdpSocketWrapper": [
+            "IceTcpSocketWrapper",
+            "IceTcpServerSocketWrapper"
+        ],
+        "IceTcpServerSocketWrapper": [
+            "IceTcpSocketWrapper",
+            "IceUdpSocketWrapper"
+        ],
+        "SafeCloseDatagramSocket": [
+            "MultiplexedDatagramSocket"
+        ],
+        "MultiplexedDatagramSocket": [
+            "SafeCloseDatagramSocket"
+        ],
+        "RelayedCandidateDatagramSocket": [
+            "GoogleRelayedCandidateDatagramSocket",
+            "MergingDatagramSocket",
+            "DelegatingDatagramSocket"
+        ],
+        "GoogleRelayedCandidateDatagramSocket": [
+            "RelayedCandidateDatagramSocket",
+            "MergingDatagramSocket",
+            "DelegatingDatagramSocket"
+        ],
+        "MergingDatagramSocket": [
+            "RelayedCandidateDatagramSocket",
+            "GoogleRelayedCandidateDatagramSocket",
+            "DelegatingDatagramSocket"
+        ],
+        "DelegatingDatagramSocket": [
+            "RelayedCandidateDatagramSocket",
+            "GoogleRelayedCandidateDatagramSocket",
+            "MergingDatagramSocket"
+        ]
+    }
+}

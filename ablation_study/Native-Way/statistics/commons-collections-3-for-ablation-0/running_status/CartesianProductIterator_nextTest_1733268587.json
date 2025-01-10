@@ -1,0 +1,1 @@
+{"name": "CartesianProductIterator_nextTest", "status": "coverage get success", "coverage_result": {"next": [{"Instruction Coverage": 0.9494949494949495}, {"Branch Coverage": 0.9}, {"Line Coverage": 0.9411764705882353}]}}

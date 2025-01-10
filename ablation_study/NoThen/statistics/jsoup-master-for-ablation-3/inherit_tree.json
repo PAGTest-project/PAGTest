@@ -1,0 +1,334 @@
+{
+    "inherit_relations": [
+        [
+            "DeflateServlet",
+            "BaseServlet"
+        ],
+        [
+            "InterruptedServlet",
+            "BaseServlet"
+        ],
+        [
+            "RedirectServlet",
+            "BaseServlet"
+        ],
+        [
+            "CookieServlet",
+            "BaseServlet"
+        ],
+        [
+            "FileServlet",
+            "BaseServlet"
+        ],
+        [
+            "ProxyServlet",
+            "AsyncProxyServlet"
+        ],
+        [
+            "EchoServlet",
+            "BaseServlet"
+        ],
+        [
+            "SlowRider",
+            "BaseServlet"
+        ],
+        [
+            "HelloServlet",
+            "BaseServlet"
+        ],
+        [
+            "HttpStatusException",
+            "IOException"
+        ],
+        [
+            "SerializationException",
+            "RuntimeException"
+        ],
+        [
+            "UnsupportedMimeTypeException",
+            "IOException"
+        ],
+        [
+            "AuthenticationHandler",
+            "Authenticator"
+        ],
+        [
+            "ValidationException",
+            "IllegalArgumentException"
+        ],
+        [
+            "XmlTreeBuilder",
+            "TreeBuilder"
+        ],
+        [
+            "HtmlTreeBuilder",
+            "TreeBuilder"
+        ],
+        [
+            "SimpleBufferedInput",
+            "FilterInputStream"
+        ],
+        [
+            "ControllableInputStream",
+            "FilterInputStream"
+        ],
+        [
+            "Comment",
+            "LeafNode"
+        ],
+        [
+            "DocumentType",
+            "LeafNode"
+        ],
+        [
+            "CDataNode",
+            "TextNode"
+        ],
+        [
+            "PseudoTextElement",
+            "Element"
+        ],
+        [
+            "TextNode",
+            "LeafNode"
+        ],
+        [
+            "Element",
+            "Node"
+        ],
+        [
+            "FormElement",
+            "Element"
+        ],
+        [
+            "Document",
+            "Element"
+        ],
+        [
+            "XmlDeclaration",
+            "LeafNode"
+        ],
+        [
+            "DataNode",
+            "LeafNode"
+        ]
+    ],
+    "childs": {
+        "BaseServlet": [
+            "DeflateServlet",
+            "InterruptedServlet",
+            "RedirectServlet",
+            "CookieServlet",
+            "FileServlet",
+            "EchoServlet",
+            "SlowRider",
+            "HelloServlet"
+        ],
+        "AsyncProxyServlet": [
+            "ProxyServlet"
+        ],
+        "IOException": [
+            "HttpStatusException",
+            "UnsupportedMimeTypeException"
+        ],
+        "RuntimeException": [
+            "SerializationException"
+        ],
+        "Authenticator": [
+            "AuthenticationHandler"
+        ],
+        "IllegalArgumentException": [
+            "ValidationException"
+        ],
+        "TreeBuilder": [
+            "XmlTreeBuilder",
+            "HtmlTreeBuilder"
+        ],
+        "FilterInputStream": [
+            "SimpleBufferedInput",
+            "ControllableInputStream"
+        ],
+        "LeafNode": [
+            "Comment",
+            "DocumentType",
+            "TextNode",
+            "XmlDeclaration",
+            "DataNode"
+        ],
+        "TextNode": [
+            "CDataNode"
+        ],
+        "Element": [
+            "PseudoTextElement",
+            "FormElement",
+            "Document"
+        ],
+        "Node": [
+            "Element"
+        ]
+    },
+    "parents": {
+        "DeflateServlet": "BaseServlet",
+        "InterruptedServlet": "BaseServlet",
+        "RedirectServlet": "BaseServlet",
+        "CookieServlet": "BaseServlet",
+        "FileServlet": "BaseServlet",
+        "ProxyServlet": "AsyncProxyServlet",
+        "EchoServlet": "BaseServlet",
+        "SlowRider": "BaseServlet",
+        "HelloServlet": "BaseServlet",
+        "HttpStatusException": "IOException",
+        "SerializationException": "RuntimeException",
+        "UnsupportedMimeTypeException": "IOException",
+        "AuthenticationHandler": "Authenticator",
+        "ValidationException": "IllegalArgumentException",
+        "XmlTreeBuilder": "TreeBuilder",
+        "HtmlTreeBuilder": "TreeBuilder",
+        "SimpleBufferedInput": "FilterInputStream",
+        "ControllableInputStream": "FilterInputStream",
+        "Comment": "LeafNode",
+        "DocumentType": "LeafNode",
+        "CDataNode": "TextNode",
+        "PseudoTextElement": "Element",
+        "TextNode": "LeafNode",
+        "Element": "Node",
+        "FormElement": "Element",
+        "Document": "Element",
+        "XmlDeclaration": "LeafNode",
+        "DataNode": "LeafNode"
+    },
+    "brother_relations": {
+        "DeflateServlet": [
+            "InterruptedServlet",
+            "RedirectServlet",
+            "CookieServlet",
+            "FileServlet",
+            "EchoServlet",
+            "SlowRider",
+            "HelloServlet"
+        ],
+        "InterruptedServlet": [
+            "DeflateServlet",
+            "RedirectServlet",
+            "CookieServlet",
+            "FileServlet",
+            "EchoServlet",
+            "SlowRider",
+            "HelloServlet"
+        ],
+        "RedirectServlet": [
+            "DeflateServlet",
+            "InterruptedServlet",
+            "CookieServlet",
+            "FileServlet",
+            "EchoServlet",
+            "SlowRider",
+            "HelloServlet"
+        ],
+        "CookieServlet": [
+            "DeflateServlet",
+            "InterruptedServlet",
+            "RedirectServlet",
+            "FileServlet",
+            "EchoServlet",
+            "SlowRider",
+            "HelloServlet"
+        ],
+        "FileServlet": [
+            "DeflateServlet",
+            "InterruptedServlet",
+            "RedirectServlet",
+            "CookieServlet",
+            "EchoServlet",
+            "SlowRider",
+            "HelloServlet"
+        ],
+        "EchoServlet": [
+            "DeflateServlet",
+            "InterruptedServlet",
+            "RedirectServlet",
+            "CookieServlet",
+            "FileServlet",
+            "SlowRider",
+            "HelloServlet"
+        ],
+        "SlowRider": [
+            "DeflateServlet",
+            "InterruptedServlet",
+            "RedirectServlet",
+            "CookieServlet",
+            "FileServlet",
+            "EchoServlet",
+            "HelloServlet"
+        ],
+        "HelloServlet": [
+            "DeflateServlet",
+            "InterruptedServlet",
+            "RedirectServlet",
+            "CookieServlet",
+            "FileServlet",
+            "EchoServlet",
+            "SlowRider"
+        ],
+        "HttpStatusException": [
+            "UnsupportedMimeTypeException"
+        ],
+        "UnsupportedMimeTypeException": [
+            "HttpStatusException"
+        ],
+        "XmlTreeBuilder": [
+            "HtmlTreeBuilder"
+        ],
+        "HtmlTreeBuilder": [
+            "XmlTreeBuilder"
+        ],
+        "SimpleBufferedInput": [
+            "ControllableInputStream"
+        ],
+        "ControllableInputStream": [
+            "SimpleBufferedInput"
+        ],
+        "Comment": [
+            "DocumentType",
+            "TextNode",
+            "XmlDeclaration",
+            "DataNode"
+        ],
+        "DocumentType": [
+            "Comment",
+            "TextNode",
+            "XmlDeclaration",
+            "DataNode"
+        ],
+        "TextNode": [
+            "Comment",
+            "DocumentType",
+            "XmlDeclaration",
+            "DataNode"
+        ],
+        "XmlDeclaration": [
+            "Comment",
+            "DocumentType",
+            "TextNode",
+            "DataNode"
+        ],
+        "DataNode": [
+            "Comment",
+            "DocumentType",
+            "TextNode",
+            "XmlDeclaration"
+        ],
+        "PseudoTextElement": [
+            "FormElement",
+            "Document"
+        ],
+        "FormElement": [
+            "PseudoTextElement",
+            "Document"
+        ],
+        "Document": [
+            "PseudoTextElement",
+            "FormElement"
+        ]
+    }
+}

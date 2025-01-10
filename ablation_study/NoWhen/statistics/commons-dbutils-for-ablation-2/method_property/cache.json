@@ -1,0 +1,5 @@
+{
+    "ResultSetIterator.hasNext": "/home/zhangzhe/APT/repo_parse/ablation/NoWhen/commons-dbutils-for-ablation-2/method_property/_ResultSetIterator_hasNext.json",
+    "ResultSetIterator.remove": "/home/zhangzhe/APT/repo_parse/ablation/NoWhen/commons-dbutils-for-ablation-2/method_property/_ResultSetIterator_remove.json",
+    "OutParameter.toString": "/home/zhangzhe/APT/repo_parse/ablation/NoWhen/commons-dbutils-for-ablation-2/method_property/_OutParameter_toString.json"
+}

@@ -1,0 +1,1 @@
+{"name": "CsvTransformer_getStartStreamTest", "status": "coverage get success", "coverage_result": {"getStartStream": [{"Instruction Coverage": 1.0}, {"Branch Coverage": -1.0}, {"Line Coverage": 1.0}]}}

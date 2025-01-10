@@ -1,0 +1,36 @@
+
+package org.apache.commons.collections4.comparators;
+
+import org.junit.jupiter.api.Test;
+import java.util.ArrayList;
+import java.util.BitSet;
+import java.util.Comparator;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class ComparatorChain_equalsTest {
+
+    @Test
+    void testEquals() {
+        // Given
+        Comparator<Comparable<Object>> comparator1 = Comparator.naturalOrder();
+        Comparator<Comparable<Object>> comparator2 = Comparator.naturalOrder();
+        List<Comparator<Comparable<Object>>> comparators = new ArrayList<>();
+        comparators.add(comparator1);
+        BitSet bits = new BitSet();
+        ComparatorChain<Comparable<Object>> chain1 = new ComparatorChain<>(comparators, bits);
+        ComparatorChain<Comparable<Object>> chain2 = new ComparatorChain<>(comparators, bits);
+        ComparatorChain<Comparable<Object>> chain3 = new ComparatorChain<>(comparators, new BitSet());
+        List<Comparator<Comparable<Object>>> emptyComparators = new ArrayList<>();
+        ComparatorChain<Comparable<Object>> chain4 = new ComparatorChain<>(emptyComparators, bits);
+
+        // When and Then
+        assertTrue(chain1.equals(chain1)); // Same instance
+        assertFalse(chain1.equals(null)); // Null object
+        assertTrue(chain1.equals(chain2)); // Same comparators and bits
+        assertFalse(chain1.equals(chain3)); // Different bits
+        assertFalse(chain1.equals(chain4)); // Different comparators
+        assertFalse(chain1.equals(new Object())); // Different class
+    }
+}

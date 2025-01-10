@@ -1,0 +1,38 @@
+{
+    "inherit_relations": [
+        [
+            "ArraySchemaDiffResult",
+            "SchemaDiffResult"
+        ],
+        [
+            "ComposedSchemaDiffResult",
+            "SchemaDiffResult"
+        ],
+        [
+            "RendererException",
+            "RuntimeException"
+        ]
+    ],
+    "childs": {
+        "SchemaDiffResult": [
+            "ArraySchemaDiffResult",
+            "ComposedSchemaDiffResult"
+        ],
+        "RuntimeException": [
+            "RendererException"
+        ]
+    },
+    "parents": {
+        "ArraySchemaDiffResult": "SchemaDiffResult",
+        "ComposedSchemaDiffResult": "SchemaDiffResult",
+        "RendererException": "RuntimeException"
+    },
+    "brother_relations": {
+        "ArraySchemaDiffResult": [
+            "ComposedSchemaDiffResult"
+        ],
+        "ComposedSchemaDiffResult": [
+            "ArraySchemaDiffResult"
+        ]
+    }
+}

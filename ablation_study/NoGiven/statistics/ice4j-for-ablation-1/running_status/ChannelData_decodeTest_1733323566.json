@@ -1,0 +1,1 @@
+{"name": "ChannelData_decodeTest", "status": "coverage get success", "coverage_result": {"decode": [{"Instruction Coverage": 0.9444444444444444}, {"Branch Coverage": 0.8333333333333334}, {"Line Coverage": 0.9444444444444444}]}}

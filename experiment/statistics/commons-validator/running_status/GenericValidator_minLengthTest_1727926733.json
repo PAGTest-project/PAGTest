@@ -1,0 +1,1 @@
+{"name": "GenericValidator_minLengthTest", "status": "coverage get success", "coverage_result": {"minLength": [{"Instruction Coverage": 1.0}, {"Branch Coverage": 1.0}, {"Line Coverage": 1.0}]}}

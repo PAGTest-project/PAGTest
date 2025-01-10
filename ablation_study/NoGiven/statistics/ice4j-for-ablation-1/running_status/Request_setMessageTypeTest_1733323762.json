@@ -1,0 +1,1 @@
+{"name": "Request_setMessageTypeTest", "status": "coverage get success", "coverage_result": {"setMessageType": [{"Instruction Coverage": 0.6923076923076923}, {"Branch Coverage": 0.5}, {"Line Coverage": 0.5}]}}

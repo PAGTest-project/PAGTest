@@ -1,0 +1,1 @@
+{"SelectorRStar": ["SelectorMinimalAreaIncrease", "SelectorMinimalOverlapArea"], "SelectorMinimalOverlapArea": ["SelectorMinimalAreaIncrease", "SelectorRStar"], "SelectorMinimalAreaIncrease": ["SelectorMinimalOverlapArea", "SelectorRStar"]}

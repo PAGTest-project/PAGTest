@@ -1,0 +1,1 @@
+{"name": "ValidatorResources_addConstantTest", "status": "coverage get success", "coverage_result": {"addConstant": [{"Instruction Coverage": 0.4230769230769231}, {"Branch Coverage": 0.5}, {"Line Coverage": 0.75}]}}

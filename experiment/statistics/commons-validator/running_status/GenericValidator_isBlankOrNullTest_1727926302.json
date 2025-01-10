@@ -1,0 +1,1 @@
+{"name": "GenericValidator_isBlankOrNullTest", "status": "coverage get success", "coverage_result": {"isBlankOrNull": [{"Instruction Coverage": 1.0}, {"Branch Coverage": 1.0}, {"Line Coverage": 1.0}]}}

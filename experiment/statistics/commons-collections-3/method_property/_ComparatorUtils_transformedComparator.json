@@ -1,0 +1,69 @@
+{
+    "target_method": "transformedComparator",
+    "signature": "Comparator<I> transformedComparator(Comparator<O>, Transformer<? super I, ? extends O>)",
+    "direct_enhancements": [
+        {
+            "method_name": "chainedComparator(Collection<Comparator<E>>)",
+            "relation_type": "Structural Similarity",
+            "confidence": 0.85,
+            "reason": "Both methods involve creating a comparator from a collection of comparators, with similar control flow and exception handling.",
+            "is_external": false
+        },
+        {
+            "method_name": "reversedComparator(Comparator<E>)",
+            "relation_type": "Behavioral Similarity",
+            "confidence": 0.8,
+            "reason": "Both methods modify the behavior of an existing comparator, though in different ways (reversing vs. transforming).",
+            "is_external": false
+        },
+        {
+            "method_name": "nullHighComparator(Comparator<E>)",
+            "relation_type": "Exception Handling Similarity",
+            "confidence": 0.75,
+            "reason": "Both methods handle null values in comparators, though with different strategies (high vs. transformed).",
+            "is_external": false
+        },
+        {
+            "method_name": "nullLowComparator(Comparator<E>)",
+            "relation_type": "Exception Handling Similarity",
+            "confidence": 0.75,
+            "reason": "Both methods handle null values in comparators, though with different strategies (low vs. transformed).",
+            "is_external": false
+        }
+    ],
+    "gwt_enhancements": {
+        "Given": {
+            "enhanced_by": [
+                {
+                    "method_name": "initializeComparators()",
+                    "relation_type": "State Change Similarity",
+                    "confidence": 0.7,
+                    "reason": "Both methods require initialization of comparators before they can be used.",
+                    "is_external": false
+                }
+            ]
+        },
+        "When": {
+            "enhanced_by": [
+                {
+                    "method_name": "setupComparatorChain()",
+                    "relation_type": "Resource Access Similarity",
+                    "confidence": 0.65,
+                    "reason": "Setting up a comparator chain is a prerequisite for both methods.",
+                    "is_external": false
+                }
+            ]
+        },
+        "Then": {
+            "enhanced_by": [
+                {
+                    "method_name": "verifyComparatorBehavior()",
+                    "relation_type": "Exception Handling Similarity",
+                    "confidence": 0.8,
+                    "reason": "Both methods need to verify the behavior of comparators, especially in handling exceptions.",
+                    "is_external": false
+                }
+            ]
+        }
+    }
+}

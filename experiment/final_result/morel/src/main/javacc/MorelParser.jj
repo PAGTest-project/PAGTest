@@ -1,0 +1,1660 @@
+/*
+ * Licensed to Julian Hyde under one or more contributor license
+ * agreements.  See the NOTICE file distributed with this work
+ * for additional information regarding copyright ownership.
+ * Julian Hyde licenses this file to you under the Apache
+ * License, Version 2.0 (the "License"); you may not use this
+ * file except in compliance with the License.  You may obtain a
+ * copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied.  See the License for the specific
+ * language governing permissions and limitations under the
+ * License.
+ */
+
+options {
+  STATIC = false;
+  IGNORE_CASE = false;
+  UNICODE_INPUT = true;
+}
+
+PARSER_BEGIN(MorelParserImpl)
+
+package net.hydromatic.morel.parse;
+
+import net.hydromatic.morel.ast.Ast;
+import net.hydromatic.morel.ast.Ast.*;
+import net.hydromatic.morel.ast.AstNode;
+import net.hydromatic.morel.ast.Op;
+import net.hydromatic.morel.ast.Pos;
+import net.hydromatic.morel.util.Folder;
+import net.hydromatic.morel.util.ImmutablePairList;
+import net.hydromatic.morel.util.Pair;
+import net.hydromatic.morel.util.PairList;
+
+import com.google.common.collect.ImmutableList;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import static net.hydromatic.morel.ast.AstBuilder.ast;
+import static net.hydromatic.morel.parse.Parsers.unquoteCharLiteral;
+import static net.hydromatic.morel.parse.Parsers.unquoteIdentifier;
+import static net.hydromatic.morel.parse.Parsers.unquoteString;
+
+/**
+ * Parser for Standard ML, generated from MorelParser.jj by JavaCC.
+ */
+public class MorelParserImpl implements MorelParser
+{
+  private static final Logger LOGGER =
+      LoggerFactory.getLogger("net.hydromatic.morel.parse");
+
+  private int lineOffset;
+  private String file = "";
+
+  public void setTabSize(int tabSize) {
+    jj_input_stream.setTabSize(tabSize);
+  }
+
+  public Pos pos() {
+    return new Pos(file,
+        token.beginLine - lineOffset, token.beginColumn,
+        token.endLine - lineOffset, token.endColumn + 1);
+  }
+
+  public void zero(String file) {
+    this.file = file;
+    if (jj_input_stream.bufpos >= 0) {
+      this.lineOffset = jj_input_stream.bufline[jj_input_stream.bufpos];
+    }
+  }
+}
+
+PARSER_END(MorelParserImpl)
+
+/* For Debug */
+JAVACODE
+void debug_message1()
+{
+  LOGGER.info("{} , {}", getToken(0).image, getToken(1).image);
+}
+
+/** Parses a literal expression. */
+Literal literal() :
+{
+  final Ast.Literal e;
+}
+{
+  e = numericLiteral() { return e; }
+|
+  e = stringLiteral() { return e; }
+|
+  e = charLiteral() { return e; }
+}
+
+/** Parses a literal expression followed by end-of-file. */
+Literal literalEof() :
+{
+  final Literal n;
+}
+{
+  n = literal() <EOF> { return n; }
+}
+
+/** Parses a numeric literal */
+Literal numericLiteral() :
+{
+  final BigDecimal d;
+}
+{
+  (<NON_NEGATIVE_INTEGER_LITERAL> | <NEGATIVE_INTEGER_LITERAL>) {
+    if (token.image.startsWith("~")) {
+      d = new BigDecimal(token.image.substring(1)).negate();
+    } else {
+      d = new BigDecimal(token.image);
+    }
+    return ast.intLiteral(pos(), d);
+  }
+|
+  <REAL_LITERAL> {
+    if (token.image.startsWith("~")) {
+      d = new BigDecimal(token.image.substring(1)).negate();
+      if (d.compareTo(BigDecimal.ZERO) == 0) {
+        // In IEEE floating point, and ML's 'real' type, negative zero is
+        // different from positive zero.
+        return ast.realLiteral(pos(), -0.f);
+      }
+    } else {
+      d = new BigDecimal(token.image);
+    }
+    return ast.realLiteral(pos(), d);
+  }
+|
+  <SCIENTIFIC_LITERAL> {
+    final int e = Math.max(token.image.indexOf("e"),
+      token.image.indexOf("E"));
+    if (token.image.startsWith("~")) {
+      d = new BigDecimal(token.image.substring(1, e)).negate();
+      if (d.compareTo(BigDecimal.ZERO) == 0) {
+        // In IEEE floating point, and ML's 'real' type, negative zero is
+        // different from positive zero.
+        return ast.realLiteral(pos(), -0.f);
+      }
+    } else {
+      d = new BigDecimal(token.image.substring(0, e));
+    }
+    final int exponent;
+    if (token.image.startsWith("~", e + 1)) {
+      exponent = -Integer.parseInt(token.image.substring(e + 2));
+    } else {
+      exponent = Integer.parseInt(token.image.substring(e + 1));
+    }
+    return ast.realLiteral(pos(), d.scaleByPowerOfTen(exponent));
+  }
+}
+
+/** Parses a string literal. */
+Literal stringLiteral() :
+{
+}
+{
+  <QUOTED_STRING> {
+    return ast.stringLiteral(pos(), unquoteString(token.image));
+  }
+}
+
+/** Parses a char literal. */
+Literal charLiteral() :
+{
+}
+{
+  <CHAR_LITERAL> {
+    return ast.charLiteral(pos(), unquoteCharLiteral(token.image));
+  }
+}
+
+/** Parses an identifier. */
+Id identifier() :
+{
+}
+{
+  <IDENTIFIER> {
+    return ast.id(pos(), token.image);
+  }
+| <QUOTED_IDENTIFIER> {
+    return ast.id(pos(), unquoteIdentifier(token.image));
+  }
+}
+
+/** Parses a record selector, e.g. "{@code #empno}".
+ *
+ * <p>You use it as a function to extract a field of a record;
+ * for example <code>#empno {empno=10, name="Fred"}</code>
+ * yields {@code 10}. */
+RecordSelector recordSelector() :
+{
+}
+{
+  <LABEL> {
+    assert token.image.startsWith("#");
+    return ast.recordSelector(pos(), token.image.substring(1));
+  }
+}
+
+/** Parses a type variable, e.g. "{@code 'a}". */
+TyVar tyVar() :
+{
+}
+{
+  <TY_VAR> {
+    assert token.image.startsWith("'");
+    return ast.tyVar(pos(), token.image);
+  }
+}
+
+/** Parses a type variable, or a list of 1 or more type variables in
+ *  parentheses, or empty. Valid examples: "", "'a", "('a)", "('a, 'b)". */
+List<TyVar> tyVarOptionalList() :
+{
+  TyVar tyVar;
+}
+{
+  tyVar = tyVar() { return ImmutableList.of(tyVar); }
+|
+  <LPAREN> { List<TyVar> tyVars = new ArrayList<>(); }
+  tyVar = tyVar() { tyVars.add(tyVar); }
+  (
+    <COMMA> tyVar = tyVar() { tyVars.add(tyVar); }
+  )*
+  { return tyVars; }
+|
+  { return ImmutableList.of(); }
+}
+
+/** Parses a record type, e.g. "{@code {a:int,b:string} }". */
+RecordType recordType() :
+{
+  final Span span;
+}
+{
+  <LBRACE> {
+  span = Span.of(pos());
+  final Map<String, Type> map = new LinkedHashMap<>();
+}
+  [
+    fieldType(map)
+    (
+      <COMMA> fieldType(map)
+    )*
+  ]
+  <RBRACE> {
+    return ast.recordType(span.end(this), map);
+  }
+}
+
+void fieldType(Map<String, Type> map) :
+{
+  final Id id;
+  final Type type;
+}
+{
+  id = identifier() <COLON> type = type() {
+    map.put(id.name, type);
+  }
+}
+
+/** Parses a "if ... then ... else ..." expression. */
+Exp ifThenElse() :
+{
+  final Span span;
+  final Exp condition;
+  final Exp ifTrue;
+  final Exp ifFalse;
+}
+{
+  <IF> { span = Span.of(pos()); } condition = expression()
+  <THEN> ifTrue = expression()
+  <ELSE> ifFalse = expression() {
+    return ast.ifThenElse(span.end(this), condition, ifTrue, ifFalse);
+  }
+}
+
+/** Parses a "let ... in expression end" expression. */
+Exp let() :
+{
+  final Span span;
+  final Exp e;
+  Decl decl;
+  final List<Decl> declList = new ArrayList<>();
+}
+{
+  <LET> { span = Span.of(pos()); }
+  ( decl = decl() [ <SEMICOLON> ] { declList.add(decl); } )+
+  <IN> e = expression() <END> {
+    return ast.let(span.end(this), declList, e);
+  }
+}
+
+/** Parses a "{@code case exp of pat => exp | pat => exp}" expression. */
+Exp caseOf() :
+{
+  final Span span;
+  final Exp exp;
+  final List<Match> matchList;
+}
+{
+  <CASE> { span = Span.of(pos()); } exp = expression() <OF>
+  matchList = matchList() {
+    return ast.caseOf(span.end(this), exp, matchList);
+  }
+}
+
+/** Parses a "{@code from id in exp yield exp}" expression. */
+Exp from() :
+{
+  final Span span;
+  Span stepSpan;
+  final List<FromStep> steps = new ArrayList<>();
+}
+{
+  <FROM> { span = Span.of(pos()); }
+  [ fromFirstScan(steps)
+    ( <COMMA> fromScan(steps) )*
+  ]
+  ( fromStep(steps) )*
+  {
+    return ast.from(span.end(this), steps);
+  }
+}
+
+void fromFirstScan(List<FromStep> steps) :
+{
+  final Pair<Pat, Exp> patExp;
+}
+{
+  patExp = fromSource() {
+    final Span span =
+        patExp.right != null
+          ? Span.of(patExp.left, patExp.right)
+          : Span.of(patExp.left);
+    steps.add(ast.scan(span.pos(), patExp.left, patExp.right, null));
+  }
+}
+
+void fromScan(List<FromStep> steps) :
+{
+  final Pair<Pat, Exp> patExp;
+  final Exp condition;
+}
+{
+  patExp = fromSource() {
+    final Span span =
+        patExp.right != null
+          ? Span.of(patExp.left, patExp.right)
+          : Span.of(patExp.left);
+  }
+  (
+    LOOKAHEAD(2)
+    <ON> condition = expression()
+  |
+    { condition = null; }
+  )
+  {
+    steps.add(ast.scan(span.end(this), patExp.left, patExp.right, condition));
+  }
+}
+
+void fromStep(List<FromStep> steps) :
+{
+  final Span span;
+  final Op op;
+  final Exp filterExp;
+  final Exp intoExp;
+  final Exp skipExp;
+  final Exp throughExp;
+  final Exp takeExp;
+  final Exp yieldExp;
+  final PairList<Id, Exp> groupExps;
+  final Pat pat;
+  final List<Aggregate> aggregates;
+  final List<OrderItem> orderItems;
+}
+{
+  <JOIN>
+  fromScan(steps)
+  ( <COMMA> fromScan(steps) )*
+|
+  <WHERE> { span = Span.of(pos()); } filterExp = expression() {
+    steps.add(ast.where(span.end(this), filterExp));
+  }
+|
+  <GROUP> { span = Span.of(pos()); }
+  (
+    groupExps = namedExpressionCommaList()
+  |
+    { groupExps = ImmutablePairList.of(); }
+  )
+  (
+    <COMPUTE> aggregates = aggregateCommaList()
+  |
+    { aggregates = ImmutableList.of(); }
+  )
+  {
+    steps.add(ast.group(span.end(this), groupExps, aggregates));
+  }
+|
+  <COMPUTE> { span = Span.of(pos()); } aggregates = aggregateCommaList() {
+    steps.add(ast.compute(span.end(this), aggregates));
+  }
+|
+  <INTO> { span = Span.of(pos()); } intoExp = expression() {
+    steps.add(ast.into(span.end(this), intoExp));
+  }
+|
+  <ORDER> { span = Span.of(pos()); } orderItems = orderItemCommaList() {
+    steps.add(ast.order(span.end(this), orderItems));
+  }
+|
+  <SKIP_> { span = Span.of(pos()); } skipExp = expression() {
+    steps.add(ast.skip(span.end(this), skipExp));
+  }
+|
+  <TAKE> { span = Span.of(pos()); } takeExp = expression() {
+    steps.add(ast.take(span.end(this), takeExp));
+  }
+|
+  <THROUGH> { span = Span.of(pos()); }
+  pat = pat() <IN> throughExp = expression() {
+    steps.add(ast.through(span.end(this), pat, throughExp));
+  }
+|
+  <YIELD> { span = Span.of(pos()); } yieldExp = expression() {
+    steps.add(ast.yield(span.end(this), yieldExp));
+  }
+}
+
+Pair<Pat, Exp> fromSource() :
+{
+  final Id id;
+  final Exp exp;
+  final Pat pat;
+}
+{
+  (
+    LOOKAHEAD(
+      (<IDENTIFIER> | <QUOTED_IDENTIFIER>)
+      (<COMMA> | <JOIN> | <WHERE> | <GROUP> | <COMPUTE>
+        | <SKIP_> | <TAKE> | <YIELD> | <EOF>))
+    id = identifier() {
+      return Pair.of(ast.idPat(id.pos, id.name), null);
+    }
+  |
+    pat = pat()
+    (
+      <IN> exp = expression() {
+        return Pair.of(pat, exp);
+      }
+    |
+      <EQ> exp = expression() {
+        return Pair.of(pat, ast.fromEq(exp));
+      }
+    )
+  )
+}
+
+List<Aggregate> aggregateCommaList() :
+{
+  final List<Aggregate> list = new ArrayList<>();
+  Aggregate e;
+}
+{
+  e = aggregate() { list.add(e); }
+  (
+    <COMMA> e = aggregate() { list.add(e); }
+  )*
+  { return list; }
+}
+
+Aggregate aggregate() :
+{
+  final PairList<Id, Exp> aggregateIds = PairList.of();
+  final Exp argument;
+}
+{
+  namedExpression(aggregateIds)
+  (
+    <OF> argument = expression()
+  |
+    { argument = null; }
+  )
+  {
+    final Id id = aggregateIds.get(0).getKey();
+    final Exp aggregate = aggregateIds.get(0).getValue();
+    return ast.aggregate(id.pos.plus(pos()), aggregate, argument, id);
+  }
+}
+
+/** List of order items "e1 desc, e2, e3 desc". */
+List<OrderItem> orderItemCommaList() :
+{
+  final List<OrderItem> list = new ArrayList<>();
+  OrderItem i;
+}
+{
+  i = orderItem() { list.add(i); }
+  (
+    <COMMA>
+    i = orderItem() { list.add(i); }
+  )*
+  { return list; }
+}
+
+/** Order item. An expression optionally followed by "desc". */
+OrderItem orderItem() :
+{
+  final Span span;
+  final Exp exp;
+}
+{
+  exp = expression() { span = Span.of(pos()); }
+  (
+    <DESC> { return ast.orderItem(span.end(this), exp, Ast.Direction.DESC); }
+  |
+    { return ast.orderItem(span.end(this), exp, Ast.Direction.ASC); }
+  )
+}
+
+/** Parses a "{@code fn arg => expression}" lambda expression. */
+Exp fn() :
+{
+  final Span span;
+  final Match match;
+}
+{
+  <FN> { span = Span.of(pos()); } match = match() {
+    return ast.fn(span.end(this), match);
+  }
+}
+
+List<Match> matchList() :
+{
+  Match match;
+  final List<Match> matchList = new ArrayList<>();
+}
+{
+  match = match() { matchList.add(match); }
+  (
+    <BAR> match = match() { matchList.add(match); }
+  )*
+  { return matchList; }
+}
+
+/** Parses a "{@code pat => expression}" match. */
+Match match() :
+{
+  final Pat pat;
+  final Exp e;
+}
+{
+  pat = pat() <RARROW> e = expression() {
+    return ast.match(pat.pos.plus(e.pos), pat, e);
+  }
+}
+
+/** Parses an expression.
+ *
+ * <p>8 is the highest level of precedence in standard ML,
+ and the '.field' extension is at level 9.
+ The full list is as follows:
+ *
+ * <ul>
+ * <li>infix 9 {@code .}
+ * <li>infix 8 (application)
+ * <li>infix 7 {@code * / div mod intersect}
+ * <li>infix 6 {@code + - ^ union except}
+ * <li>infixr 5 {@code :: @}
+ * <li>infix 4 {@code = <> > >= < <=}
+ * <li>infix 3 {@code := o}
+ * <li>infix 0 {@code before}
+ * </ul>
+ */
+Exp expression9() :
+{
+  Exp e;
+  Id id;
+}
+{
+  e = atom()
+  (
+    <DOT> id = identifier() {
+      final Exp s = ast.recordSelector(pos(), id.name);
+      e = ast.apply(s, e);
+    }
+  )*
+  { return e; }
+}
+
+/** Parses an expression of precedence level 8 (function application). */
+Exp expression8() :
+{
+  Exp e;
+  Exp e2;
+}
+{
+  e = expression9()
+  (
+    e2 = expression9() {
+      e = ast.apply(e, e2);
+    }
+  )*
+  { return e; }
+}
+
+/** Parses an expression of precedence level 7 (*, /, div, mod). */
+Exp expression7() :
+{
+  Exp e;
+  Exp e2;
+}
+{
+  <TILDE> e = expression7() { return ast.negate(pos(), e); }
+|
+  e = expression8()
+  (
+    <STAR> e2 = expression8() {
+      e = ast.times(e, e2);
+    }
+  |
+    <SLASH> e2 = expression8() {
+      e = ast.divide(e, e2);
+    }
+  |
+    <DIV> e2 = expression8() {
+      e = ast.div(e, e2);
+    }
+  |
+    <INTERSECT> e2 = expression8() {
+      e = ast.intersect(e, e2);
+    }
+  |
+    <MOD> e2 = expression8() {
+      e = ast.mod(e, e2);
+    }
+  )*
+  { return e; }
+}
+
+/** Parses an expression of precedence level 6 (+, -, ^, except, union). */
+Exp expression6() :
+{
+  Exp e;
+  Exp e2;
+}
+{
+  e = expression7()
+  (
+    <PLUS> e2 = expression7() {
+      e = ast.plus(e, e2);
+    }
+  |
+    <MINUS> e2 = expression7() {
+      e = ast.minus(e, e2);
+    }
+  |
+    <CARET> e2 = expression7() {
+      e = ast.caret(e, e2);
+    }
+  |
+    <EXCEPT> e2 = expression7() {
+      e = ast.except(e, e2);
+    }
+  |
+    <UNION> e2 = expression7() {
+      e = ast.union(e, e2);
+    }
+  )*
+  { return e; }
+}
+
+/** Parses an expression of precedence level 5 ({@code ::}),
+* right-associative. */
+Exp expression5() :
+{
+  Exp e;
+  final List<Folder<Exp>> list = new ArrayList<>();
+}
+{
+  e = expression6() { Folder.start(list, e); }
+  (
+    <AT> e = expression6() { Folder.at(list, e); }
+  |
+    <CONS> e = expression6() { Folder.cons(list, e); }
+  )*
+  { return Folder.combineAll(list); }
+}
+
+/** Parses an expression of precedence level 4 ({@code =}, {@code <>},
+  * {@code >}, {@code >=}, {@code <}, {@code <=}). */
+Exp expression4() :
+{
+  Exp e;
+  Exp e2;
+}
+{
+  e = expression5()
+  (
+    <EQ> e2 = expression5() {
+      e = ast.equal(e, e2);
+    }
+  |
+    <NE> e2 = expression5() {
+      e = ast.notEqual(e, e2);
+    }
+  |
+    <LT> e2 = expression5() {
+      e = ast.lessThan(e, e2);
+    }
+  |
+    <GT> e2 = expression5() {
+      e = ast.greaterThan(e, e2);
+    }
+  |
+    <LE> e2 = expression5() {
+      e = ast.lessThanOrEqual(e, e2);
+    }
+  |
+    <GE> e2 = expression5() {
+      e = ast.greaterThanOrEqual(e, e2);
+    }
+  |
+    <ELEM> e2 = expression5() {
+      e = ast.elem(e, e2);
+    }
+  |
+    <NOT_ELEM> e2 = expression5() {
+      e = ast.notElem(e, e2);
+    }
+  )*
+  { return e; }
+}
+
+/** Parses an expression of precedence level 3 (o). */
+Exp expression3() :
+{
+  Exp e;
+  Exp e2;
+}
+{
+  e = expression4()
+  (
+    <O> e2 = expression4() {
+      e = ast.o(e, e2);
+    }
+  )*
+  { return e; }
+}
+
+/** Parses an expression of precedence level 2 (andalso). */
+Exp expression2() :
+{
+  Exp e;
+  Exp e2;
+}
+{
+  e = expression3()
+  (
+    <ANDALSO> e2 = expression3() {
+      e = ast.andAlso(e, e2);
+    }
+  )*
+  { return e; }
+}
+
+/** Parses an expression of precedence level 1 (orelse). */
+Exp expression1() :
+{
+  Exp e;
+  Exp e2;
+}
+{
+  e = expression2()
+  (
+    <ORELSE> e2 = expression2() {
+      e = ast.orElse(e, e2);
+    }
+  )*
+  { return e; }
+}
+
+Exp expression() :
+{
+  Exp e;
+  Type t;
+}
+{
+  e = expression1()
+  (
+    <COLON> t = type() {
+      e = ast.annotatedExp(e.pos.plus(t.pos), e, t);
+    }
+  )*
+  { return e; }
+}
+
+/** List of expressions "e1 as id1, e2 as id2, e3 as id3". */
+PairList<Id, Exp> namedExpressionCommaList() :
+{
+  final PairList<Id, Exp> list = PairList.of();
+  Pair<Id, Exp> p;
+}
+{
+  namedExpression(list)
+  (
+    <COMMA>
+    namedExpression(list)
+  )*
+  { return list; }
+}
+
+/** Expression with optional "id =", e.g. "id1 = e1";
+ * "#deptno e" and "e.deptno" are equivalent to "deptno = e.deptno";
+ * "x" is equivalent to "x = x". */
+void namedExpression(PairList<Id, Exp> list) :
+{
+  final Exp exp;
+  final Id id;
+}
+{
+  LOOKAHEAD(( <IDENTIFIER> | <QUOTED_IDENTIFIER> ) <EQ>)
+  id = identifier() <EQ> exp = expression() {
+    list.add(id, exp);
+  }
+|
+  exp = expression() {
+    final String name = ast.implicitLabel(exp);
+    list.add(ast.id(exp.pos, name), exp);
+  }
+}
+
+/** Parses an atomic expression. */
+Exp atom() :
+{
+  final Exp e;
+  final Span span;
+}
+{
+  e = identifier() { return e; }
+|
+  e = recordSelector() { return e; }
+|
+  e = literal() { return e; }
+|
+  e = let() { return e; }
+|
+  e = fn() { return e; }
+|
+  e = ifThenElse() { return e; }
+|
+  e = caseOf() { return e; }
+|
+  e = from() { return e; }
+|
+  <LPAREN> {
+    span = Span.of(pos());
+  }
+  (
+    <RPAREN> { return ast.unitLiteral(span.end(this)); }
+  |
+    e = expression()
+    (
+      <RPAREN> { return e; }
+    |
+      {
+        final List<Exp> list = new ArrayList<>();
+        list.add(e);
+        Exp e2;
+      }
+      (
+        <COMMA> e2 = expression() { list.add(e2); }
+      )+
+      <RPAREN> {
+        return ast.tuple(span.end(this), list);
+      }
+    )
+  )
+|
+  <LBRACKET> {
+    span = Span.of(pos());
+    final List<Exp> list = new ArrayList<>();
+    Exp e2;
+  }
+  [
+    e2 = expression() { list.add(e2); }
+    (
+      <COMMA> e2 = expression() { list.add(e2); }
+    )*
+  ]
+  <RBRACKET> {
+    return ast.list(span.end(this), list);
+  }
+|
+  <LBRACE> {
+    span = Span.of(pos());
+    final PairList<String, Exp> nameExps = PairList.of();
+  }
+  [
+    recordExp(nameExps)
+    (
+      <COMMA> recordExp(nameExps)
+    )*
+  ]
+  <RBRACE> {
+    return ast.record(span.end(this), nameExps);
+  }
+}
+
+/** Parses a "label = expression" inside a record. */
+void recordExp(PairList<String, Exp> nameExps) :
+{
+  final String id;
+  final Ast.Exp exp;
+}
+{
+  LOOKAHEAD(<NON_NEGATIVE_INTEGER_LITERAL> <EQ>)
+  <NON_NEGATIVE_INTEGER_LITERAL> { id = token.image; }
+  <EQ> exp = expression() { nameExps.add(id, exp); }
+|
+  LOOKAHEAD(<IDENTIFIER> <EQ>)
+  <IDENTIFIER> { id = token.image; }
+  <EQ> exp = expression() { nameExps.add(id, exp); }
+|
+  LOOKAHEAD(<QUOTED_IDENTIFIER> <EQ>)
+  <QUOTED_IDENTIFIER> { id = unquoteIdentifier(token.image); }
+  <EQ> exp = expression() { nameExps.add(id, exp); }
+|
+  exp = expression() {
+    final String label = ast.implicitLabel(exp);
+    nameExps.add(label, exp);
+  }
+}
+
+/** Parses a value declaration, and adds it to a list. */
+void addValDecl(List decls) :
+{
+  final ValDecl decl;
+}
+{
+  decl = valDecl() {
+    decls.add(decl);
+  }
+}
+
+/** Parses a value declaration. */
+ValDecl valDecl() :
+{
+  final Span span;
+  boolean rec = false;
+  final List<Ast.ValBind> valBinds = new ArrayList<>();
+}
+{
+  <VAL> { span = Span.of(pos()); }
+  [ <REC> { rec = true; } ]
+  valBind(valBinds)
+  (
+    <AND> valBind(valBinds)
+  )*
+  { return ast.valDecl(span.end(this), rec, valBinds); }
+}
+
+void valBind(List<Ast.ValBind> valBinds) :
+{
+  final Pat pat;
+  final Exp e;
+}
+{
+  pat = pat() <EQ> e = expression() {
+    valBinds.add(ast.valBind(pat.pos.plus(e.pos), pat, e));
+  }
+}
+
+/** Parses a declaration. */
+Ast.Decl decl() :
+{
+  final Ast.Decl n;
+}
+{
+  n = datatypeDecl() { return n; }
+|
+  n = valDecl() { return n; }
+|
+  n = funDecl() { return n; }
+}
+
+/** Parses a declaration followed by end-of-file. */
+Ast.Decl declEof() :
+{
+  Ast.Decl d;
+}
+{
+  d = decl() <EOF> { return d; }
+}
+
+/** Parses a type declaration, e.g.
+ * {@code datatype 'a option = NONE | SOME of 'a}
+ */
+Ast.DatatypeDecl datatypeDecl() :
+{
+  final Span span;
+  final List<DatatypeBind> binds = new ArrayList<>();
+}
+{
+  <DATATYPE> { span = Span.of(pos()); }
+  datatypeBind(binds)
+  (
+    <AND> datatypeBind(binds)
+  )*
+  { return ast.datatypeDecl(span.end(this), binds); }
+}
+
+void datatypeBind(List<Ast.DatatypeBind> datatypeBinds) :
+{
+  final List<TyVar> tyVars = new ArrayList<>();
+  TyVar tyVar;
+  final Ast.Id id;
+  final List<TyCon> tyCons = new ArrayList<>();
+  TyCon tyCon;
+}
+{
+  (
+    tyVar = tyVar() { tyVars.add(tyVar); }
+  |
+    <LPAREN>
+    tyVar = tyVar() { tyVars.add(tyVar); }
+    (
+      <COMMA> tyVar = tyVar() {
+        tyVars.add(tyVar);
+      }
+    )*
+    <RPAREN>
+  )?
+  id = identifier()
+  <EQ>
+  tyCon = typeConstructor() {
+    tyCons.add(tyCon);
+  }
+  (
+    <BAR> tyCon = typeConstructor() {
+      tyCons.add(tyCon);
+    }
+  )*
+  {
+    final List<AstNode> nodes = ImmutableList.<AstNode>builder().addAll(tyVars)
+        .add(id).addAll(tyCons).build();
+    datatypeBinds.add(ast.datatypeBind(Pos.sum(nodes), id, tyVars, tyCons));
+  }
+}
+
+Ast.TyCon typeConstructor() :
+{
+  final Ast.Id tag;
+  final Ast.Type type;
+}
+{
+  tag = identifier()
+  (
+    <OF> type = type()
+  |
+    { type = null; }
+  )
+  {
+    final Pos pos = type == null ? tag.pos : tag.pos.plus(type.pos);
+    return ast.typeConstructor(pos, tag, type);
+  }
+}
+
+/** Parses a function declaration, e.g.
+* {@code fun f 1 y = y + 1 | f x y = 0 and g x = 0}. */
+Ast.FunDecl funDecl() :
+{
+  final Span span;
+  final List<FunBind> funBindList = new ArrayList<>();
+}
+{
+  <FUN> { span = Span.of(pos()); }
+  funBind(funBindList)
+  (
+    <AND> funBind(funBindList)
+  )*
+  {
+    return ast.funDecl(span.end(this), funBindList);
+  }
+}
+
+/** Parses a function binding, e.g.
+* {@code f 1 y = y + 1 | f x y = 0},
+* and adds it to a list. */
+void funBind(List<FunBind> list) :
+{
+  final List<FunMatch> matchList = new ArrayList<>();
+}
+{
+  funMatch(matchList)
+  (
+    <BAR> funMatch(matchList)
+  )*
+  {
+    list.add(ast.funBind(Pos.sum(matchList), matchList));
+  }
+}
+
+/** Parses a function match, e.g.
+* {@code f 1 y = y + 1},
+* and adds it to a list. */
+void funMatch(List<FunMatch> list) :
+{
+  final Ast.Id id;
+  Ast.Pat pat;
+  final List<Ast.Pat> patList = new ArrayList<>();
+  final Ast.Exp expression;
+  Ast.Type returnType = null;
+}
+{
+  id = identifier()
+  ( pat = atomPat() { patList.add(pat); } )+
+  [ <COLON> returnType = type() ]
+  <EQ> expression = expression() {
+    list.add(
+        ast.funMatch(id.pos.plus(expression.pos), id.name, patList, returnType,
+            expression));
+  }
+}
+
+/** Parses a pattern. */
+Pat pat() :
+{
+  Pat pat;
+  Type type;
+}
+{
+  pat = pat5()
+  (
+    <COLON> type = type() {
+      pat = ast.annotatedPat(pat.pos.plus(type.pos), pat, type);
+    }
+  )*
+  { return pat; }
+}
+
+/** Parses a pattern of precedence level 5 ({@code ::}),
+* right-associative. */
+Pat pat5() :
+{
+  Pat pat;
+  final List<Pat> list = new ArrayList<>();
+}
+{
+  pat = pat4() { list.add(pat); }
+  (
+    <CONS> pat = pat4() { list.add(pat); }
+  )*
+  {
+    pat = list.get(list.size() - 1);
+    for (int i = list.size() - 2; i >= 0; i--) {
+      pat = ast.consPat(list.get(i), pat);
+    }
+    return pat;
+  }
+}
+
+/** Parses a pattern that is a type constructor (an identifier) followed by a
+ * pattern. For now, assume that it has precedence level 4. */
+Pat pat4() :
+{
+  final Id id;
+  final Pat pat;
+}
+{
+  id = identifier()
+  (
+    // layered pattern
+    <AS> pat = pat() {
+      return ast.asPat(id.pos.plus(pat.pos),
+          (Ast.IdPat) ast.idPat(id.pos, id.name), pat);
+    }
+  |
+    pat = pat() { return ast.conPat(id.pos.plus(pat.pos), id, pat); }
+  |
+    // id was not followed by pattern: it must be pattern
+    { return ast.idPat(id.pos, id.name); }
+  )
+|
+  pat = atomPat() { return pat; }
+}
+
+/** Parses an atomic pattern. */
+Pat atomPat() :
+{
+  final Span span;
+  final Ast.Id id;
+  final Ast.Literal literal;
+  Ast.Pat p;
+  final List<Pat> list = new ArrayList<>();
+}
+{
+  id = identifier() { return ast.idPat(id.pos, id.name); }
+|
+  literal = literal() {
+    return ast.literalPat(literal.pos, literal.op.toPat(), literal.value);
+  }
+|
+  "_" {
+    return ast.wildcardPat(pos());
+  }
+|
+  <LPAREN> { span = Span.of(pos()); }
+  [
+    p = pat() { list.add(p); }
+    (
+      <COMMA> p = pat() { list.add(p); }
+    )*
+  ]
+  <RPAREN> {
+    if (list.size() == 1) {
+      return list.get(0);
+    } else {
+      return ast.tuplePat(span.end(this), list);
+    }
+  }
+|
+  <LBRACKET> {
+    span = Span.of(pos());
+  }
+  [
+    p = pat() { list.add(p); }
+    (
+      <COMMA> p = pat() { list.add(p); }
+    )*
+  ]
+  <RBRACKET> {
+    return ast.listPat(span.end(this), list);
+  }
+|
+  <LBRACE> {
+    span = Span.of(pos());
+    final Map<String, Pat> map = new LinkedHashMap<>();
+    boolean ellipsis = false;
+  }
+  [
+    <ELLIPSIS> { ellipsis = true; }
+  |
+    recordPat(map)
+    (
+      LOOKAHEAD(2)
+      <COMMA> recordPat(map)
+    )*
+    [ <COMMA> <ELLIPSIS> { ellipsis = true; } ]
+  ]
+  <RBRACE> {
+    return ast.recordPat(span.end(this), ellipsis, map);
+  }
+}
+
+/** Parses a "label = pat" inside a record pattern. */
+void recordPat(Map<String, Pat> map) :
+{
+  final String id;
+  final Ast.Pat pat;
+}
+{
+  ( <NON_NEGATIVE_INTEGER_LITERAL> { id = token.image; }
+  | <IDENTIFIER> { id = token.image; }
+  | <QUOTED_IDENTIFIER> { id = unquoteIdentifier(token.image); }
+  )
+  (
+    <EQ> pat = pat() { map.put(id, pat); }
+  |
+    { map.put(id, ast.idPat(pos(), id)); }
+  )
+}
+
+/** Parses a type. */
+Ast.Type atomicType() :
+{
+  final Span span;
+  final Type type;
+}
+{
+  type = tyVar() { return type; }
+|
+  type = namedType() { return type; }
+|
+  type = recordType() { return type; }
+|
+  <LPAREN> {
+    span = Span.of(pos());
+  }
+  type = type()
+  (
+    <RPAREN> { return type; }
+  |
+    {
+      final List<Type> list = new ArrayList<>();
+      list.add(type);
+      Type type2;
+    }
+    (
+      <COMMA> type2 = type() { list.add(type2); }
+    )+
+    <RPAREN> {
+      return ast.compositeType(span.end(this), list);
+    }
+  )
+}
+
+Ast.Type type7() :
+{
+  Type t;
+}
+{
+  t = atomicType()
+  (
+    <IDENTIFIER> {
+      final List<Type> types =
+        t instanceof Ast.CompositeType
+          ? ((Ast.CompositeType) t).types
+          : ImmutableList.of(t);
+      t = ast.namedType(t.pos.plus(pos()), types, token.image);
+    }
+  )*
+  { return t; }
+}
+
+Ast.Type type6() :
+{
+  final List<Type> types = new ArrayList<>();
+  Type t;
+}
+{
+  t = type7() { types.add(t); }
+  (
+    <STAR> t = type7() { types.add(t); }
+  )*
+  {
+    return types.size() == 1 ? t
+      : ast.tupleType(Pos.sum(types), types);
+  }
+}
+
+Ast.Type type() :
+{
+  final List<Type> types = new ArrayList<>();
+  Type t;
+}
+{
+  t = type6() { types.add(t); }
+  (
+    <RTHINARROW> t = type6() { types.add(t); }
+  )*
+  {
+    return types.size() == 1 ? t
+        : ast.foldFunctionType(types);
+  }
+}
+
+Ast.Type namedType() :
+{
+}
+{
+  <IDENTIFIER> {
+    return ast.namedType(pos(), ImmutableList.of(), token.image);
+  }
+}
+
+AstNode statement() :
+{
+  final AstNode n;
+}
+{
+  n = expression() { return n; }
+|
+  n = decl() { return n; }
+}
+
+AstNode statementSemicolon() :
+{
+  final AstNode n;
+}
+{
+  n = statement() <SEMICOLON> { return n; }
+}
+
+/** Parses a statement followed by semicolon or end-of-file.
+ * Returns null if there is no statement. */
+AstNode statementSemicolonOrEof() :
+{
+  final AstNode n;
+}
+{
+  <EOF> { return null; }
+|
+  n = statement() ( <SEMICOLON> | <EOF> ) { return n; }
+}
+
+/** Parses a statement followed by end-of-file. */
+AstNode statementEof() :
+{
+  final AstNode n;
+}
+{
+  n = statement() <EOF> { return n; }
+}
+
+<DEFAULT> TOKEN :
+{
+  < AND: "and" >
+| < ANDALSO: "andalso" >
+| < AS: "as" >
+| < CASE: "case" >
+| < DATATYPE: "datatype" >
+| < DIV: "div" >
+| < ELEM: "elem" >
+| < ELSE: "else" >
+| < EXCEPT: "except" >
+| < END: "end" >
+| < FN: "fn" >
+| < FUN: "fun" >
+| < IF: "if" >
+| < IN: "in" >
+| < INTERSECT: "intersect" >
+| < LET: "let" >
+| < MOD: "mod" >
+| < NOT_ELEM: "notelem" >
+| < O: "o" >
+| < OF: "of" >
+| < ORELSE: "orelse" >
+| < REC: "rec" >
+| < THEN: "then" >
+| < UNION: "union" >
+| < VAL: "val" >
+
+// The following are relational extensions:
+| < COMPUTE: "compute" >
+| < DESC: "desc" >
+| < FROM: "from" >
+| < GROUP: "group" >
+| < INTO: "into" >
+| < JOIN: "join" >
+| < ON: "on" >
+| < ORDER: "order" >
+| < SKIP_: "skip" >
+| < TAKE: "take" >
+| < THROUGH: "through" >
+| < WHERE: "where" >
+| < YIELD: "yield" >
+}
+
+/* LITERALS */
+
+<DEFAULT> TOKEN :
+{
+    < NON_NEGATIVE_INTEGER_LITERAL: (["0"-"9"])+ >
+    |
+    < NEGATIVE_INTEGER_LITERAL: "~"(["0"-"9"])+ >
+    |
+    < REAL_LITERAL: ("~")?(["0"-"9"])+ "." (["0"-"9"])+ >
+    |
+    < SCIENTIFIC_LITERAL: ("~")?(["0"-"9"])+
+                          ("." (["0"-"9"])+)?
+                          ["e", "E"] ("~")?(["0"-"9"])+>
+    |
+    < #HEXDIGIT: ["0"-"9","a"-"f","A"-"F"] >
+    |
+    < #WHITESPACE:
+    [ " ","\t","\n","\r","\f" ]
+    >
+    |
+    < QUOTED_STRING: <DOUBLE_QUOTE> ( (~["\"", "\\"]) | ("\\" "\"") | ("\\" "\\") )* <DOUBLE_QUOTE> >
+    |
+    < CHAR_LITERAL: ("#") <QUOTED_STRING> >
+}
+
+/* SEPARATORS */
+
+<DEFAULT> TOKEN :
+{
+    < LPAREN: "(">
+    | < RPAREN: ")">
+    | < LBRACE: "{" >
+    | < RBRACE: "}" >
+    | < LBRACKET: "[" >
+    | < RBRACKET: "]" >
+    | < SEMICOLON: ";" >
+    | < BAR: "|" >
+    | < DOT: "." >
+    | < COMMA: "," >
+    | < RARROW: "=>" >
+    | < RTHINARROW: "->" >
+}
+
+/* OPERATORS */
+
+<DEFAULT> TOKEN :
+{
+    < EQ: "=" >
+    | < GT: ">" >
+    | < LT: "<" >
+    | < COLON: ":" >
+    | < LE: "<=" >
+    | < GE: ">=" >
+    | < NE: "<>" >
+    | < PLUS: "+" >
+    | < MINUS: "-" >
+    | < CARET: "^" >
+    | < STAR: "*" >
+    | < SLASH: "/" >
+    | < TILDE: "~" >
+    | < CONS: "::" >
+    | < AT: "@" >
+    | < ELLIPSIS: "..." >
+    | < QUOTE: "'" >
+    | < DOUBLE_QUOTE: "\"" >
+}
+
+
+/*****************************************
+ * Lexical Descriptions                  *
+ *****************************************/
+
+TOKEN_MGR_DECLS : {
+    List<Integer> lexicalStateStack = new ArrayList<>();
+
+    void pushState() {
+      lexicalStateStack.add(curLexState);
+    }
+
+    void popState() {
+      SwitchTo(lexicalStateStack.remove(lexicalStateStack.size() - 1));
+    }
+}
+
+/*
+Lexical states:
+
+DEFAULT:
+IN_COMMENT:
+IN_LINE_COMMENT:
+
+DEFAULT is the normal state.
+
+After a comment has completed, the lexer returns to the previous state, one
+of the 'normal states'.
+*/
+
+/* WHITE SPACE */
+
+<DEFAULT> SKIP :
+{
+    " "
+    | "\t"
+    | "\n"
+    | "\r"
+    | "\f"
+}
+
+/* COMMENTS */
+
+<DEFAULT> MORE :
+{
+    "(*)" { pushState(); } : IN_LINE_COMMENT
+|
+    "(*" { pushState(); } : IN_COMMENT
+}
+
+<IN_LINE_COMMENT>
+SPECIAL_TOKEN :
+{
+    <SINGLE_LINE_COMMENT: "\n" | "\r" | "\r\n" > { popState(); }
+}
+
+<IN_COMMENT>
+SPECIAL_TOKEN :
+{
+    <END_COMMENT: ~["("] "*)"  > { popState(); }
+}
+
+<IN_COMMENT, IN_LINE_COMMENT>
+MORE :
+{
+    < ~[] >
+}
+
+
+/* IDENTIFIERS */
+
+<DEFAULT> TOKEN :
+{
+    < COLLATION_ID:
+    (<LETTER>|<DIGIT>)+ (<LETTER>|<DIGIT>|":"|"."|"-"|"_")*
+    "$"
+    (<LETTER>|"_")+
+    ("$" (<LETTER>|<DIGIT>|"_")+)?
+    >
+    |
+    < IDENTIFIER: <LETTER> (<LETTER>|<DIGIT>|"_"|"'")* >
+    |
+    < QUOTED_IDENTIFIER: "`" ( (~["`"]) | ("`" "`") )* "`" >
+    |
+    < TY_VAR: "'" <LETTER> (<LETTER>|<DIGIT>|"_"|"'")* >
+    |
+    < LABEL: "#" (<LETTER>|<DIGIT>|"_"|"'")+ >
+    |
+    < #LETTER:
+    [
+        "\u0041"-"\u005a",
+        "\u0061"-"\u007a",
+        "\u00c0"-"\u00d6",
+        "\u00d8"-"\u00f6",
+        "\u00f8"-"\u00ff",
+        "\u0100"-"\u1fff",
+        "\u3040"-"\u318f",
+        "\u3300"-"\u337f",
+        "\u3400"-"\u3d2d",
+        "\u4e00"-"\u9fff",
+        "\uf900"-"\ufaff"
+    ]
+    >
+    |
+    < #DIGIT:
+    [
+        "\u0030"-"\u0039",
+        "\u0660"-"\u0669",
+        "\u06f0"-"\u06f9",
+        "\u0966"-"\u096f",
+        "\u09e6"-"\u09ef",
+        "\u0a66"-"\u0a6f",
+        "\u0ae6"-"\u0aef",
+        "\u0b66"-"\u0b6f",
+        "\u0be7"-"\u0bef",
+        "\u0c66"-"\u0c6f",
+        "\u0ce6"-"\u0cef",
+        "\u0d66"-"\u0d6f",
+        "\u0e50"-"\u0e59",
+        "\u0ed0"-"\u0ed9",
+        "\u1040"-"\u1049"
+    ]
+    >
+}
+
+// End MorelParser.jj

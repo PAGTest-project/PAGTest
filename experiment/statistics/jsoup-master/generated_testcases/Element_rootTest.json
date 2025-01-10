@@ -1,0 +1,1 @@
+[{"strategy": "generate", "code": "\npackage org.jsoup.nodes;\n\nimport org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.assertNotNull;\n\nclass Element_rootTest {\n\n    @Test\n    void testRoot() {\n        Element element = new Element(\"div\");\n        assertNotNull(element.root());\n    }\n}\n"}]

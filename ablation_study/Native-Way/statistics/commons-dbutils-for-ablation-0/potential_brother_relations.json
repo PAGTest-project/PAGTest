@@ -1,0 +1,1 @@
+{"TestPropertyHandler": ["DatePropertyHandler", "StringEnumPropertyHandler"], "DatePropertyHandler": ["StringEnumPropertyHandler", "TestPropertyHandler"], "StringEnumPropertyHandler": ["DatePropertyHandler", "TestPropertyHandler"]}

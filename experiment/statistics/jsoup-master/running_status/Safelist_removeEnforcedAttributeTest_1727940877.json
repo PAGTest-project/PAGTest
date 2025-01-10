@@ -1,0 +1,1 @@
+{"name": "Safelist_removeEnforcedAttributeTest", "status": "coverage get success", "coverage_result": {"removeEnforcedAttribute": [{"Instruction Coverage": 1.0}, {"Branch Coverage": 0.8333333333333334}, {"Line Coverage": 1.0}]}}

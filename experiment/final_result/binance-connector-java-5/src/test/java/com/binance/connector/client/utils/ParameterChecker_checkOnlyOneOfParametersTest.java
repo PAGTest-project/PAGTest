@@ -1,0 +1,40 @@
+
+package com.binance.connector.client.utils;
+
+import org.json.JSONObject;
+import org.junit.Test;
+import com.binance.connector.client.exceptions.BinanceConnectorException;
+import static org.junit.Assert.*;
+
+public class ParameterChecker_checkOnlyOneOfParametersTest {
+
+    @Test
+    public void testCheckOnlyOneOfParameters_SingleParameterPresent() {
+        JSONObject params = new JSONObject();
+        params.put("param1", "value1");
+        ParameterChecker.checkOnlyOneOfParameters(params, "param1", "param2");
+        // No exception should be thrown
+    }
+
+    @Test
+    public void testCheckOnlyOneOfParameters_MultipleParametersPresent() {
+        JSONObject params = new JSONObject();
+        params.put("param1", "value1");
+        params.put("param2", "value2");
+        assertThrows(BinanceConnectorException.class, () -> ParameterChecker.checkOnlyOneOfParameters(params, "param1", "param2"));
+    }
+
+    @Test
+    public void testCheckOnlyOneOfParameters_NoParametersPresent() {
+        JSONObject params = new JSONObject();
+        ParameterChecker.checkOnlyOneOfParameters(params, "param1", "param2");
+        // No exception should be thrown
+    }
+
+    @Test
+    public void testCheckOnlyOneOfParameters_NullParams() {
+        JSONObject params = null;
+        ParameterChecker.checkOnlyOneOfParameters(params, "param1", "param2");
+        // No exception should be thrown
+    }
+}

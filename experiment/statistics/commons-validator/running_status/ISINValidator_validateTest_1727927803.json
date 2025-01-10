@@ -1,0 +1,1 @@
+{"name": "ISINValidator_validateTest", "status": "coverage get success", "coverage_result": {"validate": [{"Instruction Coverage": 0.9545454545454546}, {"Branch Coverage": 0.8333333333333334}, {"Line Coverage": 1.0}]}}

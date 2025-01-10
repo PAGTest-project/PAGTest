@@ -1,0 +1,1 @@
+{"name": "JSONParser_getJSONStringValueTest", "status": "coverage get success", "coverage_result": {"getJSONStringValue": [{"Instruction Coverage": 1.0}, {"Branch Coverage": -1.0}, {"Line Coverage": 1.0}]}}

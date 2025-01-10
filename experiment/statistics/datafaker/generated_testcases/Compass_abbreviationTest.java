@@ -1,0 +1,39 @@
+
+package net.datafaker.providers.base;
+
+import net.datafaker.providers.base.Compass.CompassPoint;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class Compass_abbreviationTest {
+
+    private Compass compass;
+
+    @BeforeEach
+    public void setUp() {
+        compass = new Compass(new BaseProviders() {
+            @Override
+            public void addUrl(java.util.Locale locale, java.net.URL url) {
+                // Implementation of the abstract method
+            }
+
+            @Override
+            public FakeValuesService fakeValuesService() {
+                // Implementation of the abstract method
+                return null;
+            }
+        });
+    }
+
+    @Test
+    public void testAbbreviationWithCompassPoint() {
+        compass.compassPoint(CompassPoint.CARDINAL);
+        assertEquals("compass.cardinal.abbreviation", compass.abbreviation());
+    }
+
+    @Test
+    public void testAbbreviationWithoutCompassPoint() {
+        assertEquals("compass.abbreviation", compass.abbreviation());
+    }
+}

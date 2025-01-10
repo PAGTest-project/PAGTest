@@ -1,0 +1,1 @@
+{"name": "IBANCheckDigit_isValidTest", "status": "coverage get success", "coverage_result": {"isValid": [{"Instruction Coverage": 0.9230769230769231}, {"Branch Coverage": 1.0}, {"Line Coverage": 0.75}]}}

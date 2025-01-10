@@ -1,0 +1,1 @@
+{"name": "StunStack_sendIndicationTest", "status": "coverage get success", "coverage_result": {"sendIndication": [{"Instruction Coverage": 0.7272727272727273}, {"Branch Coverage": 0.5}, {"Line Coverage": 0.8}]}}

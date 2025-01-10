@@ -1,0 +1,1 @@
+{"name": "StaticBucketMap_putTest", "status": "coverage get success", "coverage_result": {"put": [{"Instruction Coverage": 0.68}, {"Branch Coverage": 0.6666666666666666}, {"Line Coverage": 0.6956521739130435}]}}

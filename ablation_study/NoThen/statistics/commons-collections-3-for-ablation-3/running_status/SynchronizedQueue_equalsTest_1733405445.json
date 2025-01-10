@@ -1,0 +1,1 @@
+{"name": "SynchronizedQueue_equalsTest", "status": "coverage get success", "coverage_result": {"equals": [{"Instruction Coverage": 0.29411764705882354}, {"Branch Coverage": 0.5}, {"Line Coverage": 0.5}]}}

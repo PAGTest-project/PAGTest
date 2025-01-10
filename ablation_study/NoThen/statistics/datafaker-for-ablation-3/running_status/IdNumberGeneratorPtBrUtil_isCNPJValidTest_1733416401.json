@@ -1,0 +1,1 @@
+{"name": "IdNumberGeneratorPtBrUtil_isCNPJValidTest", "status": "coverage get success", "coverage_result": {"isCNPJValid": [{"Instruction Coverage": 0.9642857142857143}, {"Branch Coverage": 0.5}, {"Line Coverage": 0.875}]}}

@@ -1,0 +1,1 @@
+{"name": "PeekingIterator_hasNextTest", "status": "coverage get success", "coverage_result": {"hasNext": [{"Instruction Coverage": 0.875}, {"Branch Coverage": 0.8333333333333334}, {"Line Coverage": 0.6666666666666666}]}}

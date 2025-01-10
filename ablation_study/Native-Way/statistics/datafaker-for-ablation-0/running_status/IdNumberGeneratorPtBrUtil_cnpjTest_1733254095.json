@@ -1,0 +1,1 @@
+{"name": "IdNumberGeneratorPtBrUtil_cnpjTest", "status": "coverage get success", "coverage_result": {"cnpj": [{"Instruction Coverage": 0.952}, {"Branch Coverage": 0.9}, {"Line Coverage": 0.95}]}}

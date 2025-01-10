@@ -1,0 +1,30 @@
+name: stryker-javascript
+
+on:
+  push:
+    branches-ignore:
+      - renovate/**
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  stryker:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: javascript/package-lock.json
+    - run: npm install
+      working-directory: javascript
+    - run: npm run stryker
+      working-directory: javascript
+    - uses: actions/upload-artifact@v4
+      with:
+        name: stryker-report
+        path: |
+          javascript/reports/mutation/html/index.html
+          javascript/reports/mutation/mutation.json

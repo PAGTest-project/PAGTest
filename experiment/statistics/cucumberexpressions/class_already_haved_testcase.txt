@@ -1,0 +1,16 @@
+Argument
+ParameterTypeRegistry
+CucumberExpression
+Expression
+RegularExpression
+TreeRegexp
+ParameterType
+CucumberExpressionParser
+RegexpUtils
+CucumberExpressionTokenizer
+CombinatorialGeneratedExpressionFactory
+PatternCompilerProvider
+NumberParser
+BuiltInParameterTransformer
+ParameterByTypeTransformer
+ExpressionFactory

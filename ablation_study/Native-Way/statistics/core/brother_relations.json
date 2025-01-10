@@ -1,0 +1,8 @@
+{
+    "ArraySchemaDiffResult": [
+        "ComposedSchemaDiffResult"
+    ],
+    "ComposedSchemaDiffResult": [
+        "ArraySchemaDiffResult"
+    ]
+}

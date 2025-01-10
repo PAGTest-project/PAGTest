@@ -1,0 +1,9 @@
+{
+    "ParameterType.compareTo": "/home/zhangzhe/APT/repo_parse/ablation/NoThen/java/method_property/_ParameterType_compareTo.json",
+    "ParameterType.weight": "/home/zhangzhe/APT/repo_parse/ablation/NoThen/java/method_property/_ParameterType_weight.json",
+    "RegexpUtils.escapeRegex": "/home/zhangzhe/APT/repo_parse/ablation/NoThen/java/method_property/_RegexpUtils_escapeRegex.json",
+    "RegularExpression.match": "/home/zhangzhe/APT/repo_parse/ablation/NoThen/java/method_property/_RegularExpression_match.json",
+    "ParameterTypeRegistry.defineParameterType": "/home/zhangzhe/APT/repo_parse/ablation/NoThen/java/method_property/_ParameterTypeRegistry_defineParameterType.json",
+    "ExpressionFactory.createExpression": "/home/zhangzhe/APT/repo_parse/ablation/NoThen/java/method_property/_ExpressionFactory_createExpression.json",
+    "CucumberExpression.match": "/home/zhangzhe/APT/repo_parse/ablation/NoThen/java/method_property/_CucumberExpression_match.json"
+}

@@ -1,0 +1,1 @@
+{"BaseFaker": [{"methods": [{"method_name": "expression(String)", "file_path": "src/test/java/net/datafaker/Issue1178Test.java", "testclass_name": "Issue1178Test", "testcase_name": "testExpressionEnglishFails"}], "class": "Faker"}]}

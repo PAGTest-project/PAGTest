@@ -1,0 +1,1 @@
+{"name": "ChangedSchema_setWriteOnlyTest", "status": "coverage get success", "coverage_result": {"setWriteOnly": [{"Instruction Coverage": 1.0}, {"Branch Coverage": -1.0}, {"Line Coverage": 1.0}]}}

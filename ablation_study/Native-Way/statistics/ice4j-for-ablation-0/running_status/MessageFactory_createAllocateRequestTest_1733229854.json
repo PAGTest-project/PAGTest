@@ -1,0 +1,1 @@
+{"name": "MessageFactory_createAllocateRequestTest", "status": "coverage get success", "coverage_result": {"createAllocateRequest": [{"Instruction Coverage": 0.625}, {"Branch Coverage": 0.0}, {"Line Coverage": 0.6666666666666666}]}}

@@ -1,0 +1,8 @@
+src/test/java/net/hydromatic/morel/SatTest.java
+src/test/java/net/hydromatic/morel/compile/ExtentTest.java
+src/test/java/net/hydromatic/morel/PairListTest.java
+src/test/java/net/hydromatic/morel/UtilTest.java
+src/test/java/net/hydromatic/morel/InlineTest.java
+src/test/java/net/hydromatic/morel/FromBuilderTest.java
+src/test/java/net/hydromatic/morel/util/Pair_rightTest.java
+src/test/java/net/hydromatic/morel/util/Pair_leftTest.java

@@ -1,0 +1,1 @@
+{"name": "CryptoLoans_loanAdjustLTVHistoryTest", "status": "coverage get success", "coverage_result": {"loanAdjustLTVHistory": [{"Instruction Coverage": 1.0}, {"Branch Coverage": -1.0}, {"Line Coverage": 1.0}]}}

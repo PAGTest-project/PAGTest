@@ -1,0 +1,1 @@
+{"name": "ResultSetIterator_hasNextTest", "status": "coverage get success", "coverage_result": {"hasNext": [{"Instruction Coverage": 0.6428571428571429}, {"Branch Coverage": 1.0}, {"Line Coverage": 0.5}]}}

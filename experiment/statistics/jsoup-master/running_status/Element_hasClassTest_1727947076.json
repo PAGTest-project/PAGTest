@@ -1,0 +1,1 @@
+{"name": "Element_hasClassTest", "status": "coverage get success", "coverage_result": {"hasClass": [{"Instruction Coverage": 0.9775280898876404}, {"Branch Coverage": 0.875}, {"Line Coverage": 0.9565217391304348}]}}

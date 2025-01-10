@@ -1,0 +1,1 @@
+{"name": "ErrorCodeAttribute_getDefaultReasonPhraseTest", "status": "coverage get success", "coverage_result": {"getDefaultReasonPhrase": [{"Instruction Coverage": 0.13043478260869565}, {"Branch Coverage": 0.09090909090909091}, {"Line Coverage": 0.13043478260869565}]}}

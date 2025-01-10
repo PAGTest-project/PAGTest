@@ -1,0 +1,1 @@
+{"name": "TransportAddress_toRedactedStringTest", "status": "coverage get success", "coverage_result": {"toRedactedString": [{"Instruction Coverage": 0.9466666666666667}, {"Branch Coverage": 0.8125}, {"Line Coverage": 1.0}]}}

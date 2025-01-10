@@ -1,0 +1,1 @@
+{"name": "MultiValueMap_containsValueTest", "status": "coverage get success", "coverage_result": {"containsValue": [{"Instruction Coverage": 1.0}, {"Branch Coverage": 0.8333333333333334}, {"Line Coverage": 1.0}]}}

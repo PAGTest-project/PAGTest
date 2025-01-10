@@ -1,0 +1,81 @@
+
+package com.github.davidmoten.rtree.fbs;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.nio.ByteBuffer;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import com.github.davidmoten.rtree.Context;
+import com.github.davidmoten.rtree.Entry;
+import com.github.davidmoten.rtree.RTree;
+import com.github.davidmoten.rtree.geometry.Geometries;
+import com.github.davidmoten.rtree.geometry.Point;
+import com.github.davidmoten.rtree.geometry.Rectangle;
+import com.google.flatbuffers.FlatBufferBuilder;
+
+public class SerializerFlatBuffers_writeTest {
+
+    private SerializerFlatBuffers<Object, Point> serializer;
+    private RTree<Object, Point> tree;
+
+    @Before
+    public void setUp() {
+        serializer = new SerializerFlatBuffers<>(null, null);
+        tree = RTree.create();
+    }
+
+    @Test
+    public void testWriteWithEmptyTree() throws IOException {
+        ByteArrayOutputStream os = new ByteArrayOutputStream();
+        serializer.write(tree, os);
+        byte[] bytes = os.toByteArray();
+        ByteBuffer bb = ByteBuffer.wrap(bytes);
+        Tree_ t = Tree_.getRootAsTree_(bb);
+        assertEquals(0, t.size());
+        assertTrue(t.root() == null);
+    }
+
+    @Test
+    public void testWriteWithNonEmptyTree() throws IOException {
+        tree = tree.add(new Entry<Object, Point>() {
+            @Override
+            public Object value() {
+                return new Object();
+            }
+
+            @Override
+            public Point geometry() {
+                return Geometries.point(1, 2);
+            }
+        });
+        ByteArrayOutputStream os = new ByteArrayOutputStream();
+        serializer.write(tree, os);
+        byte[] bytes = os.toByteArray();
+        ByteBuffer bb = ByteBuffer.wrap(bytes);
+        Tree_ t = Tree_.getRootAsTree_(bb);
+        assertEquals(1, t.size());
+        assertTrue(t.root() != null);
+    }
+
+    @Test
+    public void testToBounds() {
+        FlatBufferBuilder builder = new FlatBufferBuilder();
+        Rectangle rect = Geometries.rectangle(0, 0, 1, 1);
+        int boundsOffset = serializer.toBounds(builder, rect);
+        builder.finish(boundsOffset);
+        ByteBuffer bb = builder.dataBuffer();
+        Bounds_ bounds = Bounds_.getRootAsBounds_(bb);
+        assertEquals(BoundsType_.BoundsDouble, bounds.type());
+        BoxDouble_ box = bounds.boxDouble();
+        assertEquals(0.0, box.x1(), 0.001);
+        assertEquals(0.0, box.y1(), 0.001);
+        assertEquals(1.0, box.x2(), 0.001);
+        assertEquals(1.0, box.y2(), 0.001);
+    }
+}

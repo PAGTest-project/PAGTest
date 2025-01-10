@@ -1,0 +1,1 @@
+{"name": "UnknownAttributesAttribute_getAttributeTest", "status": "coverage get success", "coverage_result": {"getAttribute": [{"Instruction Coverage": 1.0}, {"Branch Coverage": -1.0}, {"Line Coverage": 1.0}]}}

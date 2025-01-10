@@ -1,0 +1,7 @@
+Gemfile.lock
+coverage/
+acceptance/
+pkg/
+*.gem
+.deps
+*.iml

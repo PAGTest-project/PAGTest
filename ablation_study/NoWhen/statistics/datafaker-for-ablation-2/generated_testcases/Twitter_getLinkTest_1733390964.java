@@ -1,0 +1,46 @@
+
+package net.datafaker.providers.base;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+public class Twitter_getLinkTest {
+    private Twitter twitter;
+
+    @BeforeEach
+    public void setUp() {
+        twitter = new Twitter(new BaseProviders() {});
+    }
+
+    @Test
+    void testGetLinkWithValidExtraLength() {
+        String username = "testUser";
+        int extraLength = 5;
+        String link = twitter.getLink(username, extraLength);
+        String expectedPrefix = "https://twitter.com/" + username + "/";
+        assertTrue(link.startsWith(expectedPrefix));
+        assertEquals(expectedPrefix.length() + extraLength, link.length());
+    }
+
+    @Test
+    void testGetLinkWithExtraLengthLessThanFour() {
+        String username = "testUser";
+        int extraLength = 3;
+        String link = twitter.getLink(username, extraLength);
+        String expectedPrefix = "https://twitter.com/" + username + "/";
+        assertTrue(link.startsWith(expectedPrefix));
+        assertEquals(expectedPrefix.length() + extraLength, link.length());
+    }
+
+    @Test
+    void testGetLinkWithZeroExtraLength() {
+        String username = "testUser";
+        int extraLength = 0;
+        String link = twitter.getLink(username, extraLength);
+        String expectedPrefix = "https://twitter.com/" + username + "/";
+        assertTrue(link.startsWith(expectedPrefix));
+        assertEquals(expectedPrefix.length() + extraLength, link.length());
+    }
+}

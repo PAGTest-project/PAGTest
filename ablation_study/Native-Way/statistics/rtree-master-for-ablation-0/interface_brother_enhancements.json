@@ -1,0 +1,1 @@
+{"SplitterQuadratic": [{"methods": [], "interface_brother": "src/main/java/com/github/davidmoten/rtree/SplitterRStar.java.SplitterRStar"}], "SplitterRStar": [{"methods": [], "interface_brother": "src/main/java/com/github/davidmoten/rtree/SplitterQuadratic.java.SplitterQuadratic"}]}

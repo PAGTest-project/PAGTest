@@ -1,0 +1,1 @@
+{"name": "SingletonListIterator_resetTest", "status": "coverage get success", "coverage_result": {"reset": [{"Instruction Coverage": 1.0}, {"Branch Coverage": -1.0}, {"Line Coverage": 1.0}]}}

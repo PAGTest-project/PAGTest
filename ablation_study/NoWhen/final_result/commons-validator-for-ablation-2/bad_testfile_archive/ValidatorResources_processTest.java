@@ -1,0 +1,33 @@
+
+package org.apache.commons.validator;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.xml.sax.SAXException;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+public class ValidatorResources_processTest {
+
+    private ValidatorResources resources;
+
+    @BeforeEach
+    protected void setUp() throws IOException, SAXException {
+        final InputStream stream = this.getClass().getResourceAsStream("ValidatorResourcesTest-config.xml");
+        assertNotNull(stream, "Stream should not be null");
+        resources = new ValidatorResources(new InputStream[]{stream});
+        stream.close();
+    }
+
+    @Test
+    public void testProcess() {
+        resources.process();
+        assertTrue(resources.getFormSets() instanceof org.apache.commons.collections.FastHashMap);
+        assertTrue(resources.getConstants() instanceof org.apache.commons.collections.FastHashMap);
+        assertTrue(resources.getActions() instanceof org.apache.commons.collections.FastHashMap);
+    }
+}

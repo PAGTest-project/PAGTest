@@ -1,0 +1,92 @@
+
+package org.apache.commons.collections4.map;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+public class CompositeMap_sizeTest {
+
+    private CompositeMap<String, String> compositeMap;
+    private Map<String, String> map1;
+    private Map<String, String> map2;
+
+    @BeforeEach
+    public void setUp() {
+        map1 = new HashMap<>();
+        map1.put("1", "one");
+        map1.put("2", "two");
+
+        map2 = new HashMap<>();
+        map2.put("3", "three");
+        map2.put("4", "four");
+
+        compositeMap = new CompositeMap<>(map1, map2);
+    }
+
+    @Test
+    public void testSizeWithTwoMaps() {
+        assertEquals(4, compositeMap.size());
+    }
+
+    @Test
+    public void testSizeAfterAddingMap() {
+        Map<String, String> map3 = new HashMap<>();
+        map3.put("5", "five");
+        map3.put("6", "six");
+
+        compositeMap.addComposited(map3);
+        assertEquals(6, compositeMap.size());
+    }
+
+    @Test
+    public void testSizeAfterRemovingMap() {
+        compositeMap.removeComposited(map2);
+        assertEquals(2, compositeMap.size());
+    }
+
+    @Test
+    public void testSizeAfterAddingAndRemovingElements() {
+        compositeMap.setMutator(new CompositeMap.MapMutator<String, String>() {
+            @Override
+            public void resolveCollision(CompositeMap<String, String> composite, Map<String, String> existing, Map<String, String> added, Collection<String> intersect) {
+                // No-op
+            }
+
+            @Override
+            public String put(CompositeMap<String, String> map, Map<String, String>[] composited, String key, String value) {
+                return map1.put(key, value);
+            }
+
+            @Override
+            public void putAll(CompositeMap<String, String> map, Map<String, String>[] composited, Map<? extends String, ? extends String> t) {
+                map1.putAll(t);
+            }
+        });
+
+        compositeMap.put("7", "seven");
+        assertEquals(5, compositeMap.size());
+
+        compositeMap.remove("2");
+        assertEquals(4, compositeMap.size());
+    }
+
+    @Test
+    public void testSizeWithEmptyCompositeMap() {
+        CompositeMap<String, String> emptyCompositeMap = new CompositeMap<>();
+        assertEquals(0, emptyCompositeMap.size());
+    }
+
+    @Test
+    public void testSizeAfterClearingMaps() {
+        map1.clear();
+        map2.clear();
+        assertEquals(0, compositeMap.size());
+    }
+}

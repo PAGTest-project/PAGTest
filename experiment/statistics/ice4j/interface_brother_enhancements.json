@@ -1,0 +1,25 @@
+[
+    {
+        "class_name": "src/main/java/org/ice4j/socket/GoogleRelayedCandidateDelegate.java.GoogleRelayedCandidateDelegate",
+        "interface_brother": "src/main/java/org/ice4j/stack/StunStack.java.StunStack",
+        "methods": [
+            "[void]handleMessageEvent(StunMessageEvent)"
+        ]
+    },
+    {
+        "class_name": "src/main/java/org/ice4j/socket/RelayedCandidateDatagramSocket.java.RelayedCandidateDatagramSocket",
+        "interface_brother": "src/main/java/org/ice4j/stack/StunStack.java.StunStack",
+        "methods": [
+            "[void]handleMessageEvent(StunMessageEvent)"
+        ]
+    },
+    {
+        "class_name": "src/main/java/org/ice4j/ice/harvest/TcpHarvester.java.TcpHarvester",
+        "interface_brother": "src/main/java/org/ice4j/ice/harvest/SinglePortUdpHarvester.java.SinglePortUdpHarvester",
+        "methods": [
+            "[Collection<LocalCandidate>]harvest(Component)",
+            "[HarvestStatistics]getHarvestStatistics()",
+            "[boolean]isHostHarvester()"
+        ]
+    }
+]

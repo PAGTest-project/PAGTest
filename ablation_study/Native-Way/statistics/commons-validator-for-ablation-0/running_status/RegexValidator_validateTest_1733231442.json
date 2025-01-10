@@ -1,0 +1,1 @@
+{"name": "RegexValidator_validateTest", "status": "coverage get success", "coverage_result": {"validate": [{"Instruction Coverage": 0.6060606060606061}, {"Branch Coverage": 0.5833333333333334}, {"Line Coverage": 0.6}]}}

@@ -1,0 +1,1 @@
+{"name": "IdNumberGeneratorPtBrUtil_cpfTest", "status": "coverage get success", "coverage_result": {"cpf": [{"Instruction Coverage": 0.9425287356321839}, {"Branch Coverage": 0.875}, {"Line Coverage": 0.9285714285714286}]}}
