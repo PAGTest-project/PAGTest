@@ -1,0 +1,22 @@
+.aider*
+__pycache__/
+*.bqrs
+patch.txt
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+.env.bak
+venv.bak/
+*venv/
+
+# workspace/
+.idea/
+.vscode/
+
+*build/
+*logs/
